@@ -9,12 +9,14 @@
 <spring:url value="/resources/j_spring_security_check" var="form_url" />
 
 <div class="row-fluid">
-  	<div class="span4">
-		<form:form action="${form_url}" method="POST">
-			<label for="username"><spring:message code="login.username" /> : </label> <input type="text" name="j_username"/>
-			<label for="password"><spring:message code="login.password" /> : </label> <input type="password" name="j_password"/>
-			<input type="submit"/>
-		</form:form> 
-    	<p><a class="btn" href="#">View details &raquo;</a></p>
-	</div><!--/span-->
+  	<div class="span9">
+  	
+		<form:form action="${form_url}" method="POST" class="form-horizontal">
+        <fieldset>		
+			<label for="username"><spring:message code="login.username" /> </label> <input type="text" name="j_username"/>
+			<label for="password"><spring:message code="login.password" /> </label> <input type="password" name="j_password"/>
+			<input type="submit" class="btn btn-primary"/>
+		</fieldset>
+		</form:form>
+	</div>
 </div>

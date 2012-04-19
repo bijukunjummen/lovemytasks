@@ -44,10 +44,8 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
-            <p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>
           </div><!--/.nav-collapse -->
         </div>
       </div>
@@ -57,17 +55,14 @@
       <div class="row-fluid">
         <div class="span9">
           <div class="hero-unit">
-            <h1>Hello, world!</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-            <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+            <h2>My tasks!</h2>
           </div>
         </div>
       </div>
       <tiles:insertAttribute name="body"/> 	
       <hr>
-
       <footer>
-        <p>&copy; Company 2012</p>
+        <p>&copy; Biju Kunjummen 2012</p>
       </footer>
 
     </div>
