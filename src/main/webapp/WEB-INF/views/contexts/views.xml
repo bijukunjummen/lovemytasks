@@ -3,5 +3,8 @@
 <tiles-definitions>
     <definition extends="default" name="contexts/list">
         <put-attribute name="body" value="/WEB-INF/views/contexts/list.jsp"/>
-    </definition>    
+    </definition>
+    <definition extends="default" name="contexts/create">
+        <put-attribute name="body" value="/WEB-INF/views/contexts/create.jsp"/>
+    </definition>
 </tiles-definitions>
