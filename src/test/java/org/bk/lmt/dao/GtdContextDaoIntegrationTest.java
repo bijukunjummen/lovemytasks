@@ -1,8 +1,8 @@
 package org.bk.lmt.dao;
 
-import static org.hamcrest.CoreMatchers.*;
-import static org.junit.Assert.*;
-import static org.junit.matchers.JUnitMatchers.*;
+import static org.hamcrest.Matchers.*;
+import static org.hamcrest.MatcherAssert.*;
+
 
 import java.util.List;
 import java.util.Map;
@@ -64,7 +64,6 @@ public class GtdContextDaoIntegrationTest {
 
 		this.gtdContextDao.remove(aContext);
 		assertThat(this.gtdContextDao.findById(1L), is(nullValue()));
-
 	}
 
 }
