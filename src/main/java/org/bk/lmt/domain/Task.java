@@ -20,8 +20,8 @@ import org.codehaus.jackson.annotate.JsonIgnore;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table(name="gtdactions")
-public class GtdAction {
+@Table(name="tasks")
+public class Task {
 
     @Size(min = 1, max = 100)
     private String title;
@@ -31,8 +31,8 @@ public class GtdAction {
     private GtdProject project;
 
     @ManyToOne
-    @JoinColumn(name="gtdcontext_id")
-    private GtdContext gtdContext;
+    @JoinColumn(name="context_id")
+    private Context context;
 
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(style = "S-")
@@ -67,12 +67,12 @@ public class GtdAction {
         this.project = project;
     }
     
-    public GtdContext getContext() {
-        return this.gtdContext;
+    public Context getContext() {
+        return this.context;
     }
     
-    public void setContext(GtdContext gtdContext) {
-        this.gtdContext = gtdContext;
+    public void setContext(Context context) {
+        this.context = context;
     }
     
     public Date getStartDate() {

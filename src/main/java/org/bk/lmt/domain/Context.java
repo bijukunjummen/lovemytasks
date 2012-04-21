@@ -15,7 +15,7 @@ import org.codehaus.jackson.annotate.JsonIgnore;
 
 @Entity
 @Table(name="gtdcontexts")
-public class GtdContext {
+public class Context {
 
     @Size(min = 1, max = 50)
     private String name;

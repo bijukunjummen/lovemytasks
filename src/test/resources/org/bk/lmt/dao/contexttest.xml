@@ -17,13 +17,13 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 		
 	<import resource="classpath:/META-INF/spring/applicationContext.xml"/>
-	<bean name="user1" class="org.bk.simplygtd.domain.GtdUser" p:username="user1" p:fullname="testUser" p:password="test"/>
-	<bean name="user2" class="org.bk.simplygtd.domain.GtdUser" p:username="user2" p:fullname="testUser" p:password="test"/>
-	<bean name="context1" class="org.bk.simplygtd.domain.GtdContext"  p:name="context1"/>
-    <bean name="context2" class="org.bk.simplygtd.domain.GtdContext"  p:name="context2"/>
-    <bean name="context3" class="org.bk.simplygtd.domain.GtdContext"  p:name="context3"/>
-    <bean name="context4" class="org.bk.simplygtd.domain.GtdContext"  p:name="context4"/>
-    <bean name="context5" class="org.bk.simplygtd.domain.GtdContext"  p:name="context5"/>
+	<bean name="user1" class="org.bk.lmt.domain.GtdUser" p:username="user1" p:fullname="testUser" p:password="test"/>
+	<bean name="user2" class="org.bk.lmt.domain.GtdUser" p:username="user2" p:fullname="testUser" p:password="test"/>
+	<bean name="context1" class="org.bk.lmt.domain.Context"  p:name="context1"/>
+    <bean name="context2" class="org.bk.lmt.domain.Context"  p:name="context2"/>
+    <bean name="context3" class="org.bk.lmt.domain.Context"  p:name="context3"/>
+    <bean name="context4" class="org.bk.lmt.domain.Context"  p:name="context4"/>
+    <bean name="context5" class="org.bk.lmt.domain.Context"  p:name="context5"/>
 	<jdbc:embedded-database id="dataSource" type="H2"></jdbc:embedded-database>
 	
 </beans>

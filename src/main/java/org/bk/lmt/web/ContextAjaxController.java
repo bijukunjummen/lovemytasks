@@ -6,8 +6,8 @@ import java.util.Map;
 
 import javax.annotation.Resource;
 
-import org.bk.lmt.domain.GtdContext;
-import org.bk.lmt.service.GtdContextService;
+import org.bk.lmt.domain.Context;
+import org.bk.lmt.service.ContextService;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
@@ -19,10 +19,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.json.MappingJacksonJsonView;
 
-@RequestMapping("/gtdcontexts")
+@RequestMapping("/ajaxContexts")
 @Controller
-public class GtdAjaxContextController {
-	@Resource private GtdContextService gtdContextService;
+public class ContextAjaxController {
+	@Resource private ContextService gtdContextService;
 	
 
     @RequestMapping(value="read.json", method = RequestMethod.GET)
@@ -39,11 +39,11 @@ public class GtdAjaxContextController {
     }
 
     @RequestMapping(value="create.json", method = RequestMethod.POST)
-    public ModelAndView jsoncreate(@RequestBody GtdContext gtdContext) {
+    public ModelAndView jsoncreate(@RequestBody Context gtdContext) {
     	Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
     	String userName = ((User)principal).getUsername();    	
 		Map<String, Object> modelMap = new HashMap<String, Object>();
-		GtdContext gtdContextUpdated = this.gtdContextService.persistForUser(gtdContext, userName);
+		Context gtdContextUpdated = this.gtdContextService.persistForUser(gtdContext, userName);
     	modelMap.put("success", "true");
     	modelMap.put("data", Collections.singletonList(gtdContextUpdated));
     	MappingJacksonJsonView mappingJacksonView = new MappingJacksonJsonView();
@@ -52,11 +52,11 @@ public class GtdAjaxContextController {
     }
 
     @RequestMapping(value="update.json", method = RequestMethod.POST)
-    public ModelAndView jsonupdate(@RequestBody GtdContext gtdContext) {
+    public ModelAndView jsonupdate(@RequestBody Context gtdContext) {
     	Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
     	String userName = ((User)principal).getUsername();    	
 		Map<String, Object> modelMap = new HashMap<String, Object>();
-		GtdContext gtdContextUpdated = this.gtdContextService.updateForUser(gtdContext, userName);
+		Context gtdContextUpdated = this.gtdContextService.updateForUser(gtdContext, userName);
     	modelMap.put("success", "true");
     	modelMap.put("data", Collections.singletonList(gtdContextUpdated));
     	MappingJacksonJsonView mappingJacksonView = new MappingJacksonJsonView();
@@ -66,7 +66,7 @@ public class GtdAjaxContextController {
     }
 
     @RequestMapping(value="delete.json", method = RequestMethod.POST)
-    public ModelAndView jsondelete(@RequestBody GtdContext gtdContext) {
+    public ModelAndView jsondelete(@RequestBody Context gtdContext) {
 //    	Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 //    	String userName = ((User)principal).getUsername();    	
 		Map<String, Object> modelMap = new HashMap<String, Object>();

@@ -23,7 +23,8 @@
 	<beans:bean id="gtdAuthenticationProvider" class="org.bk.lmt.security.GtdAuthenticationProvider"/>
 	
     <authentication-manager alias="authenticationManager">         
-        <authentication-provider ref="gtdAuthenticationProvider"/>
+        <authentication-provider ref="gtdAuthenticationProvider">
+        </authentication-provider>
 	</authentication-manager>
 
 </beans:beans>

@@ -7,9 +7,9 @@ import static org.hamcrest.MatcherAssert.*;
 import java.util.List;
 import java.util.Map;
 
-import org.bk.lmt.dao.GtdContextDao;
+import org.bk.lmt.dao.ContextDao;
 import org.bk.lmt.dao.GtdUserDao;
-import org.bk.lmt.domain.GtdContext;
+import org.bk.lmt.domain.Context;
 import org.bk.lmt.domain.GtdUser;
 import org.junit.Before;
 import org.junit.Test;
@@ -24,46 +24,46 @@ import org.springframework.transaction.annotation.Transactional;
 @ContextConfiguration(locations = { "contexttest.xml" })
 @Transactional
 @TransactionConfiguration(defaultRollback = true)
-public class GtdContextDaoIntegrationTest {
+public class ContextDaoIntegrationTest {
 	@Autowired
-	Map<String, GtdContext> gtdContextsMap;
+	Map<String, Context> contextsMap;
 	@Autowired
 	Map<String, GtdUser> gtdUsersMap;
 	@Autowired
-	GtdContextDao gtdContextDao;
+	ContextDao contextDao;
 	@Autowired
 	GtdUserDao gtdUserDao;
 
 	@Before
 	public void setUp() {
 		this.gtdUserDao.persist(gtdUsersMap.get("user1"));
-		for (String key : gtdContextsMap.keySet()) {
-			GtdContext gtdContext = gtdContextsMap.get(key);
+		for (String key : contextsMap.keySet()) {
+			Context gtdContext = contextsMap.get(key);
 			gtdContext.setGtdUser(gtdUsersMap.get("user1"));
-			this.gtdContextDao.persist(gtdContext);
+			this.contextDao.persist(gtdContext);
 		}
 	}
 
 	@Test
 	public void testGetContext() {
-		GtdContext aContext = this.gtdContextDao.findById(1L);
+		Context aContext = this.contextDao.findById(1L);
 		assertThat(aContext.getName(), is("context1"));
 
 		aContext.setName("updated-context1");
 		
-		aContext = this.gtdContextDao.update(aContext);
+		aContext = this.contextDao.update(aContext);
 		System.out.println(aContext.getGtdUser());
 		assertThat(aContext.getName(), is("updated-context1"));
 
-		List<GtdContext> contextsByUser = this.gtdContextDao.findContextsByGtdUser("user1",0,10);
-		assertThat(contextsByUser, hasItems(gtdContextsMap.get("context1"), gtdContextsMap.get("context2"), gtdContextsMap.get("context3")));
+		List<Context> contextsByUser = this.contextDao.findContextsByGtdUser("user1",0,10);
+		assertThat(contextsByUser, hasItems(contextsMap.get("context1"), contextsMap.get("context2"), contextsMap.get("context3")));
 
-		List<GtdContext> contextsByName = this.gtdContextDao.findContextsByName("context5");
+		List<Context> contextsByName = this.contextDao.findContextsByName("context5");
 		
-		assertThat(contextsByName, hasItem(gtdContextsMap.get("context5")));
+		assertThat(contextsByName, hasItem(contextsMap.get("context5")));
 
-		this.gtdContextDao.remove(aContext);
-		assertThat(this.gtdContextDao.findById(1L), is(nullValue()));
+		this.contextDao.remove(aContext);
+		assertThat(this.contextDao.findById(1L), is(nullValue()));
 	}
 
 }

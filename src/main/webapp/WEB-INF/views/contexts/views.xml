@@ -7,4 +7,8 @@
     <definition extends="default" name="contexts/create">
         <put-attribute name="body" value="/WEB-INF/views/contexts/create.jsp"/>
     </definition>
+    <definition extends="default" name="contexts/update">
+        <put-attribute name="body" value="/WEB-INF/views/contexts/update.jsp"/>
+    </definition>
+    
 </tiles-definitions>
