@@ -11,6 +11,8 @@ import javax.persistence.Table;
 import javax.persistence.Version;
 import javax.validation.constraints.Size;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 import org.codehaus.jackson.annotate.JsonIgnore;
 
 @Entity
@@ -67,7 +69,7 @@ public class Context {
 
 	@Override
 	public String toString() {
-		return "GtdContext [id=" + id + ", name=" + name + "]";
+		return ReflectionToStringBuilder.toString(this, ToStringStyle.SHORT_PREFIX_STYLE);
 	}
 
 

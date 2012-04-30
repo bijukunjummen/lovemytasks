@@ -1,6 +1,5 @@
 package org.bk.lmt.domain;
 import java.util.Calendar;
-import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,6 +14,8 @@ import javax.persistence.TemporalType;
 import javax.persistence.Version;
 import javax.validation.constraints.Size;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -27,10 +28,12 @@ public class GtdProject{
 
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(pattern="yyyy/MM/dd hh:mm:ss a")
+    @Column(name = "startdate")
     private Calendar startDate;
 
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(pattern="yyyy/MM/dd hh:mm:ss a")
+    @Column(name = "completeddate")
     private Calendar completedDate;
 
     private Boolean isDone;
@@ -106,15 +109,7 @@ public class GtdProject{
     }
 
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Id: ").append(getId()).append(", ");
-        sb.append("Version: ").append(getVersion()).append(", ");
-        sb.append("Name: ").append(getName()).append(", ");
-        sb.append("StartDate: ").append(getStartDate()).append(", ");
-        sb.append("CompletedDate: ").append(getCompletedDate()).append(", ");
-        sb.append("IsDone: ").append(getIsDone()).append(", ");
-        sb.append("GtdUser: ").append(getGtdUser());
-        return sb.toString();
+    	return ReflectionToStringBuilder.toString(this, ToStringStyle.SHORT_PREFIX_STYLE);
     }
     
 }

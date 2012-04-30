@@ -10,14 +10,20 @@
 <!--[if lt IE 8]><link rel="stylesheet" href="<c:url value="/resources/blueprint/ie.css" />" type="text/css" media="screen, projection"><![endif]-->
 </head>
 <body>
-  <div class="container">
-    <h1>Spring MVC 3.1 Demo Endpoints</h1>
+  <div class="row-fluid">
+    <div class="span1">
+	</div>
+  	<div class="span8">
+    <h3>Spring MVC Endpoints</h3>
     <c:forEach items="${handlerMethods}" var="entry">
-      <div>
+    <div class="row-fluid">
+      <div class="span8">
         <hr>
         <p><strong>${entry.value}</strong></p>      
       </div>
-      <div class="span-3 colborder">
+     </div>
+     <div class="row-fluid">
+      <div class="span2">
         <p>
           <span class="alt">Patterns:</span><br> 
           <c:if test="${not empty entry.key.patternsCondition.patterns}">
@@ -25,15 +31,7 @@
           </c:if>
         </p>
       </div>
-      <div class="span-3 colborder">
-        <p>
-          <span class="alt">Request Methods:</span><br>
-          <c:if test="${not empty entry.key.methodsCondition.methods}">
-            ${entry.key.methodsCondition.methods}
-          </c:if>
-        </p>
-      </div>
-      <div class="span-3 colborder">
+      <div class="span2">
         <p>
           <span class="alt">Headers:</span><br>
           <c:if test="${not empty entry.key.headersCondition.expressions}">
@@ -41,15 +39,7 @@
           </c:if>
         </p>
       </div>
-      <div class="span-3 colborder">
-        <p>
-          <span class="alt">Parameters:</span><br>
-          <c:if test="${not empty entry.key.paramsCondition.expressions}">
-            ${entry.key.paramsCondition.expressions}
-          </c:if>
-        </p>
-      </div>
-      <div class="span-3 colborder">
+      <div class="span2">
         <p>
           <span class="alt">Consumes:</span><br>
           <c:if test="${not empty entry.key.consumesCondition.expressions}">
@@ -57,7 +47,26 @@
           </c:if>
         </p>
       </div>
-      <div class="span-3 last">
+      </div>
+
+     <div class="row-fluid">
+      <div class="span2">
+        <p>
+          <span class="alt">Request Methods:</span><br>
+          <c:if test="${not empty entry.key.methodsCondition.methods}">
+            ${entry.key.methodsCondition.methods}
+          </c:if>
+        </p>
+      </div>
+      <div class="span2">
+        <p>
+          <span class="alt">Parameters:</span><br>
+          <c:if test="${not empty entry.key.paramsCondition.expressions}">
+            ${entry.key.paramsCondition.expressions}
+          </c:if>
+        </p>
+      </div>
+      <div class="span2">
         <p>
           <span class="alt">Produces:</span><br>
           <c:if test="${not empty entry.key.producesCondition.expressions}">
@@ -65,7 +74,10 @@
           </c:if>
         </p>
       </div>
+      </div>
+
     </c:forEach>
+    </div>
   </div>
 </body>
 </html>

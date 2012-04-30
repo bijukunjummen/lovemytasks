@@ -37,7 +37,10 @@ public class ContextServiceImpl implements ContextService{
 		return this.contextDao.findContextsByGtdUser(userName,firstResult, maxResults);    
 	}
 	
-
+	@Override
+    public List<Context> findContextsByGtdUserName(String userName) {
+		return this.contextDao.findContextsByGtdUser(userName);    
+	}
 	@Override
 	public Long countContextsByUserName(String userName){
 		return this.contextDao.countContextsByUserName(userName);

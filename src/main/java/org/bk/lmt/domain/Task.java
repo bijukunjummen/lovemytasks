@@ -1,6 +1,8 @@
 package org.bk.lmt.domain;
 import java.util.Date;
 
+import javax.persistence.Access;
+import javax.persistence.AccessType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -10,19 +12,36 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Version;
 import javax.validation.constraints.Size;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(name="tasks")
-public class Task {
+@Access(AccessType.FIELD)
+@NamedQueries({
+		@NamedQuery(name="Task.findByUser", query="SELECT task FROM Task AS task WHERE task.gtdUser = :gtdUser"),
+		@NamedQuery(name="Task.countByUser", query="SELECT COUNT(task) FROM Task AS task WHERE task.gtdUser = :gtdUser")
+})
 
+public class Task {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private Long id;
+    
+    @Version
+    @Column(name = "version")
+    private Integer version;
     @Size(min = 1, max = 100)
     private String title;
 
@@ -36,12 +55,15 @@ public class Task {
 
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(style = "S-")
+    @Column(name = "startdate")
     private Date startDate;
 
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(style = "S-")
+    @Column(name = "completeddate")
     private Date completedDate;
 
+    @Column(name = "isdone")
     private Boolean isDone;
 
     @Enumerated(EnumType.STRING)
@@ -107,14 +129,7 @@ public class Task {
         this.status = status;
     }
     
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private Long id;
-    
-    @Version
-    @Column(name = "version")
-    private Integer version;
+
     
     public Long getId() {
         return this.id;
@@ -142,19 +157,9 @@ public class Task {
         this.gtdUser = gtdUser;
     }
     
+    @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Id: ").append(getId()).append(", ");
-        sb.append("Version: ").append(getVersion()).append(", ");
-        sb.append("Title: ").append(getTitle()).append(", ");
-        sb.append("Project: ").append(getProject()).append(", ");
-        sb.append("Context: ").append(getContext()).append(", ");
-        sb.append("StartDate: ").append(getStartDate()).append(", ");
-        sb.append("CompletedDate: ").append(getCompletedDate()).append(", ");
-        sb.append("IsDone: ").append(getIsDone()).append(", ");
-        sb.append("Status: ").append(getStatus()).append(", ");
-        sb.append("GtdUser: ").append(getGtdUser());
-        return sb.toString();
+    	return ReflectionToStringBuilder.toString(this, ToStringStyle.SHORT_PREFIX_STYLE);
     }
     
 }

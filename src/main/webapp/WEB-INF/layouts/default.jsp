@@ -5,6 +5,9 @@
 <%@ taglib tagdir="/WEB-INF/tags/util" prefix="util" %>
 
 <spring:url var="resources" value="/resources" />
+<spring:url var="contextsHomeUrl" value="/contexts" />
+<spring:url var="tasksHomeUrl" value="/tasks" />
+<spring:url var="projectsHomeUrl" value="/projects" />
 
 <!DOCTYPE html>
 <html lang="en">
@@ -60,9 +63,9 @@
             <ul class="nav nav-list">
               <li class="nav-header">Sidebar</li>
               <li class="active"><a href="#">Link</a></li>
-              <li><a href="#">Actions</a></li>
-              <li><a href="#">Contexts</a></li>
-              <li><a href="#">Projects</a></li>
+              <li><a href="${tasksHomeUrl}"><spring:message code="sidebar.tasks"/></a></li>
+              <li><a href="${contextsHomeUrl}"><spring:message code="sidebar.contexts"/></a></li>
+              <li><a href="${projectsHomeUrl}"><spring:message code="sidebar.projects"/></a></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->

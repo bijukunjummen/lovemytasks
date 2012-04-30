@@ -40,7 +40,7 @@ public class ContextDaoIntegrationTest {
 		for (String key : contextsMap.keySet()) {
 			Context gtdContext = contextsMap.get(key);
 			gtdContext.setGtdUser(gtdUsersMap.get("user1"));
-			this.contextDao.persist(gtdContext);
+			gtdContext = this.contextDao.persist(gtdContext);
 		}
 	}
 
@@ -52,7 +52,6 @@ public class ContextDaoIntegrationTest {
 		aContext.setName("updated-context1");
 		
 		aContext = this.contextDao.update(aContext);
-		System.out.println(aContext.getGtdUser());
 		assertThat(aContext.getName(), is("updated-context1"));
 
 		List<Context> contextsByUser = this.contextDao.findContextsByGtdUser("user1",0,10);

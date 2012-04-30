@@ -36,6 +36,11 @@ public class GtdProjectServiceImpl implements GtdProjectService {
     }
 
     @Override
+    public List<GtdProject> findGTDProjectsByGtdUser(String userName) {
+        return this.gtdProjectDao.findGTDProjectsByGtdUser(userName);
+    }
+
+    @Override
     public Long countProjectsByUserName(String userName) {
         return this.gtdProjectDao.countProjectsByUserName(userName);
     }

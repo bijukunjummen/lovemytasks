@@ -16,12 +16,11 @@ public class JpaContextDao extends JpaDao<Long, Context> implements ContextDao{
     public JpaContextDao(){
         super(Context.class);
     }
-	@Override
+	
+    @Override
 	public List<Context> findContextEntries(int firstResult, int maxResults) {
 		return this.entityManager.createQuery("select o from Context o", Context.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
 	}
-
-
 
 	@Override
 	public List<Context> findContextsByName(String name) {
@@ -36,7 +35,6 @@ public class JpaContextDao extends JpaDao<Long, Context> implements ContextDao{
 		return q.getResultList();
 	}
 
-
 	@Override
     public List<Context> findContextsByGtdUser(String userName, int firstResult, int maxResults) {
         TypedQuery<Context> q = this.entityManager.createQuery("SELECT o FROM Context o WHERE o.gtdUser.username = :userName order by o.name", Context.class);
@@ -44,12 +42,16 @@ public class JpaContextDao extends JpaDao<Long, Context> implements ContextDao{
         return q.setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
 
-
+	@Override
+    public List<Context> findContextsByGtdUser(String userName) {
+        TypedQuery<Context> q = this.entityManager.createQuery("SELECT o FROM Context o WHERE o.gtdUser.username = :userName order by o.name", Context.class);
+        q.setParameter("userName", userName);
+        return q.getResultList();
+    }
 	@Override
     public Long countContextsByUserName(String userName) {
 		TypedQuery<Long> q = this.getEntityManager().createQuery("select count(o) from Context o where o.gtdUser.username=:userName", Long.class);
         q.setParameter("userName", userName);
 		return q.getSingleResult();
     }
-
 }

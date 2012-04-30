@@ -19,7 +19,13 @@ public class JpaGtdProjectDao extends JpaDao<Long, GtdProject> implements GtdPro
 		q.setParameter("userName", userName);
 		return q.setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
 	}
-
+	
+	@Override
+	public List<GtdProject> findGTDProjectsByGtdUser(String userName) {
+		TypedQuery<GtdProject> q = this.entityManager.createQuery("select o from GtdProject o where o.gtdUser.username=:userName", GtdProject.class);
+		q.setParameter("userName", userName);
+		return q.getResultList();
+	}
 	
     @Override
     public Long countProjectsByUserName(String userName) {
