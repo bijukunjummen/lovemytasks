@@ -8,6 +8,7 @@ import org.bk.lmt.domain.GtdUser;
 import org.bk.lmt.domain.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class TaskServiceImpl implements TaskService {
@@ -16,6 +17,7 @@ public class TaskServiceImpl implements TaskService {
 	@Autowired private GtdUserDao gtdUserDao;
 	
 	@Override
+	@Transactional
 	public Task persistForUser(Task task, String username) {
 		GtdUser user = this.gtdUserDao.findUserByUserName(username);
 		task.setGtdUser(user);
@@ -23,6 +25,7 @@ public class TaskServiceImpl implements TaskService {
 	}
 
 	@Override
+	@Transactional
 	public Task updateForUser(Task task, String username) {
 		GtdUser user = this.gtdUserDao.findUserByUserName(username);
 		task.setGtdUser(user);
@@ -47,6 +50,7 @@ public class TaskServiceImpl implements TaskService {
 	}
 
 	@Override
+	@Transactional
 	public void remove(Task task) {
 		this.taskDao.remove(task);
 	}

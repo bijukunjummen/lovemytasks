@@ -29,8 +29,8 @@
 					<td><c:out value="${task.title}" /></td>
 					<td><c:out value="${task.project.name}" /></td>
 					<td><c:out value="${task.context.name}" /></td>
-					<td><c:out value="${task.startDate}" /></td>
-					<td><c:out value="${task.completedDate}" /></td>
+					<td><fmt:formatDate value="${task.startDate}" type="date" /></td>
+					<td><fmt:formatDate value="${task.completedDate}" type="date" /></td>
 					<td><c:out value="${task.isDone}" /></td>
 					<td><c:out value="${task.status}" /></td>
 					<td><spring:url value="/tasks/${task.id}" var="update_form_url">

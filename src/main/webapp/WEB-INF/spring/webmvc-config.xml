@@ -9,7 +9,7 @@
 	</context:component-scan>
 
 	<!-- Turns on support for mapping requests to Spring MVC @Controller methods Also registers default Formatters and Validators for use across all @Controllers -->
-	<mvc:annotation-driven > 
+	<mvc:annotation-driven conversion-service="conversionService"> 
 	   <mvc:message-converters register-defaults="false">
 	       <bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter" >
 	           <property name="objectMapper">
@@ -54,6 +54,14 @@
 	<!-- store preferred theme configuration in a cookie -->
 	<bean class="org.springframework.web.servlet.theme.CookieThemeResolver" id="themeResolver" p:cookieName="theme" p:defaultThemeName="standard" />
 
+    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <property name="converters">
+            <set>
+                <bean class="org.bk.lmt.spring.StringToProjectConverter"/>
+                <bean class="org.bk.lmt.spring.StringToContextConverter"/>
+            </set>
+        </property>
+    </bean>
     <!-- 
 	<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver" p:defaultErrorView="uncaughtException">
 		<property name="exceptionMappings">

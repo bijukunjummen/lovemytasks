@@ -8,4 +8,8 @@
     <definition extends="default" name="tasks/create">
         <put-attribute name="body" value="/WEB-INF/views/tasks/create.jsp"/>
     </definition> 
+    
+    <definition extends="default" name="tasks/update">
+        <put-attribute name="body" value="/WEB-INF/views/tasks/update.jsp"/>
+    </definition> 
 </tiles-definitions>
