@@ -25,14 +25,10 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 @TransactionConfiguration(defaultRollback = true)
 public class ContextDaoIntegrationTest {
-	@Autowired
-	Map<String, Context> contextsMap;
-	@Autowired
-	Map<String, GtdUser> gtdUsersMap;
-	@Autowired
-	ContextDao contextDao;
-	@Autowired
-	GtdUserDao gtdUserDao;
+	@Autowired Map<String, Context> contextsMap;
+	@Autowired Map<String, GtdUser> gtdUsersMap;
+	@Autowired ContextDao contextDao;
+	@Autowired GtdUserDao gtdUserDao;
 
 	@Before
 	public void setUp() {

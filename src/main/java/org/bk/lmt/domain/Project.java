@@ -8,6 +8,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -20,8 +22,14 @@ import org.codehaus.jackson.annotate.JsonIgnore;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table(name="gtdprojects")
-public class GtdProject{
+@Table(name="projects")
+@NamedQueries({
+	@NamedQuery(name="Project.findByUser", query="select o from Project o where o.gtdUser.username=:userName"),
+	@NamedQuery(name="Project.countByUser", query="select count(o) from Project o where o.gtdUser.username=:userName")	
+}
+		
+)
+public class Project{
 
     @Size(min = 1, max = 100)
     private String name;

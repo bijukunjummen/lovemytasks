@@ -26,16 +26,15 @@
             </map>
         </property>
     </bean>
-	
 	<bean name="user1" class="org.bk.lmt.domain.GtdUser" p:username="user1" p:fullname="testUser" p:password="test" />
 	<bean name="user2" class="org.bk.lmt.domain.GtdUser" p:username="user1" p:fullname="testUser" p:password="test" />
 
-	<bean name="project1" class="org.bk.lmt.domain.GtdProject" p:name="project1" p:startDate="2010-01-04T12:08:56.235-0800" p:completedDate="2010-01-04T12:08:56.235-0800"
+	<bean name="project1" class="org.bk.lmt.domain.Project" p:name="project1" p:startDate="2010-01-04T12:08:56.235-0800" p:completedDate="2010-01-04T12:08:56.235-0800"
 		p:isDone="true" />
-	<bean name="project2" class="org.bk.lmt.domain.GtdProject" p:name="project2" p:startDate="2010-01-04T12:08:56.235-0800" />
-	<bean name="project3" class="org.bk.lmt.domain.GtdProject" p:name="project3" p:startDate="2010-01-04T12:08:56.235-0800" />
-	<bean name="project4" class="org.bk.lmt.domain.GtdProject" p:name="project4" p:startDate="2010-01-04T12:08:56.235-0800" />
-	<bean name="project5" class="org.bk.lmt.domain.GtdProject" p:name="project5" p:startDate="2010-01-04T12:08:56.235-0800" />
+	<bean name="project2" class="org.bk.lmt.domain.Project" p:name="project2" p:startDate="2010-01-04T12:08:56.235-0800" />
+	<bean name="project3" class="org.bk.lmt.domain.Project" p:name="project3" p:startDate="2010-01-04T12:08:56.235-0800" />
+	<bean name="project4" class="org.bk.lmt.domain.Project" p:name="project4" p:startDate="2010-01-04T12:08:56.235-0800" />
+	<bean name="project5" class="org.bk.lmt.domain.Project" p:name="project5" p:startDate="2010-01-04T12:08:56.235-0800" />
 	
 	<jdbc:embedded-database id="dataSource" type="H2"></jdbc:embedded-database>
 </beans>

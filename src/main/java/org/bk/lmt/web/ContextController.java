@@ -20,14 +20,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class ContextController {
 	
-	@Resource private ContextService gtdContextService;	
+	@Resource private ContextService contextService;	
 	
 	@RequestMapping(produces="text/html")
 	public String list(@RequestParam(defaultValue="1",value="page", required=false) Integer page, @RequestParam(defaultValue="10", value="size", required=false) Integer size, Model model){
     	Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
     	String userName = ((User)principal).getUsername();
-    	model.addAttribute("contexts", this.gtdContextService.findContextsByGtdUserName(userName, page == null ? 0 : (page.intValue() - 1) * size, size));
-        float nrOfPages = (float)this.gtdContextService.countContextsByUserName(userName)/size;
+    	model.addAttribute("contexts", this.contextService.findContextsByGtdUserName(userName, page == null ? 0 : (page.intValue() - 1) * size, size));
+        float nrOfPages = (float)this.contextService.countContextsByUserName(userName)/size;
         model.addAttribute("maxPages", (int) ((nrOfPages > (int) nrOfPages || nrOfPages == 0.0) ? nrOfPages + 1 : nrOfPages));
     	
 		return "contexts/list";
@@ -43,7 +43,7 @@ public class ContextController {
 			return "contexts/create";
 		}
 		model.asMap().clear();
-		this.gtdContextService.persistForUser(context, userName);
+		this.contextService.persistForUser(context, userName);
 		return "redirect:/contexts";
 	}
 
@@ -63,7 +63,7 @@ public class ContextController {
 			return "contexts/update";
 		}
 		model.asMap().clear();
-		this.gtdContextService.updateForUser(context, userName);
+		this.contextService.updateForUser(context, userName);
 		return "redirect:/contexts";
 	}
 	
@@ -71,7 +71,7 @@ public class ContextController {
 	public String updateForm(@PathVariable("id") Long id, Model model){
     	Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
     	String userName = ((User)principal).getUsername();
-		populateEditForm(model, this.gtdContextService.findById(id));
+		populateEditForm(model, this.contextService.findById(id));
 		return "contexts/update";
 	}
 	
@@ -83,8 +83,8 @@ public class ContextController {
 	public String delete(@PathVariable("id") Long id,  @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model model){
     	Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
     	String userName = ((User)principal).getUsername();
-    	Context context = this.gtdContextService.findById(id);
-		this.gtdContextService.remove(context);
+    	Context context = this.contextService.findById(id);
+		this.contextService.remove(context);
         model.asMap().clear();
         model.addAttribute("page", (page == null) ? "1" : page.toString());
         model.addAttribute("size", (size == null) ? "10" : size.toString());

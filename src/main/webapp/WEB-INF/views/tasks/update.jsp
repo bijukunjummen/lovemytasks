@@ -13,46 +13,45 @@
 	</div>
   	<div class="span8">
 	<form:form action="${submitUrl}" method="PUT" modelAttribute="task" class="form-horizontal">
-		
 		<form:errors cssClass="error" delimiter="&lt;p/&gt;" />
 		<form:hidden id="_id" path="id" />
 		<form:hidden id="_version" path="version" />
 		<div class="control-group">
-		<label for="task_title" class="control-label"> <spring:message code="task.create.title" /> : </label>
-		<div class="controls">
-		<form:input path="title" />
-		<form:errors cssClass="error" id="name_error_id" path="title" />
-		</div>
+			<label for="task_title" class="control-label"> <spring:message code="task.create.title" /> : </label>
+			<div class="controls">
+				<form:input path="title" />
+				<form:errors cssClass="error" id="name_error_id" path="title" />
+			</div>
 		</div>
 		<br />
 		<div class="control-group">
-		<label for="task_project" class="control-label"> <spring:message code="task.create.project" /> : </label>
-		<div class="controls">
-		<form:select path="project" multiple="false">
-			<form:option value="-1" label="${projectSelectMessage}"/>
-			<form:options items="${projects}" itemValue="id" itemLabel="name"/>
-		</form:select>
-		<form:errors cssClass="error" id="name_error_id" path="project" />
-		</div>
+			<label for="task_project" class="control-label"> <spring:message code="task.create.project" /> : </label>
+			<div class="controls">
+				<form:select path="project" multiple="false">
+					<form:option value="-1" label="${projectSelectMessage}"/>
+					<form:options items="${projects}" itemValue="id" itemLabel="name"/>
+				</form:select>
+				<form:errors cssClass="error" id="name_error_id" path="project" />
+			</div>
 		</div>
 		<br />	
 		<div class="control-group">
-		<label for="task_context" class="control-label"> <spring:message code="task.create.context" /> : </label>
-		<div class="controls">
-		<form:select path="context" multiple="false">
-			<form:option value="-1" label="${contextSelectMessage}"/>
-			<form:options items="${contexts}" itemValue="id" itemLabel="name"/>
-		</form:select>
-		<form:errors cssClass="error" id="name_error_id" path="context" />
-		</div>
+			<label for="task_context" class="control-label"> <spring:message code="task.create.context" /> : </label>
+			<div class="controls">
+				<form:select path="context" multiple="false">
+					<form:option value="-1" label="${contextSelectMessage}"/>
+					<form:options items="${contexts}" itemValue="id" itemLabel="name"/>
+				</form:select>
+				<form:errors cssClass="error" id="name_error_id" path="context" />
+			</div>
 		</div>
 		<br />		
 		<div class="control-group">
-		<label for="task_isdone" class="control-label"><spring:message code="task.create.isdone"/> : </label>
-		<div class="controls">
-		<form:checkbox path="isDone"/>
-		<form:errors cssClass="error" id="isdone_error_id" path="isDone" />
-		</div>
+			<label for="task_isdone" class="control-label"><spring:message code="task.create.isdone"/> : </label>
+			<div class="controls">
+				<form:checkbox path="isDone"/>
+				<form:errors cssClass="error" id="isdone_error_id" path="isDone" />
+			</div>
 		</div>
 		<br />			
 			

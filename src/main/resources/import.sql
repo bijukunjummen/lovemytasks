@@ -1,5 +1,6 @@
 insert into gtdusers (id, username, password, fullname) values(1,'test','password','Full Name')
 insert into contexts (id, name, gtduser_id, version) values (1,'Home',1,0)
 insert into contexts (id, name, gtduser_id, version) values (2,'Work',1,0)
-insert into gtdprojects (id, name, startdate, completeddate, gtduser_id, version) values (1,'Test Project','2011-12-26 00:00:00', '2011-12-28 00:00:00',1,0)
+insert into projects (id, name, startdate, completeddate, gtduser_id, version) values (1,'Test Project','2011-12-26 00:00:00', '2011-12-28 00:00:00',1,0)
+insert into projects (id, name, startdate, gtduser_id, version) values (2,'Test Project - 2','2011-12-26 00:00:00', 1,0)
 insert into tasks (id, title, gtdproject_id, gtduser_id, context_id, startdate, completeddate, isDone, status, version) values(1, 'Test Task', 1, 1, 1, '2011-12-26 00:00:00', '2011-12-28 00:00:00', 0, 'SCHEDULED',0)

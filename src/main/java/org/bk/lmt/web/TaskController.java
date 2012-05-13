@@ -4,7 +4,7 @@ import javax.validation.Valid;
 
 import org.bk.lmt.domain.Task;
 import org.bk.lmt.service.ContextService;
-import org.bk.lmt.service.GtdProjectService;
+import org.bk.lmt.service.ProjectService;
 import org.bk.lmt.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class TaskController {
 	@Autowired private TaskService taskService;
-	@Autowired private GtdProjectService projectService;
+	@Autowired private ProjectService projectService;
 	@Autowired private ContextService contextService;
 	
 	@RequestMapping(produces="text/html")
@@ -93,7 +93,7 @@ public class TaskController {
 
 	private void populateEditForm(Model model, Task task, String userName){
 		model.addAttribute("task", task);
-		model.addAttribute("projects", this.projectService.findGTDProjectsByGtdUser(userName));
+		model.addAttribute("projects", this.projectService.findProjectsByGtdUser(userName));
 		model.addAttribute("contexts", this.contextService.findContextsByGtdUserName(userName));
 	}
 }

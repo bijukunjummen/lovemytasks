@@ -47,7 +47,7 @@ public class Task {
 
     @ManyToOne
     @JoinColumn(name="gtdproject_id")
-    private GtdProject project;
+    private Project project;
 
     @ManyToOne
     @JoinColumn(name="context_id")
@@ -81,11 +81,11 @@ public class Task {
         this.title = title;
     }
     
-    public GtdProject getProject() {
+    public Project getProject() {
         return this.project;
     }
     
-    public void setProject(GtdProject project) {
+    public void setProject(Project project) {
         this.project = project;
     }
     

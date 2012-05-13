@@ -6,9 +6,9 @@ import static org.hamcrest.MatcherAssert.*;
 import java.util.List;
 import java.util.Map;
 
-import org.bk.lmt.dao.GtdProjectDao;
+import org.bk.lmt.dao.ProjectDao;
 import org.bk.lmt.dao.GtdUserDao;
-import org.bk.lmt.domain.GtdProject;
+import org.bk.lmt.domain.Project;
 import org.bk.lmt.domain.GtdUser;
 import org.junit.Before;
 import org.junit.Test;
@@ -23,41 +23,37 @@ import org.springframework.transaction.annotation.Transactional;
 @ContextConfiguration(locations = { "projecttest.xml" })
 @Transactional
 @TransactionConfiguration(defaultRollback = true)
-public class GtdProjectDaoIntegrationTest {
+public class ProjectDaoIntegrationTest {
 
-	@Autowired
-	Map<String, GtdProject> gtdProjectsMap;
+	@Autowired Map<String, Project> projectsMap;
 
-	@Autowired
-	Map<String, GtdUser> gtdUsersMap;
+	@Autowired Map<String, GtdUser> gtdUsersMap;
 
-	@Autowired
-	GtdProjectDao gtdProjectDao;
+	@Autowired ProjectDao projectDao;
 
-	@Autowired
-	GtdUserDao gtdUserDao;
+	@Autowired GtdUserDao gtdUserDao;
 
 	@Before
 	public void setUp() {
 		this.gtdUserDao.persist(gtdUsersMap.get("user1"));
-		for (String key : gtdProjectsMap.keySet()) {
-			GtdProject gtdProject = gtdProjectsMap.get(key);
+		for (String key : projectsMap.keySet()) {
+			Project gtdProject = projectsMap.get(key);
 			gtdProject.setGtdUser(gtdUsersMap.get("user1"));
-			this.gtdProjectDao.persist(gtdProject);
+			this.projectDao.persist(gtdProject);
 		}
 	}
 
 	@Test
 	public void testProjectIntegration() {
-		GtdProject gtdProject = this.gtdProjectDao.findById(1L);
-		assertThat(gtdProject, is(equalTo(gtdProjectsMap.get("project1"))));
+		Project gtdProject = this.projectDao.findById(1L);
+		assertThat(gtdProject, is(equalTo(projectsMap.get("project1"))));
 		
 		GtdUser user1 = this.gtdUserDao.findUserByUserName("user1");
-		List<GtdProject> user1Projects = this.gtdProjectDao.findGTDProjectsByGtdUser(user1.getUsername(), 0, 10);
-		assertThat(user1Projects, hasItems(gtdProjectsMap.values().toArray(new GtdProject[0])));
+		List<Project> user1Projects = this.projectDao.findProjectsByGtdUser(user1.getUsername(), 0, 10);
+		assertThat(user1Projects, hasItems(projectsMap.values().toArray(new Project[0])));
 	
-		assertThat(this.gtdProjectDao.countProjectsByUserName(user1.getUsername()), is(5L));
-		this.gtdProjectDao.remove(gtdProject);
-		assertThat( this.gtdProjectDao.findById(1L), is(nullValue()));
+		assertThat(this.projectDao.countProjectsByUserName(user1.getUsername()), is(5L));
+		this.projectDao.remove(gtdProject);
+		assertThat( this.projectDao.findById(1L), is(nullValue()));
 	}
 }
