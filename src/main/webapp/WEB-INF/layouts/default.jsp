@@ -55,17 +55,24 @@
         </div>
       </div>
     </div>
-
+    <c:if test="${feature=='tasks'}">
+      <c:set var="tasksclass" value="active"/>
+    </c:if>
+    <c:if test="${feature=='contexts'}">
+      <c:set var="contextsclass" value="active"/>
+    </c:if>
+    <c:if test="${feature=='projects'}">
+      <c:set var="projectsclass" value="active"/>
+    </c:if>
     <div class="container-fluid">
       <div class="row-fluid">
         <div class="span2">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              <li class="nav-header">Sidebar</li>
-              <li class="active"><a href="#">Link</a></li>
-              <li><a href="${tasksHomeUrl}"><spring:message code="sidebar.tasks"/></a></li>
-              <li><a href="${contextsHomeUrl}"><spring:message code="sidebar.contexts"/></a></li>
-              <li><a href="${projectsHomeUrl}"><spring:message code="sidebar.projects"/></a></li>
+              <li class="nav-header"></li>
+              <li class="${tasksclass}"><a href="${tasksHomeUrl}"><spring:message code="sidebar.tasks"/></a></li>
+              <li class="${contextsclass}"><a href="${contextsHomeUrl}"><spring:message code="sidebar.contexts"/></a></li>
+              <li class="${projectsclass}"><a href="${projectsHomeUrl}"><spring:message code="sidebar.projects"/></a></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
@@ -74,7 +81,7 @@
       <hr>
 
       <footer>
-        <p>&copy; Biju Kunjummen 2012</p>
+        <p>&copy; Biju 2012</p>
       </footer>
 
     </div>

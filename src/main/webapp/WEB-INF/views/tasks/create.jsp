@@ -34,7 +34,8 @@
 		</form:select>
 		<form:errors cssClass="error" id="name_error_id" path="context" />
 		<br />			
-		<label for="task_isdone"><spring:message code="task.create.isdone"/></label><form:checkbox path="isDone"/>
+		<label for="task_isdone"><spring:message code="task.create.isdone"/></label>
+		<form:checkbox path="isDone"/>
 		<br />			
 		<div class="submit" id="submit">
 			<spring:message code="button_save" var="save_button" htmlEscape="false" />

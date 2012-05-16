@@ -4,4 +4,10 @@
     <definition extends="default" name="projects/list">
         <put-attribute name="body" value="/WEB-INF/views/projects/list.jsp"/>
     </definition>
+    <definition extends="default" name="projects/create">
+    	<put-attribute name="body" value="/WEB-INF/views/projects/create.jsp"/>
+    </definition>
+    <definition extends="default" name="projects/update">
+    	<put-attribute name="body" value="/WEB-INF/views/projects/update.jsp"/>
+    </definition>    
 </tiles-definitions>
