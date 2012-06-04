@@ -5,20 +5,20 @@
 <%@ taglib tagdir="/WEB-INF/tags/util" prefix="util" %>
 
 <spring:url var="resources" value="/resources" />
-
+<spring:message code="app.name" var="appname"/>
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
-    <title>Love My Tasks</title>
+    <title>${appname}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-
+	<link href="${resources}/css/standard.css" rel="stylesheet">
     <link href="${resources}/css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
       body {
-        padding-top: 60px;
+        padding-top: 50px;
         padding-bottom: 40px;
       }
       .sidebar-nav {
@@ -31,7 +31,6 @@
   </head>
 
   <body>
-
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -40,7 +39,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Project name</a>
+          <a class="brand" href="#">My Tasks</a>
           <div class="nav-collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
@@ -54,12 +53,14 @@
     <div class="container-fluid">
       <div class="row-fluid">
         <div class="span9">
-          <div class="hero-unit">
+          <div class="page-header">
             <h2>My tasks!</h2>
           </div>
         </div>
       </div>
+     
       <tiles:insertAttribute name="body"/> 	
+     
       <hr>
       <footer>
         <p>&copy; Biju Kunjummen 2012</p>

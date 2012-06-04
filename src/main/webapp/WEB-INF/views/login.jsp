@@ -7,10 +7,17 @@
 
 
 <spring:url value="/resources/j_spring_security_check" var="form_url" />
-
 <div class="row-fluid">
-  	<div class="span9">
-  	
+	<div class="span9">
+		<c:if test="${not empty param.login_error}">
+			<div class="alert alert-error">
+				Your login failed. Please try again..<br /> 
+			</div>
+		</c:if>
+	</div>
+</div>
+<div class="row-fluid">
+  	<div class="span9">  	
 		<form:form action="${form_url}" method="POST" class="form-horizontal">
         <fieldset>		
 			<label for="username"><spring:message code="login.username" /> </label> <input type="text" name="j_username"/>

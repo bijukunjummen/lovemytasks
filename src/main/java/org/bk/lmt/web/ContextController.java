@@ -6,11 +6,10 @@ import javax.validation.Valid;
 import org.bk.lmt.domain.Context;
 import org.bk.lmt.service.ContextService;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,19 +18,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @RequestMapping("/contexts")
 @Controller
-public class ContextController {
+public class ContextController extends BaseController{
 	
 	@Resource private ContextService contextService;	
 	
-	@ModelAttribute("feature")
-	public String fromPage(){
+	@Override
+	public String getPageName(){
 		return "contexts";
 	}
 	
 	@RequestMapping(produces="text/html")
 	public String list(@RequestParam(defaultValue="1",value="page", required=false) Integer page, @RequestParam(defaultValue="10", value="size", required=false) Integer size, Model model){
     	Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-    	String userName = ((User)principal).getUsername();
+    	String userName = ((UserDetails)principal).getUsername();
     	model.addAttribute("contexts", this.contextService.findContextsByGtdUserName(userName, page == null ? 0 : (page.intValue() - 1) * size, size));
         float nrOfPages = (float)this.contextService.countContextsByUserName(userName)/size;
         model.addAttribute("maxPages", (int) ((nrOfPages > (int) nrOfPages || nrOfPages == 0.0) ? nrOfPages + 1 : nrOfPages));
@@ -42,7 +41,7 @@ public class ContextController {
 	@RequestMapping(method=RequestMethod.POST, produces="text/html")
 	public String create(@Valid Context context, BindingResult bindingResult, Model model){
     	Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-    	String userName = ((User)principal).getUsername();
+    	String userName = ((UserDetails)principal).getUsername();
 		
 		if (bindingResult.hasErrors()){
 			populateEditForm(model, context);
@@ -62,7 +61,7 @@ public class ContextController {
 	@RequestMapping(method=RequestMethod.PUT, produces="text/html")
 	public String update(@Valid Context context, BindingResult bindingResult, Model model){
     	Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-    	String userName = ((User)principal).getUsername();
+    	String userName = ((UserDetails)principal).getUsername();
 		
 		if (bindingResult.hasErrors()){
 			populateEditForm(model, context);
@@ -76,7 +75,7 @@ public class ContextController {
 	@RequestMapping(value="/{id}", params="form", produces="text/html")
 	public String updateForm(@PathVariable("id") Long id, Model model){
     	Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-    	String userName = ((User)principal).getUsername();
+    	String userName = ((UserDetails)principal).getUsername();
 		populateEditForm(model, this.contextService.findById(id));
 		return "contexts/update";
 	}
@@ -88,7 +87,7 @@ public class ContextController {
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "text/html")
 	public String delete(@PathVariable("id") Long id,  @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model model){
     	Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-    	String userName = ((User)principal).getUsername();
+    	String userName = ((UserDetails)principal).getUsername();
     	Context context = this.contextService.findById(id);
 		this.contextService.remove(context);
         model.asMap().clear();

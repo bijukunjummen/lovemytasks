@@ -4,21 +4,27 @@
 
   <jsp:output omit-xml-declaration="yes" />
 
+  <spring:url value="/resources/js/jquery-1.7.2.js"  var="jqueryjs" />
+  <spring:url value="/resources/js/jquery.dataTables.js" var="datatablesjs" />
+  <spring:url value="/resources/js/jquery.jeditable.js" var="jeditablejs" />
+  <spring:url value="/resources/js/bootstrap.min.js" var="bootstrapjs" />
 
-  <spring:url value="/resources/ext-js/ext-all.js"  var="ext_js" />
-  <spring:url value="/resources/ext-js/resources/css/ext-all.css" var="ext_css" />
-  <spring:url value="/resources/images/favicon.ico" var="favicon" />
-
-  <link rel="stylesheet" type="text/css" media="screen" href="${ext_css}"></link>
+  <spring:url value="/resources/css/standard.css"  var="standard_css" />
+  <spring:url value="/resources/css/bootstrap-responsive.min.css"  var="bootstrap_responsive_css" />
+  <spring:url value="/resources/css/bootstrap.min.css"  var="bootstrap_css" />
+  <spring:url value="/resources/css/jquery.dataTables.css" var="datatables_css" />
   
-  <link rel="SHORTCUT ICON" href="${favicon}" />
+  
+   
+  <link rel="stylesheet" type="text/css" media="screen" href="${bootstrap_responsive_css}"></link>
+  <link rel="stylesheet" type="text/css" media="screen" href="${bootstrap_css}"></link>
+  <link rel="stylesheet" type="text/css" media="screen" href="${datatables_css}"></link>
+  <link href="${standard_css}" rel="stylesheet"></link>
+  
+  <script src="${jqueryjs}" type="text/javascript"><!-- /required for FF3 and Opera --></script>
+  <script src="${datatablesjs}" type="text/javascript"><!-- /required for FF3 and Opera --></script>
+  <script src="${bootstrapjs}" type="text/javascript"><!-- /required for FF3 and Opera --></script>
+  <script src="${jeditablejs}" type="text/javascript"><!-- /required for FF3 and Opera --></script>
 
-  <!-- Get the user local from the page context (it was set by Spring MVC's locale resolver) -->
-  <c:set var="userLocale">
-    <c:out value="${pageContext.response.locale}" default="en" />
-  </c:set>
-
- 
-  <script src="${ext_js}" type="text/javascript"><!-- /required for FF3 and Opera --></script>
 
 </jsp:root>

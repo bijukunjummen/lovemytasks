@@ -27,7 +27,14 @@
 
 	<!-- register "global" interceptor beans to apply to all registered HandlerMappings -->
 	<mvc:interceptors>
-		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" p:paramName="lang" />
+		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"
+			p:paramName="lang" />
+		<!-- 
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<bean class="org.bk.lmt.spring.LogBillingInterceptor" />
+		</mvc:interceptor>
+		 -->
 	</mvc:interceptors>
 
 	<!-- selects a static view for rendering without the need for an explicit controller -->

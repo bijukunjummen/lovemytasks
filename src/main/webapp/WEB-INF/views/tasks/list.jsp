@@ -6,12 +6,29 @@
 
 <%@ taglib tagdir="/WEB-INF/tags/util" prefix="util"%>
 
+<script type="text/javascript">
+$(document).ready(function(){
+	var oTable = $('#tasklist').dataTable({
+ 		"bPaginate": false,
+        "bLengthChange": false,
+        "bFilter": false,
+        "bSort": false,
+        "bInfo": false,
+        "bAutoWidth": false		
+	});
+
+
+
+
+});
+</script>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <div class="row-fluid">
   	<div class="span1">
 	</div>
   	<div class="span8">
-		<table class="table table-condensed table-bordered">
+		<table class="table table-condensed table-bordered" id="tasklist">
 			<thead>
 				<tr>
 					<th><spring:message code="task.name" /></th>
@@ -21,12 +38,14 @@
 					<th><spring:message code="task.completedDate" /></th>
 					<th><spring:message code="task.isDone" /></th>
 					<th><spring:message code="task.status" /></th>
+					<th></th>
+					<th></th>
 				</tr>
 			</thead>
 			<tbody>
 			<c:forEach items="${tasks}" var="task">
 				<tr>
-					<td><c:out value="${task.title}" /></td>
+					<td id="task_title_${task.id}"><c:out value="${task.title}" /></td>
 					<td><c:out value="${task.project.name}" /></td>
 					<td><c:out value="${task.context.name}" /></td>
 					<td><fmt:formatDate value="${task.startDate}" type="date" /></td>
@@ -34,21 +53,21 @@
 					<td><c:out value="${task.isDone}" /></td>
 					<td><c:out value="${task.status}" /></td>
 					<td><spring:url value="/tasks/${task.id}" var="update_form_url">
-							<spring:param name="form" />
-						</spring:url> 
-						<spring:message code="tasks.edit_task" var="edit_message" htmlEscape="false" /> 
-						<a href="${update_form_url}">${fn:escapeXml(edit_message)}</a>
-					</td>
-					<td>
-						<spring:url value="/tasks/${task.id}" var="delete_form_url" /> 
-						<form:form action="${delete_form_url}" method="DELETE" id="${context.id}_DELETE_FORM">
-							<input name="page" type="hidden" value="${param.page}" />
-							<input name="size" type="hidden" value="${param.size}" />
-							<spring:message code="task.delete_task" var="delete_message" htmlEscape="false" />
-							<input type="submit" value="${fn:escapeXml(delete_message)}" class="btn-small" />
-						</form:form>						
+						<spring:param name="form" />
+					</spring:url> 
+					<spring:message code="tasks.edit_task" var="edit_message" htmlEscape="false" /> 
+					<a href="${update_form_url}">${fn:escapeXml(edit_message)}</a>
+				</td>
+				<td>
+					<spring:url value="/tasks/${task.id}" var="delete_form_url" /> 
+					<form:form action="${delete_form_url}" method="DELETE" id="${task.id}_DELETE_FORM">
+					<input name="page" type="hidden" value="${param.page}" />
+					<input name="size" type="hidden" value="${param.size}" />
+					<spring:message code="project.delete_project" var="delete_message" htmlEscape="false" />
+					<input type="submit" value="${fn:escapeXml(delete_message)}" class="btn-small" />
+				</form:form>						
+			</td>
 					
-					</td>
 				</tr>
 		
 			</c:forEach>
