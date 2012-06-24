@@ -7,6 +7,7 @@
 <%@ taglib tagdir="/WEB-INF/tags/util" prefix="util"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <spring:url value="/contexts" var="submitUrl" />
+<spring:message code="button_save" var="save_button" htmlEscape="false" />
 <div class="row-fluid">
   	<div class="span1">
 	</div>
@@ -19,8 +20,7 @@
 		<form:input path="name" />
 		<form:errors cssClass="error" id="name_error_id" path="name" />
 		<br />
-		<div class="submit" id="submit">
-			<spring:message code="button_save" var="save_button" htmlEscape="false" />
+		<div class="submit" id="submit">	
 			<input id="proceed" type="submit" value="${fn:escapeXml(save_button)}" />
 		</div>
 	</form:form>

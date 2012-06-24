@@ -29,8 +29,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Table(name="tasks")
 @Access(AccessType.FIELD)
 @NamedQueries({
-		@NamedQuery(name="Task.findByUser", query="SELECT task FROM Task AS task WHERE task.gtdUser = :gtdUser"),
-		@NamedQuery(name="Task.countByUser", query="SELECT COUNT(task) FROM Task AS task WHERE task.gtdUser = :gtdUser")
+		@NamedQuery(name="Task.findByUser", query="SELECT task FROM Task AS task WHERE task.taskUser = :taskUser"),
+		@NamedQuery(name="Task.countByUser", query="SELECT COUNT(task) FROM Task AS task WHERE task.taskUser = :taskUser")
 })
 
 public class Task {
@@ -46,7 +46,7 @@ public class Task {
     private String title;
 
     @ManyToOne
-    @JoinColumn(name="gtdproject_id")
+    @JoinColumn(name="project_id")
     private Project project;
 
     @ManyToOne
@@ -67,11 +67,11 @@ public class Task {
     private Boolean isDone;
 
     @Enumerated(EnumType.STRING)
-    private GtdStatus status;
+    private TaskStatus status;
     
     @ManyToOne
-    @JoinColumn(name="gtduser_id")
-    private GtdUser gtdUser;
+    @JoinColumn(name="taskuser_id")
+    private TaskUser taskUser;
 
     public String getTitle() {
         return this.title;
@@ -121,11 +121,11 @@ public class Task {
         this.isDone = isDone;
     }
     
-    public GtdStatus getStatus() {
+    public TaskStatus getStatus() {
         return this.status;
     }
     
-    public void setStatus(GtdStatus status) {
+    public void setStatus(TaskStatus status) {
         this.status = status;
     }
     
@@ -149,12 +149,12 @@ public class Task {
     }
     
     @JsonIgnore
-    public GtdUser getGtdUser() {
-        return this.gtdUser;
+    public TaskUser getTaskUser() {
+        return this.taskUser;
     }
     
-    public void setGtdUser(GtdUser gtdUser) {
-        this.gtdUser = gtdUser;
+    public void setTaskUser(TaskUser taskUser) {
+        this.taskUser = taskUser;
     }
     
     @Override

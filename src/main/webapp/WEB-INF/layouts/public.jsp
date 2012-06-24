@@ -39,7 +39,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">My Tasks</a>
+          <a class="brand" href="#"><spring:message code="app.name"/></a>
           <div class="nav-collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
@@ -63,7 +63,7 @@
      
       <hr>
       <footer>
-        <p>&copy; Biju Kunjummen 2012</p>
+        <p>&copy; <spring:message code="app.copyright"/></p>
       </footer>
 
     </div>

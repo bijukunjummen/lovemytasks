@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.Map;
 
 import org.bk.lmt.dao.ContextDao;
-import org.bk.lmt.dao.GtdUserDao;
+import org.bk.lmt.dao.TaskUserDao;
 import org.bk.lmt.domain.Context;
-import org.bk.lmt.domain.GtdUser;
+import org.bk.lmt.domain.TaskUser;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -26,16 +26,17 @@ import org.springframework.transaction.annotation.Transactional;
 @TransactionConfiguration(defaultRollback = true)
 public class ContextDaoIntegrationTest {
 	@Autowired Map<String, Context> contextsMap;
-	@Autowired Map<String, GtdUser> gtdUsersMap;
+	@Autowired Map<String, TaskUser> usersMap;
 	@Autowired ContextDao contextDao;
-	@Autowired GtdUserDao gtdUserDao;
+	@Autowired TaskUserDao taskUserDao;
 
 	@Before
 	public void setUp() {
-		this.gtdUserDao.persist(gtdUsersMap.get("user1"));
+		System.out.println(this.usersMap.get("user1"));
+		this.taskUserDao.persist(usersMap.get("user1"));
 		for (String key : contextsMap.keySet()) {
 			Context gtdContext = contextsMap.get(key);
-			gtdContext.setGtdUser(gtdUsersMap.get("user1"));
+			gtdContext.setTaskUser(usersMap.get("user1"));
 			gtdContext = this.contextDao.persist(gtdContext);
 		}
 	}
@@ -53,9 +54,6 @@ public class ContextDaoIntegrationTest {
 		List<Context> contextsByUser = this.contextDao.findContextsByGtdUser("user1",0,10);
 		assertThat(contextsByUser, hasItems(contextsMap.get("context1"), contextsMap.get("context2"), contextsMap.get("context3")));
 
-		List<Context> contextsByName = this.contextDao.findContextsByName("context5");
-		
-		assertThat(contextsByName, hasItem(contextsMap.get("context5")));
 
 		this.contextDao.remove(aContext);
 		assertThat(this.contextDao.findById(1L), is(nullValue()));

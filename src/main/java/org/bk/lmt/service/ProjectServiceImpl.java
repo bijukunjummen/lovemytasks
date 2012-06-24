@@ -5,9 +5,9 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import org.bk.lmt.dao.ProjectDao;
-import org.bk.lmt.dao.GtdUserDao;
+import org.bk.lmt.dao.TaskUserDao;
 import org.bk.lmt.domain.Project;
-import org.bk.lmt.domain.GtdUser;
+import org.bk.lmt.domain.TaskUser;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,13 +15,13 @@ import org.springframework.transaction.annotation.Transactional;
 public class ProjectServiceImpl implements ProjectService {
     
     @Resource private ProjectDao projectDao;
-    @Resource private GtdUserDao gtdUserDao;
+    @Resource private TaskUserDao gtdUserDao;
 
     @Transactional
     @Override
     public Project persistForUser(Project gtdProject, String userName) {
-        GtdUser gtdUser = this.gtdUserDao.findUserByUserName(userName);
-        gtdProject.setGtdUser(gtdUser);
+        TaskUser gtdUser = this.gtdUserDao.findUserByUserName(userName);
+        gtdProject.setTaskUser(gtdUser);
         return projectDao.persist(gtdProject);
     }
 
@@ -48,8 +48,8 @@ public class ProjectServiceImpl implements ProjectService {
     @Transactional
     @Override
     public Project updateForUser(Project gtdProject, String userName) {
-        GtdUser gtdUser = this.gtdUserDao.findUserByUserName(userName);
-        gtdProject.setGtdUser(gtdUser);
+        TaskUser gtdUser = this.gtdUserDao.findUserByUserName(userName);
+        gtdProject.setTaskUser(gtdUser);
         return this.projectDao.update(gtdProject);
     }
 
@@ -63,7 +63,7 @@ public class ProjectServiceImpl implements ProjectService {
         this.projectDao = projectDao;
     }
 
-    public void setGtdUserDao(GtdUserDao gtdUserDao) {
+    public void setGtdUserDao(TaskUserDao gtdUserDao) {
         this.gtdUserDao = gtdUserDao;
     }
 

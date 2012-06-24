@@ -2,9 +2,9 @@ package org.bk.lmt.service;
 
 import java.util.List;
 
-import org.bk.lmt.dao.GtdUserDao;
+import org.bk.lmt.dao.TaskUserDao;
 import org.bk.lmt.dao.TasksDao;
-import org.bk.lmt.domain.GtdUser;
+import org.bk.lmt.domain.TaskUser;
 import org.bk.lmt.domain.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,21 +14,21 @@ import org.springframework.transaction.annotation.Transactional;
 public class TaskServiceImpl implements TaskService {
 	
 	@Autowired private TasksDao taskDao;
-	@Autowired private GtdUserDao gtdUserDao;
+	@Autowired private TaskUserDao gtdUserDao;
 	
 	@Override
 	@Transactional
 	public Task persistForUser(Task task, String username) {
-		GtdUser user = this.gtdUserDao.findUserByUserName(username);
-		task.setGtdUser(user);
+		TaskUser user = this.gtdUserDao.findUserByUserName(username);
+		task.setTaskUser(user);
 		return this.taskDao.persist(task);
 	}
 
 	@Override
 	@Transactional
 	public Task updateForUser(Task task, String username) {
-		GtdUser user = this.gtdUserDao.findUserByUserName(username);
-		task.setGtdUser(user);
+		TaskUser user = this.gtdUserDao.findUserByUserName(username);
+		task.setTaskUser(user);
 		return this.taskDao.update(task);
 	}
 
@@ -39,13 +39,13 @@ public class TaskServiceImpl implements TaskService {
 
 	@Override
 	public List<Task> findTasksByUser(String username, int firstResult, int maxResults) {
-		GtdUser user = this.gtdUserDao.findUserByUserName(username);
-		return this.taskDao.findTasksByGtdUser(user, firstResult, maxResults );
+		TaskUser user = this.gtdUserDao.findUserByUserName(username);
+		return this.taskDao.findTasksByUser(user, firstResult, maxResults );
 	}
 
 	@Override
 	public Long countTasksByUser(String username) {
-		GtdUser user = this.gtdUserDao.findUserByUserName(username);
+		TaskUser user = this.gtdUserDao.findUserByUserName(username);
 		return this.taskDao.countTasksByUser(user);
 	}
 

@@ -24,8 +24,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Entity
 @Table(name="projects")
 @NamedQueries({
-	@NamedQuery(name="Project.findByUser", query="select o from Project o where o.gtdUser.username=:userName"),
-	@NamedQuery(name="Project.countByUser", query="select count(o) from Project o where o.gtdUser.username=:userName")	
+	@NamedQuery(name="Project.findByUser", query="select o from Project o where o.taskUser.username=:userName"),
+	@NamedQuery(name="Project.countByUser", query="select count(o) from Project o where o.taskUser.username=:userName")	
 }
 		
 )
@@ -47,8 +47,8 @@ public class Project{
     private Boolean isDone;
 
     @ManyToOne
-    @JoinColumn(name="gtduser_id")
-    private GtdUser gtdUser;
+    @JoinColumn(name="taskuser_id")
+    private TaskUser taskUser;
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -108,12 +108,12 @@ public class Project{
     }
     
     @JsonIgnore
-    public GtdUser getGtdUser() {
-        return this.gtdUser;
+    public TaskUser getTaskUser() {
+        return this.taskUser;
     }
     
-    public void setGtdUser(GtdUser gtdUser) {
-        this.gtdUser = gtdUser;
+    public void setTaskUser(TaskUser taskUser) {
+        this.taskUser = taskUser;
     }
 
     public String toString() {

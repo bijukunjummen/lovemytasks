@@ -5,9 +5,9 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import org.bk.lmt.dao.ContextDao;
-import org.bk.lmt.dao.GtdUserDao;
+import org.bk.lmt.dao.TaskUserDao;
 import org.bk.lmt.domain.Context;
-import org.bk.lmt.domain.GtdUser;
+import org.bk.lmt.domain.TaskUser;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,13 +15,13 @@ import org.springframework.transaction.annotation.Transactional;
 public class ContextServiceImpl implements ContextService{
 
 	@Resource private ContextDao contextDao;
-	@Resource private GtdUserDao gtdUserDao;
+	@Resource private TaskUserDao gtdUserDao;
 
 	@Override
 	@Transactional
     public Context persistForUser(Context gtdContext, String userName) {
-		GtdUser gtdUser = this.gtdUserDao.findUserByUserName(userName);
-		gtdContext.setGtdUser(gtdUser);
+		TaskUser taskUser = this.gtdUserDao.findUserByUserName(userName);
+		gtdContext.setTaskUser(taskUser);
 	    return contextDao.persist(gtdContext);
     }	
 	
@@ -49,8 +49,8 @@ public class ContextServiceImpl implements ContextService{
 	@Override
 	@Transactional
     public Context updateForUser(Context gtdContext, String userName) {
-		GtdUser gtdUser = this.gtdUserDao.findUserByUserName(userName);
-		gtdContext.setGtdUser(gtdUser);		
+		TaskUser gtdUser = this.gtdUserDao.findUserByUserName(userName);
+		gtdContext.setTaskUser(gtdUser);		
 		return this.contextDao.update(gtdContext);
     }
 
@@ -66,7 +66,7 @@ public class ContextServiceImpl implements ContextService{
     	this.contextDao = contextDao;
     }
 
-	public void setGtdUserDao(GtdUserDao gtdUserDao) {
+	public void setGtdUserDao(TaskUserDao gtdUserDao) {
     	this.gtdUserDao = gtdUserDao;
     }
 

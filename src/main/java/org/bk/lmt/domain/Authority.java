@@ -6,7 +6,7 @@ import javax.persistence.Enumerated;
 
 
 @Embeddable
-public class GtdAuthority {
+public class Authority {
 	
     @Enumerated(EnumType.STRING)
     private AuthorityNames name;

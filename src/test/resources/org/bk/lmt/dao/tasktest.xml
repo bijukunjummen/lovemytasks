@@ -17,11 +17,12 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 		
 	<import resource="classpath:/META-INF/spring/applicationContext.xml"/>
+	<import resource="classpath:/META-INF/spring/applicationContext-overrides.xml"/>
 	
 	<bean name="task1" class="org.bk.lmt.domain.Task" p:title="task1"></bean>
 	
-	<bean name="user1" class="org.bk.lmt.domain.GtdUser" p:username="user1" p:fullname="testUser" p:password="test"/>
-	<bean name="user2" class="org.bk.lmt.domain.GtdUser" p:username="user2" p:fullname="testUser" p:password="test"/>
+	<bean name="user1" class="org.bk.lmt.domain.TaskUser" p:username="user1" p:fullname="testUser" p:password="test"/>
+	<bean name="user2" class="org.bk.lmt.domain.TaskUser" p:username="user2" p:fullname="testUser" p:password="test"/>
 	<bean name="context1" class="org.bk.lmt.domain.Context"  p:name="context1"/>
     <bean name="context2" class="org.bk.lmt.domain.Context"  p:name="context2"/>
 	<jdbc:embedded-database id="dataSource" type="H2"></jdbc:embedded-database>

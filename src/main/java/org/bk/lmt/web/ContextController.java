@@ -5,8 +5,6 @@ import javax.validation.Valid;
 
 import org.bk.lmt.domain.Context;
 import org.bk.lmt.service.ContextService;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -29,8 +27,7 @@ public class ContextController extends BaseController{
 	
 	@RequestMapping(produces="text/html")
 	public String list(@RequestParam(defaultValue="1",value="page", required=false) Integer page, @RequestParam(defaultValue="10", value="size", required=false) Integer size, Model model){
-    	Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-    	String userName = ((UserDetails)principal).getUsername();
+    	String userName = getUserDetails().getUsername();
     	model.addAttribute("contexts", this.contextService.findContextsByGtdUserName(userName, page == null ? 0 : (page.intValue() - 1) * size, size));
         float nrOfPages = (float)this.contextService.countContextsByUserName(userName)/size;
         model.addAttribute("maxPages", (int) ((nrOfPages > (int) nrOfPages || nrOfPages == 0.0) ? nrOfPages + 1 : nrOfPages));
@@ -40,8 +37,7 @@ public class ContextController extends BaseController{
 	
 	@RequestMapping(method=RequestMethod.POST, produces="text/html")
 	public String create(@Valid Context context, BindingResult bindingResult, Model model){
-    	Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-    	String userName = ((UserDetails)principal).getUsername();
+    	String userName = getUserDetails().getUsername();
 		
 		if (bindingResult.hasErrors()){
 			populateEditForm(model, context);
@@ -60,8 +56,7 @@ public class ContextController extends BaseController{
 	
 	@RequestMapping(method=RequestMethod.PUT, produces="text/html")
 	public String update(@Valid Context context, BindingResult bindingResult, Model model){
-    	Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-    	String userName = ((UserDetails)principal).getUsername();
+    	String userName = getUserDetails().getUsername();
 		
 		if (bindingResult.hasErrors()){
 			populateEditForm(model, context);
@@ -74,8 +69,7 @@ public class ContextController extends BaseController{
 	
 	@RequestMapping(value="/{id}", params="form", produces="text/html")
 	public String updateForm(@PathVariable("id") Long id, Model model){
-    	Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-    	String userName = ((UserDetails)principal).getUsername();
+//    	String userName = getUserDetails().getUsername();
 		populateEditForm(model, this.contextService.findById(id));
 		return "contexts/update";
 	}
@@ -86,8 +80,7 @@ public class ContextController extends BaseController{
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "text/html")
 	public String delete(@PathVariable("id") Long id,  @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model model){
-    	Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-    	String userName = ((UserDetails)principal).getUsername();
+//    	String userName = getUserDetails().getUsername();
     	Context context = this.contextService.findById(id);
 		this.contextService.remove(context);
         model.asMap().clear();

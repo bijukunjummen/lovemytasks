@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.Map;
 
 import org.bk.lmt.dao.ProjectDao;
-import org.bk.lmt.dao.GtdUserDao;
+import org.bk.lmt.dao.TaskUserDao;
 import org.bk.lmt.domain.Project;
-import org.bk.lmt.domain.GtdUser;
+import org.bk.lmt.domain.TaskUser;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,18 +27,18 @@ public class ProjectDaoIntegrationTest {
 
 	@Autowired Map<String, Project> projectsMap;
 
-	@Autowired Map<String, GtdUser> gtdUsersMap;
+	@Autowired Map<String, TaskUser> usersMap;
 
 	@Autowired ProjectDao projectDao;
 
-	@Autowired GtdUserDao gtdUserDao;
+	@Autowired TaskUserDao taskUserDao;
 
 	@Before
 	public void setUp() {
-		this.gtdUserDao.persist(gtdUsersMap.get("user1"));
+		this.taskUserDao.persist(usersMap.get("user1"));
 		for (String key : projectsMap.keySet()) {
 			Project gtdProject = projectsMap.get(key);
-			gtdProject.setGtdUser(gtdUsersMap.get("user1"));
+			gtdProject.setTaskUser(usersMap.get("user1"));
 			this.projectDao.persist(gtdProject);
 		}
 	}
@@ -48,7 +48,7 @@ public class ProjectDaoIntegrationTest {
 		Project gtdProject = this.projectDao.findById(1L);
 		assertThat(gtdProject, is(equalTo(projectsMap.get("project1"))));
 		
-		GtdUser user1 = this.gtdUserDao.findUserByUserName("user1");
+		TaskUser user1 = this.taskUserDao.findUserByUserName("user1");
 		List<Project> user1Projects = this.projectDao.findProjectsByGtdUser(user1.getUsername(), 0, 10);
 		assertThat(user1Projects, hasItems(projectsMap.values().toArray(new Project[0])));
 	

@@ -4,16 +4,11 @@ import java.security.Principal;
 
 import javax.validation.Valid;
 
-import org.bk.lmt.domain.GtdUser;
 import org.bk.lmt.domain.Task;
 import org.bk.lmt.service.ContextService;
 import org.bk.lmt.service.ProjectService;
 import org.bk.lmt.service.TaskService;
-import org.bk.lmt.types.CustomUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -37,7 +32,7 @@ public class TaskController extends BaseController{
 	@RequestMapping(produces="text/html")
 	public String list(@RequestParam(defaultValue="1", value="page", required=false) Integer page, 
 				@RequestParam(defaultValue="10", value="size", required=false) Integer size, Principal principal, Model model){
-		String userName = ((CustomUserDetails)((Authentication)principal).getPrincipal()).getUsername();
+		String userName = this.getUserDetails().getUsername();
 		int firstResult = (page==null)?0:(page-1) * size;
 		model.addAttribute("tasks",this.taskService.findTasksByUser(userName, firstResult, size));
 		float nrOfPages = (float)this.taskService.countTasksByUser(userName)/size;
@@ -48,8 +43,7 @@ public class TaskController extends BaseController{
 	
 	@RequestMapping(method=RequestMethod.POST, produces="text/html")
 	public String create(@Valid Task task, BindingResult bindingResult, Model model){
-    	Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-    	String userName = ((UserDetails)principal).getUsername();
+    	String userName = this.getUserDetails().getUsername();
 		if (bindingResult.hasErrors()){
 			populateEditForm(model, task, userName);
 			return "tasks/create";
@@ -61,8 +55,7 @@ public class TaskController extends BaseController{
 	
 	@RequestMapping(params="form", produces="text/html")
 	public String createForm(Model model){
-		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		String userName = ((UserDetails)principal).getUsername();
+		String userName = this.getUserDetails().getUsername();
 		
 		populateEditForm(model, new Task(), userName);
 		return "tasks/create";
@@ -70,16 +63,14 @@ public class TaskController extends BaseController{
 	
 	@RequestMapping(value="/{id}", params="form", produces="text/html")
 	public String updateForm(@PathVariable("id") Long id,  Model model){
-		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-    	String userName = ((UserDetails)principal).getUsername();
+    	String userName = this.getUserDetails().getUsername();
     	populateEditForm(model, this.taskService.findById(id), userName);
 		return "tasks/update";
 	}
 	
 	@RequestMapping(method=RequestMethod.PUT, produces="text/html")
 	public String update(@Valid Task task, BindingResult bindingResult, Model model){
-		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-    	String userName = ((UserDetails)principal).getUsername();
+    	String userName = this.getUserDetails().getUsername();
     	if (bindingResult.hasErrors()){
     		populateEditForm(model, task, userName);
     		return "tasks/update";
@@ -91,8 +82,7 @@ public class TaskController extends BaseController{
 	
 	@RequestMapping(value="{id}", method=RequestMethod.DELETE, produces="text/html")
 	public String delete(@PathVariable("id") Long id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model model){
-    	Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-    	String userName = ((UserDetails)principal).getUsername();
+//    	String userName = this.getAuthentication().getUsername();
     	Task task = this.taskService.findById(id);
     	this.taskService.remove(task);
         model.asMap().clear();

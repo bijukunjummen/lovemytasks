@@ -1,5 +1,6 @@
 package org.bk.lmt.domain;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -11,6 +12,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Version;
 import javax.validation.constraints.NotNull;
@@ -19,8 +22,15 @@ import javax.validation.constraints.Size;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 @Entity
-@Table(name="gtdusers")
-public class GtdUser{
+@Table(name="taskusers")
+
+@NamedQueries({
+	@NamedQuery(name="TaskUser.findUserByUserName", query="select o from TaskUser o where o.username=:username"),
+	@NamedQuery(name="TaskUser.findAll", query="select o from TaskUser o")
+})
+public class TaskUser implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -43,8 +53,8 @@ public class GtdUser{
 	private Integer version;
 	
 	@ElementCollection
-	@CollectionTable(name="gtdauthorities", joinColumns=@JoinColumn(name="gtduser_id"))
-	private Set<GtdAuthority> gtdAuthorities= new HashSet<GtdAuthority>();
+	@CollectionTable(name="authorities", joinColumns=@JoinColumn(name="taskuser_id"))
+	private Set<Authority> authorities= new HashSet<Authority>();
 
 	public String getFullname() {
 		return this.fullname;
@@ -88,12 +98,12 @@ public class GtdUser{
 	}
 
 	
-	public Set<GtdAuthority> getGtdAuthorities() {
-    	return gtdAuthorities;
+	public Set<Authority> getAuthorities() {
+    	return authorities;
     }
 
-	public void setGtdAuthorities(Set<GtdAuthority> gtdAuthorities) {
-    	this.gtdAuthorities = gtdAuthorities;
+	public void setAuthorities(Set<Authority> authorities) {
+    	this.authorities = authorities;
     }
 
 	@Override

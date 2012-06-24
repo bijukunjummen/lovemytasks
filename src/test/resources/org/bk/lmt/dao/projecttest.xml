@@ -17,6 +17,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<import resource="classpath:/META-INF/spring/applicationContext.xml" />
+	<import resource="classpath:/META-INF/spring/applicationContext-overrides.xml"/>
 	<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
         <property name="customEditors">
             <map>
@@ -26,8 +27,8 @@
             </map>
         </property>
     </bean>
-	<bean name="user1" class="org.bk.lmt.domain.GtdUser" p:username="user1" p:fullname="testUser" p:password="test" />
-	<bean name="user2" class="org.bk.lmt.domain.GtdUser" p:username="user1" p:fullname="testUser" p:password="test" />
+	<bean name="user1" class="org.bk.lmt.domain.TaskUser" p:username="user1" p:fullname="testUser" p:password="test" />
+	<bean name="user2" class="org.bk.lmt.domain.TaskUser" p:username="user1" p:fullname="testUser" p:password="test" />
 
 	<bean name="project1" class="org.bk.lmt.domain.Project" p:name="project1" p:startDate="2010-01-04T12:08:56.235-0800" p:completedDate="2010-01-04T12:08:56.235-0800"
 		p:isDone="true" />

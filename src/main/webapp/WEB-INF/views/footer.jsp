@@ -1,1 +1,1 @@
-<div class="small">© Sequentra</div> 
+<div class="small">© Biju</div> 

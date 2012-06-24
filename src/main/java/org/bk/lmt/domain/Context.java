@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Version;
 import javax.validation.constraints.Size;
@@ -17,14 +19,18 @@ import org.codehaus.jackson.annotate.JsonIgnore;
 
 @Entity
 @Table(name="contexts")
+@NamedQueries({
+	@NamedQuery(name="Context.findContextByTaskUser", query="SELECT o FROM Context o WHERE o.taskUser.username = :userName order by o.name"),
+	@NamedQuery(name="Context.countContextByTaskUser", query="select count(o) from Context o where o.taskUser.username=:userName")
+})
 public class Context {
 
     @Size(min = 1, max = 50)
     private String name;
 
     @ManyToOne
-    @JoinColumn(name="gtduser_id")
-    private GtdUser gtdUser;
+    @JoinColumn(name="taskuser_id")
+    private TaskUser taskUser;
     
     public String getName() {
         return this.name;
@@ -59,12 +65,12 @@ public class Context {
     }
 
     @JsonIgnore
-    public GtdUser getGtdUser() {
-        return this.gtdUser;
+    public TaskUser getTaskUser() {
+        return this.taskUser;
     }
     
-    public void setGtdUser(GtdUser gtdUser) {
-        this.gtdUser = gtdUser;
+    public void setTaskUser(TaskUser taskUser) {
+        this.taskUser = taskUser;
     }
 
 	@Override

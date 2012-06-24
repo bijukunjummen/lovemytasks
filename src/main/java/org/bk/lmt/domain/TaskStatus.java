@@ -1,6 +1,6 @@
 package org.bk.lmt.domain;
 
 
-public enum GtdStatus {
+public enum TaskStatus {
     ININBOX, DOASAP, SCHEDULED, DELEGATED
 }
