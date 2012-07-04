@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
-<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	version="3.0" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
-
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
     
     <display-name>lovemytasks</display-name>
     
@@ -15,7 +13,7 @@
     
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath*:META-INF/spring/applicationContext*.xml</param-value>
+        <param-value>classpath:/META-INF/spring/applicationContext.xml,classpath:/META-INF/spring/applicationContext-security.xml</param-value>
     </context-param>
     
     <filter>
@@ -80,7 +78,7 @@
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>/WEB-INF/spring/webmvc-config.xml</param-value>
+            <param-value>classpath:/META-INF/spring/web/webmvc-config.xml,classpath:/META-INF/spring/web/webmvc-tiles-config.xml</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 
 @RequestMapping("/contexts")
@@ -36,7 +37,7 @@ public class ContextController extends BaseController{
 	}
 	
 	@RequestMapping(method=RequestMethod.POST, produces="text/html")
-	public String create(@Valid Context context, BindingResult bindingResult, Model model){
+	public String create(@Valid Context context, BindingResult bindingResult, Model model, RedirectAttributes redirectAttributes){
     	String userName = getUserDetails().getUsername();
 		
 		if (bindingResult.hasErrors()){
