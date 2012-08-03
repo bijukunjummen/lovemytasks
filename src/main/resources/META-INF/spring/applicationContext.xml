@@ -14,8 +14,16 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
                             
     <context:property-placeholder location="classpath*:META-INF/spring/database.properties" local-override="true" properties-ref="localProperties"/>
+    <!-- bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    	<property name="location" value="classpath*:META-INF/spring/database.properties"></property>
+    	<property name="localOverride" value="true"></property>
+    	<property name="properties">
+    		<ref bean="localProperties"/>
+    	</property>
+    </bean -->
 
     <util:properties id="localProperties">
+    	
     </util:properties>
     
     <context:spring-configured/>
@@ -41,5 +49,7 @@
         <property name="dataSource" ref="dataSource"/>
         <property name="persistenceUnitName" value="${persistenceUnitName}"></property>
     </bean>
+    
+    
     
 </beans>

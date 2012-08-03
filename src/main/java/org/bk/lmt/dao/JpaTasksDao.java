@@ -40,4 +40,14 @@ public class JpaTasksDao extends JpaDao<Long, Task> implements TasksDao{
 		q.setParameter("taskUser", taskUser);
 		return q.getSingleResult();
 	}
+
+	@Override
+	public List<Task> findTasksByUserAndNameFilter(TaskUser taskUser, String namePattern, int firstResult, int maxResults) {
+        if (taskUser == null) throw new IllegalArgumentException("The taskUser argument is required");
+        EntityManager em = this.getEntityManager();
+        TypedQuery<Task> q = em.createNamedQuery("Task.findByUserAndNamePattern", Task.class);
+        q.setParameter("taskUser", taskUser);
+        q.setParameter("namePattern", "%"+namePattern+"%");
+        return q.setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+	}
 }

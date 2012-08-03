@@ -1,5 +1,7 @@
 package org.bk.lmt.web;
 
+import java.io.File;
+
 import org.bk.lmt.domain.TaskUser;
 import org.bk.lmt.types.CustomUserDetails;
 import org.junit.Test;
@@ -18,15 +20,25 @@ public class ContextControllerSpringMvcTest {
 		user.setUsername("user1");user.setPassword("");
 		Authentication authentication = new UsernamePasswordAuthenticationToken(new CustomUserDetails(user), null);
 		SecurityContextHolder.getContext().setAuthentication(authentication);
-		xmlConfigSetup("classpath:/META-INF/spring/webmvc-config.xml", "classpath:/org/bk/lmt/web/contextcontrollertest.xml").build()
+		
+		xmlConfigSetup("classpath:/META-INF/spring/web/webmvc-config.xml","classpath:/META-INF/spring/web/webmvc-config-tiles.xml", "classpath:/org/bk/lmt/web/contextcontrollertest.xml")
+			.configureWebAppRootDir("src/main/webapp", false).build()
 			.perform(post("/contexts").param("name", "context1"))
 			.andExpect(status().isOk())
 			.andExpect(view().name("redirect:/contexts"));
 		
-		xmlConfigSetup("classpath:/META-INF/spring/webmvc-config.xml", "classpath:/org/bk/lmt/web/contextcontrollertest.xml").build()
+		xmlConfigSetup("classpath:/META-INF/spring/web/webmvc-config.xml","classpath:/META-INF/spring/web/webmvc-config-tiles.xml", "classpath:/org/bk/lmt/web/contextcontrollertest.xml")
+			.configureWebAppRootDir("src/main/webapp", false).build()
 			.perform(get("/contexts"))
 			.andExpect(status().isOk())
 			.andExpect(view().name("contexts/list"));
+		
+		xmlConfigSetup("classpath:/META-INF/spring/web/webmvc-config.xml","classpath:/META-INF/spring/web/webmvc-config-tiles.xml", "classpath:/org/bk/lmt/web/contextcontrollertest.xml")
+		.configureWebAppRootDir("src/main/webapp", false).build()
+		.perform(get("/contexts/exception"))
+		.andExpect(status().isOk())
+		.andExpect(view().name("exceptionPage"));
+		
 	}
 
 }

@@ -28,7 +28,7 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations={"classpath:/META-INF/spring/webmvc-config.xml", "contextcontrollertest.xml"})
+@ContextConfiguration(locations={"classpath:/META-INF/spring/web/webmvc-config.xml", "contextcontrollertest.xml"})
 public class ContextControllerTest {
 
     @Autowired

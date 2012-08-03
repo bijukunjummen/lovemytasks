@@ -42,6 +42,12 @@ public class TaskServiceImpl implements TaskService {
 		TaskUser user = this.gtdUserDao.findUserByUserName(username);
 		return this.taskDao.findTasksByUser(user, firstResult, maxResults );
 	}
+	
+	@Override
+	public List<Task> findTasksByUserAndNameFilter(String username, String namePattern, int firstResult, int maxResults) {
+		TaskUser user = this.gtdUserDao.findUserByUserName(username);
+		return this.taskDao.findTasksByUserAndNameFilter(user, namePattern, firstResult, maxResults );
+	}
 
 	@Override
 	public Long countTasksByUser(String username) {
@@ -54,5 +60,7 @@ public class TaskServiceImpl implements TaskService {
 	public void remove(Task task) {
 		this.taskDao.remove(task);
 	}
+
+
 
 }

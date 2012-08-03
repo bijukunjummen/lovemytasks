@@ -36,7 +36,10 @@
 		<br />			
 		<label for="task_isdone"><spring:message code="task.create.isdone"/></label>
 		<form:checkbox path="isDone"/>
-		<br />			
+		<br />		
+		<label for="task_startDate"><spring:message code="task.create.startDate"/></label>	
+		<form:input path="startDate"/>
+		
 		<div class="submit" id="submit">
 			<spring:message code="button_save" var="save_button" htmlEscape="false" />
 			<input id="proceed" type="submit" value="${fn:escapeXml(save_button)}" />

@@ -1,0 +1,1889 @@
+---- AspectJ Properties ---
+AspectJ Compiler 1.6.12 built on Tuesday Oct 18, 2011 at 17:52:06 GMT
+---- Dump Properties ---
+Dump file: ajcore.20120727.193819.078.txt
+Dump reason: abort
+Dump on exception: true
+Dump at exit condition: abort
+---- System Properties ---
+java.runtime.name=Java(TM) SE Runtime Environment
+sun.boot.library.path=C:\Java\jdk1.7.0_05\jre\bin
+java.vm.version=23.1-b03
+java.vm.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+guice.disable.misplaced.annotation.check=true
+path.separator=;
+java.vm.name=Java HotSpot(TM) Client VM
+file.encoding.pkg=sun.io
+user.country=US
+user.script=
+sun.java.launcher=SUN_STANDARD
+sun.os.patch.level=Service Pack 3
+java.vm.specification.name=Java Virtual Machine Specification
+user.dir=C:\learn\lovemytasks
+java.runtime.version=1.7.0_05-b05
+java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+java.endorsed.dirs=C:\Java\jdk1.7.0_05\jre\lib\endorsed
+os.arch=x86
+java.io.tmpdir=C:\TEMP\
+line.separator=
+
+java.vm.specification.vendor=Oracle Corporation
+user.variant=
+os.name=Windows XP
+classworlds.conf=C:\javautil\apache-maven-3.0.4\bin\..\bin\m2.conf
+sun.jnu.encoding=Cp1252
+java.library.path=C:\Java\jdk1.7.0_05\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\util\git\\bin;C:\util\git\\mingw\bin;C:\util\git\\cmd;C:\Ruby193\bin;C:\java\jdk1.6.0_20\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Visual Networks\Dial Analysis\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\WINDOWS\system32\WindowsPowerShell\v1.0;C:\Program Files\Perforce;C:\javautil\apache-ant-1.8.3\bin;C:\javautil\apache-maven-3.0.4\bin;C:\javautil\typesafe-stack\bin;C:\Program Files\Windows Imaging\;C:\javautil\spring-roo-1.2.2.RELEASE\bin;.
+java.specification.name=Java Platform API Specification
+java.class.version=51.0
+sun.management.compiler=HotSpot Client Compiler
+os.version=5.1
+user.home=C:\Documents and Settings\ckunjub
+user.timezone=America/New_York
+java.awt.printerjob=sun.awt.windows.WPrinterJob
+file.encoding=Cp1252
+java.specification.version=1.7
+java.class.path=C:\javautil\apache-maven-3.0.4\bin\..\boot\plexus-classworlds-2.4.jar
+user.name=ckunjub
+java.vm.specification.version=1.7
+sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher test
+java.home=C:\Java\jdk1.7.0_05\jre
+sun.arch.data.model=32
+user.language=en
+java.specification.vendor=Oracle Corporation
+awt.toolkit=sun.awt.windows.WToolkit
+java.vm.info=mixed mode, sharing
+java.version=1.7.0_05
+java.ext.dirs=C:\Java\jdk1.7.0_05\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+sun.boot.class.path=C:\Java\jdk1.7.0_05\jre\lib\resources.jar;C:\Java\jdk1.7.0_05\jre\lib\rt.jar;C:\Java\jdk1.7.0_05\jre\lib\sunrsasign.jar;C:\Java\jdk1.7.0_05\jre\lib\jsse.jar;C:\Java\jdk1.7.0_05\jre\lib\jce.jar;C:\Java\jdk1.7.0_05\jre\lib\charsets.jar;C:\Java\jdk1.7.0_05\jre\lib\jfr.jar;C:\Java\jdk1.7.0_05\jre\classes
+java.vendor=Oracle Corporation
+maven.home=C:\javautil\apache-maven-3.0.4\bin\..
+file.separator=\
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+sun.io.unicode.encoding=UnicodeLittle
+sun.cpu.endian=little
+sun.desktop=windows
+sun.cpu.isalist=pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86
+---- Command Line ---
+-encoding
+UTF-8
+-outxml
+-showWeaveInfo
+-source
+1.7
+-target
+1.7
+-verbose
+-classpath
+C:\Documents and Settings\ckunjub\.m2\repository\junit\junit-dep\4.10\junit-dep-4.10.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\hamcrest\hamcrest-core\1.2.1\hamcrest-core-1.2.1.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\hamcrest\hamcrest-library\1.2.1\hamcrest-library-1.2.1.jar;C:\Documents and Settings\ckunjub\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\slf4j\slf4j-api\1.6.4\slf4j-api-1.6.4.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\slf4j\jcl-over-slf4j\1.6.4\jcl-over-slf4j-1.6.4.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\slf4j\slf4j-log4j12\1.6.4\slf4j-log4j12-1.6.4.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\aspectj\aspectjrt\1.6.12\aspectjrt-1.6.12.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\aspectj\aspectjweaver\1.6.12\aspectjweaver-1.6.12.jar;C:\Documents and Settings\ckunjub\.m2\repository\javax\servlet\servlet-api\2.5\servlet-api-2.5.jar;C:\Documents and Settings\ckunjub\.m2\repository\net\sf\flexjson\flexjson\2.0\flexjson-2.0.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-core\3.1.1.RELEASE\spring-core-3.1.1.RELEASE.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-test\3.1.1.RELEASE\spring-test-3.1.1.RELEASE.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-aop\3.1.1.RELEASE\spring-aop-3.1.1.RELEASE.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-aspects\3.1.1.RELEASE\spring-aspects-3.1.1.RELEASE.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-tx\3.1.1.RELEASE\spring-tx-3.1.1.RELEASE.jar;C:\Documents and Settings\ckunjub\.m2\repository\com\h2database\h2\1.3.160\h2-1.3.160.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\hibernate\hibernate-core\4.1.1.Final\hibernate-core-4.1.1.Final.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\hibernate\hibernate-entitymanager\4.1.1.Final\hibernate-entitymanager-4.1.1.Final.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.0-api\1.0.0.Final\hibernate-jpa-2.0-api-1.0.0.Final.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\hibernate\hibernate-validator\4.3.0.Final\hibernate-validator-4.3.0.Final.jar;C:\Documents and Settings\ckunjub\.m2\repository\javax\validation\validation-api\1.0.0.GA\validation-api-1.0.0.GA.jar;C:\Documents and Settings\ckunjub\.m2\repository\cglib\cglib\2.2.2\cglib-2.2.2.jar;C:\Documents and Settings\ckunjub\.m2\repository\javax\transaction\jta\1.1\jta-1.1.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-jdbc\3.1.1.RELEASE\spring-jdbc-3.1.1.RELEASE.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-orm\3.1.1.RELEASE\spring-orm-3.1.1.RELEASE.jar;C:\Documents and Settings\ckunjub\.m2\repository\commons-pool\commons-pool\1.5.4\commons-pool-1.5.4.jar;C:\Documents and Settings\ckunjub\.m2\repository\commons-dbcp\commons-dbcp\1.3\commons-dbcp-1.3.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\codehaus\jackson\jackson-mapper-asl\1.6.4\jackson-mapper-asl-1.6.4.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\apache\tiles\tiles-core\2.2.1\tiles-core-2.2.1.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\apache\tiles\tiles-jsp\2.2.1\tiles-jsp-2.2.1.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-web\3.1.1.RELEASE\spring-web-3.1.1.RELEASE.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-webmvc\3.1.1.RELEASE\spring-webmvc-3.1.1.RELEASE.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\webflow\spring-js-resources\2.2.0.RELEASE\spring-js-resources-2.2.0.RELEASE.jar;C:\Documents and Settings\ckunjub\.m2\repository\commons-digester\commons-digester\2.0\commons-digester-2.0.jar;C:\Documents and Settings\ckunjub\.m2\repository\commons-fileupload\commons-fileupload\1.2.1\commons-fileupload-1.2.1.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;C:\Documents and Settings\ckunjub\.m2\repository\javax\servlet\jsp\jstl\jstl-api\1.2\jstl-api-1.2.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\glassfish\web\jstl-impl\1.2\jstl-impl-1.2.jar;C:\Documents and Settings\ckunjub\.m2\repository\javax\el\el-api\1.0\el-api-1.0.jar;C:\Documents and Settings\ckunjub\.m2\repository\joda-time\joda-time\1.6\joda-time-1.6.jar;C:\Documents and Settings\ckunjub\.m2\repository\javax\servlet\jsp\jsp-api\2.1\jsp-api-2.1.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\security\spring-security-core\3.1.0.RELEASE\spring-security-core-3.1.0.RELEASE.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\security\spring-security-config\3.1.0.RELEASE\spring-security-config-3.1.0.RELEASE.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\security\spring-security-web\3.1.0.RELEASE\spring-security-web-3.1.0.RELEASE.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\security\spring-security-taglibs\3.1.0.RELEASE\spring-security-taglibs-3.1.0.RELEASE.jar;C:\Documents and Settings\ckunjub\.m2\repository\com\googlecode\flyway\flyway-core\1.6.1\flyway-core-1.6.1.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-test-mvc\1.0.0.M1\spring-test-mvc-1.0.0.M1.jar;C:\Documents and Settings\ckunjub\.m2\repository\com\jayway\jsonpath\json-path\0.5.5\json-path-0.5.5.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-asm\3.1.1.RELEASE\spring-asm-3.1.1.RELEASE.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-beans\3.1.1.RELEASE\spring-beans-3.1.1.RELEASE.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-expression\3.1.1.RELEASE\spring-expression-3.1.1.RELEASE.jar;C:\Documents and Settings\ckunjub\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-context-support\3.1.1.RELEASE\spring-context-support-3.1.1.RELEASE.jar;C:\Documents and Settings\ckunjub\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\jboss\logging\jboss-logging\3.1.0.GA\jboss-logging-3.1.0.GA.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.1_spec\1.0.0.Final\jboss-transaction-api_1.1_spec-1.0.0.Final.jar;C:\Documents and Settings\ckunjub\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Documents and Settings\ckunjub\.m2\repository\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\javassist\javassist\3.15.0-GA\javassist-3.15.0-GA.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\hibernate\common\hibernate-commons-annotations\4.0.1.Final\hibernate-commons-annotations-4.0.1.Final.jar;C:\Documents and Settings\ckunjub\.m2\repository\asm\asm\3.3.1\asm-3.3.1.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\codehaus\jackson\jackson-core-asl\1.6.4\jackson-core-asl-1.6.4.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\apache\tiles\tiles-api\2.2.1\tiles-api-2.2.1.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\apache\tiles\tiles-servlet\2.2.1\tiles-servlet-2.2.1.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\apache\tiles\tiles-template\2.2.1\tiles-template-2.2.1.jar;C:\Documents and Settings\ckunjub\.m2\repository\commons-beanutils\commons-beanutils\1.8.0\commons-beanutils-1.8.0.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\security\spring-security-crypto\3.1.0.RELEASE\spring-security-crypto-3.1.0.RELEASE.jar;C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\security\spring-security-acl\3.1.0.RELEASE\spring-security-acl-3.1.0.RELEASE.jar;C:\learn\lovemytasks\target\classes
+-aspectpath
+C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-aspects\3.1.1.RELEASE\spring-aspects-3.1.1.RELEASE.jar
+-d
+C:\learn\lovemytasks\target\classes
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\aspects\NoCachingInController.aj
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\BaseDao.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\ContextDao.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\JpaContextDao.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\JpaDao.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\JpaProjectDao.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\JpaTasksDao.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\JpaTaskUserDao.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\ProjectDao.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\TasksDao.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\TaskUserDao.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\domain\Authority.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\domain\AuthorityNames.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\domain\Context.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\domain\Project.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\domain\Task.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\domain\TaskStatus.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\domain\TaskUser.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\registration\RegistrationController.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\registration\RegistrationValidator.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\security\GtdAuthenticationProvider.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\security\PasswordEncryptionService.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\service\ContextService.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\service\ContextServiceImpl.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\service\ProjectService.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\service\ProjectServiceImpl.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\service\TaskService.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\service\TaskServiceImpl.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\service\TaskUserService.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\service\TaskUserServiceImpl.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\spring\CustomCalendarEditor.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\spring\CustomWebAppInitializer.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\spring\StringToContextConverter.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\spring\StringToProjectConverter.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\types\CustomUserDetails.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\types\ListWrapper.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\types\Registration.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\types\TypeWrapper.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\web\BaseController.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\web\ContextController.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\web\DatatableForm.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\web\EndpointDocController.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\web\ProjectController.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\web\spring\CustomObjectMapper.java
+C:\learn\lovemytasks\src\main\java\org\bk\lmt\web\TaskController.java
+---- Full Classpath ---
+C:\Java\jdk1.7.0_05\jre\lib\resources.jar(2464212 bytes)
+C:\Java\jdk1.7.0_05\jre\lib\rt.jar(60337847 bytes)
+C:\Java\jdk1.7.0_05\jre\lib\sunrsasign.jar(missing)
+C:\Java\jdk1.7.0_05\jre\lib\jsse.jar(574500 bytes)
+C:\Java\jdk1.7.0_05\jre\lib\jce.jar(108596 bytes)
+C:\Java\jdk1.7.0_05\jre\lib\charsets.jar(3604989 bytes)
+C:\Java\jdk1.7.0_05\jre\lib\jfr.jar(461153 bytes)
+C:\Java\jdk1.7.0_05\jre\classes(missing)
+C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-aspects\3.1.1.RELEASE\spring-aspects-3.1.1.RELEASE.jar(50332 bytes)
+C:\Java\jdk1.7.0_05\jre\lib\ext\dnsns.jar(8934 bytes)
+C:\Java\jdk1.7.0_05\jre\lib\ext\localedata.jar(1023488 bytes)
+C:\Java\jdk1.7.0_05\jre\lib\ext\sunec.jar(15817 bytes)
+C:\Java\jdk1.7.0_05\jre\lib\ext\sunjce_provider.jar(198110 bytes)
+C:\Java\jdk1.7.0_05\jre\lib\ext\sunmscapi.jar(30560 bytes)
+C:\Java\jdk1.7.0_05\jre\lib\ext\sunpkcs11.jar(237969 bytes)
+C:\Java\jdk1.7.0_05\jre\lib\ext\zipfs.jar(68654 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\junit\junit-dep\4.10\junit-dep-4.10.jar(234088 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\hamcrest\hamcrest-core\1.2.1\hamcrest-core-1.2.1.jar(41908 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\hamcrest\hamcrest-library\1.2.1\hamcrest-library-1.2.1.jar(50443 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar(481535 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\slf4j\slf4j-api\1.6.4\slf4j-api-1.6.4.jar(25962 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\slf4j\jcl-over-slf4j\1.6.4\jcl-over-slf4j-1.6.4.jar(17308 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\slf4j\slf4j-log4j12\1.6.4\slf4j-log4j12-1.6.4.jar(9748 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\aspectj\aspectjrt\1.6.12\aspectjrt-1.6.12.jar(116219 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\aspectj\aspectjweaver\1.6.12\aspectjweaver-1.6.12.jar(1749970 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\javax\servlet\servlet-api\2.5\servlet-api-2.5.jar(105112 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\net\sf\flexjson\flexjson\2.0\flexjson-2.0.jar(75294 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-core\3.1.1.RELEASE\spring-core-3.1.1.RELEASE.jar(449324 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-test\3.1.1.RELEASE\spring-test-3.1.1.RELEASE.jar(229725 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar(831068 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-aop\3.1.1.RELEASE\spring-aop-3.1.1.RELEASE.jar(331471 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-aspects\3.1.1.RELEASE\spring-aspects-3.1.1.RELEASE.jar(50332 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-tx\3.1.1.RELEASE\spring-tx-3.1.1.RELEASE.jar(246719 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\com\h2database\h2\1.3.160\h2-1.3.160.jar(1256430 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\hibernate\hibernate-core\4.1.1.Final\hibernate-core-4.1.1.Final.jar(4381748 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\hibernate\hibernate-entitymanager\4.1.1.Final\hibernate-entitymanager-4.1.1.Final.jar(477883 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.0-api\1.0.0.Final\hibernate-jpa-2.0-api-1.0.0.Final.jar(100884 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\hibernate\hibernate-validator\4.3.0.Final\hibernate-validator-4.3.0.Final.jar(476575 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\javax\validation\validation-api\1.0.0.GA\validation-api-1.0.0.GA.jar(47433 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\cglib\cglib\2.2.2\cglib-2.2.2.jar(287192 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\javax\transaction\jta\1.1\jta-1.1.jar(15071 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-jdbc\3.1.1.RELEASE\spring-jdbc-3.1.1.RELEASE.jar(404732 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-orm\3.1.1.RELEASE\spring-orm-3.1.1.RELEASE.jar(378476 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\commons-pool\commons-pool\1.5.4\commons-pool-1.5.4.jar(96221 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\commons-dbcp\commons-dbcp\1.3\commons-dbcp-1.3.jar(148817 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\codehaus\jackson\jackson-mapper-asl\1.6.4\jackson-mapper-asl-1.6.4.jar(544019 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\apache\tiles\tiles-core\2.2.1\tiles-core-2.2.1.jar(155516 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\apache\tiles\tiles-jsp\2.2.1\tiles-jsp-2.2.1.jar(45472 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-web\3.1.1.RELEASE\spring-web-3.1.1.RELEASE.jar(544291 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-webmvc\3.1.1.RELEASE\spring-webmvc-3.1.1.RELEASE.jar(573701 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\webflow\spring-js-resources\2.2.0.RELEASE\spring-js-resources-2.2.0.RELEASE.jar(4458070 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\commons-digester\commons-digester\2.0\commons-digester-2.0.jar(148783 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\commons-fileupload\commons-fileupload\1.2.1\commons-fileupload-1.2.1.jar(57779 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar(315805 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\javax\servlet\jsp\jstl\jstl-api\1.2\jstl-api-1.2.jar(30527 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\glassfish\web\jstl-impl\1.2\jstl-impl-1.2.jar(391957 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\javax\el\el-api\1.0\el-api-1.0.jar(24432 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\joda-time\joda-time\1.6\joda-time-1.6.jar(534827 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\javax\servlet\jsp\jsp-api\2.1\jsp-api-2.1.jar(100636 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\security\spring-security-core\3.1.0.RELEASE\spring-security-core-3.1.0.RELEASE.jar(348567 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\security\spring-security-config\3.1.0.RELEASE\spring-security-config-3.1.0.RELEASE.jar(202754 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\security\spring-security-web\3.1.0.RELEASE\spring-security-web-3.1.0.RELEASE.jar(255577 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\security\spring-security-taglibs\3.1.0.RELEASE\spring-security-taglibs-3.1.0.RELEASE.jar(21310 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\com\googlecode\flyway\flyway-core\1.6.1\flyway-core-1.6.1.jar(147558 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-test-mvc\1.0.0.M1\spring-test-mvc-1.0.0.M1.jar(129218 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\com\jayway\jsonpath\json-path\0.5.5\json-path-0.5.5.jar(22948 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-asm\3.1.1.RELEASE\spring-asm-3.1.1.RELEASE.jar(53081 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-beans\3.1.1.RELEASE\spring-beans-3.1.1.RELEASE.jar(589824 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-expression\3.1.1.RELEASE\spring-expression-3.1.1.RELEASE.jar(176311 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar(4467 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\spring-context-support\3.1.1.RELEASE\spring-context-support-3.1.1.RELEASE.jar(107225 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar(445288 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\jboss\logging\jboss-logging\3.1.0.GA\jboss-logging-3.1.0.GA.jar(60768 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.1_spec\1.0.0.Final\jboss-transaction-api_1.1_spec-1.0.0.Final.jar(11209 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar(313898 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar(109318 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\javassist\javassist\3.15.0-GA\javassist-3.15.0-GA.jar(648253 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\hibernate\common\hibernate-commons-annotations\4.0.1.Final\hibernate-commons-annotations-4.0.1.Final.jar(81271 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\asm\asm\3.3.1\asm-3.3.1.jar(43581 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\codehaus\jackson\jackson-core-asl\1.6.4\jackson-core-asl-1.6.4.jar(201024 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\apache\tiles\tiles-api\2.2.1\tiles-api-2.2.1.jar(31124 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\apache\tiles\tiles-servlet\2.2.1\tiles-servlet-2.2.1.jar(54867 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\apache\tiles\tiles-template\2.2.1\tiles-template-2.2.1.jar(19856 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\commons-beanutils\commons-beanutils\1.8.0\commons-beanutils-1.8.0.jar(231320 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\security\spring-security-crypto\3.1.0.RELEASE\spring-security-crypto-3.1.0.RELEASE.jar(41068 bytes)
+C:\Documents and Settings\ckunjub\.m2\repository\org\springframework\security\spring-security-acl\3.1.0.RELEASE\spring-security-acl-3.1.0.RELEASE.jar(81133 bytes)
+C:\learn\lovemytasks\target\classes(6 entries)
+---- Compiler Messages ---
+info directory classpath entry does not exist: C:\Java\jdk1.7.0_05\jre\lib\sunrsasign.jar
+info zipfile classpath entry does not exist: C:\Java\jdk1.7.0_05\jre\classes
+info Pipelining compilation
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\aspects\NoCachingInController.aj
+info weaver operating in reweavable mode.  Need to verify any required types exist.
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\BaseDao.java
+info woven class org.bk.lmt.dao.BaseDao (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\BaseDao.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\ContextDao.java
+info woven class org.bk.lmt.dao.ContextDao (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\ContextDao.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\JpaContextDao.java
+abort trouble in: 
+public class org.bk.lmt.dao.JpaContextDao extends org.bk.lmt.dao.JpaDao implements org.bk.lmt.dao.ContextDao:
+  public void <init>()    org.aspectj.weaver.MethodDeclarationLineNumber: 13:288
+:
+                    ALOAD_0     // Lorg/bk/lmt/dao/JpaContextDao; this   (line 14)
+                    LDC org.bk.lmt.domain.Context
+                    INVOKESPECIAL org.bk.lmt.dao.JpaDao.<init> (Ljava/lang/Class;)V
+    constructor-execution(void org.bk.lmt.dao.JpaContextDao.<init>())
+    |               RETURN   (line 15)
+    constructor-execution(void org.bk.lmt.dao.JpaContextDao.<init>())
+  end public void <init>()
+
+  public java.util.List findContextsByGtdUser(String, int, int)    org.aspectj.weaver.MethodDeclarationLineNumber: 18:384
+:
+    method-execution(java.util.List org.bk.lmt.dao.JpaContextDao.findContextsByGtdUser(java.lang.String, int, int))
+    |               ALOAD_0     // Lorg/bk/lmt/dao/JpaContextDao; this   (line 19)
+    |               GETFIELD org.bk.lmt.dao.JpaContextDao.entityManager Ljavax/persistence/EntityManager;
+    |               LDC "Context.findContextByTaskUser"
+    |               LDC org.bk.lmt.domain.Context
+    | method-call(javax.persistence.TypedQuery javax.persistence.EntityManager.createNamedQuery(java.lang.String, java.lang.Class))
+    | |             INVOKEINTERFACE javax.persistence.EntityManager.createNamedQuery (Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;
+    | method-call(javax.persistence.TypedQuery javax.persistence.EntityManager.createNamedQuery(java.lang.String, java.lang.Class))
+    |               ASTORE 4
+    |               ALOAD 4     // Ljavax/persistence/TypedQuery; q   (line 20)
+    |               LDC "userName"
+    |               ALOAD_1     // Ljava/lang/String; userName
+    | method-call(javax.persistence.TypedQuery javax.persistence.TypedQuery.setParameter(java.lang.String, java.lang.Object))
+    | |             INVOKEINTERFACE javax.persistence.TypedQuery.setParameter (Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/TypedQuery;
+    | method-call(javax.persistence.TypedQuery javax.persistence.TypedQuery.setParameter(java.lang.String, java.lang.Object))
+    |               POP
+    |               ALOAD 4     // Ljavax/persistence/TypedQuery; q   (line 21)
+    |               ILOAD_2     // I firstResult
+    | method-call(javax.persistence.TypedQuery javax.persistence.TypedQuery.setFirstResult(int))
+    | |             INVOKEINTERFACE javax.persistence.TypedQuery.setFirstResult (I)Ljavax/persistence/TypedQuery;
+    | method-call(javax.persistence.TypedQuery javax.persistence.TypedQuery.setFirstResult(int))
+    |               ILOAD_3     // I maxResults
+    | method-call(javax.persistence.TypedQuery javax.persistence.TypedQuery.setMaxResults(int))
+    | |             INVOKEINTERFACE javax.persistence.TypedQuery.setMaxResults (I)Ljavax/persistence/TypedQuery;
+    | method-call(javax.persistence.TypedQuery javax.persistence.TypedQuery.setMaxResults(int))
+    | method-call(java.util.List javax.persistence.TypedQuery.getResultList())
+    | |             INVOKEINTERFACE javax.persistence.TypedQuery.getResultList ()Ljava/util/List;
+    | method-call(java.util.List javax.persistence.TypedQuery.getResultList())
+    |               ARETURN
+    method-execution(java.util.List org.bk.lmt.dao.JpaContextDao.findContextsByGtdUser(java.lang.String, int, int))
+  end public java.util.List findContextsByGtdUser(String, int, int)
+
+  public java.util.List findContextsByGtdUser(String)    org.aspectj.weaver.MethodDeclarationLineNumber: 25:759
+:
+                    ALOAD_0     // Lorg/bk/lmt/dao/JpaContextDao; this   (line 26)
+                    GETFIELD org.bk.lmt.dao.JpaContextDao.entityManager Ljavax/persistence/EntityManager;
+                    LDC "Context.findContextByTaskUser"
+                    LDC org.bk.lmt.domain.Context
+                    INVOKEINTERFACE javax.persistence.EntityManager.createNamedQuery (Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;
+                    ASTORE_2
+                    ALOAD_2     // Ljavax/persistence/TypedQuery; q   (line 27)
+                    LDC "userName"
+                    ALOAD_1     // Ljava/lang/String; userName
+                    INVOKEINTERFACE javax.persistence.TypedQuery.setParameter (Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/TypedQuery;
+                    POP
+                    ALOAD_2     // Ljavax/persistence/TypedQuery; q   (line 28)
+                    INVOKEINTERFACE javax.persistence.TypedQuery.getResultList ()Ljava/util/List;
+                    ARETURN
+  end public java.util.List findContextsByGtdUser(String)
+
+  public Long countContextsByUserName(String)    org.aspectj.weaver.MethodDeclarationLineNumber: 31:1036
+:
+                    ALOAD_0     // Lorg/bk/lmt/dao/JpaContextDao; this   (line 32)
+                    INVOKEVIRTUAL org.bk.lmt.dao.JpaContextDao.getEntityManager ()Ljavax/persistence/EntityManager;
+                    LDC "Context.countContextByTaskUser"
+                    LDC java.lang.Long
+                    INVOKEINTERFACE javax.persistence.EntityManager.createNamedQuery (Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;
+                    ASTORE_2
+                    ALOAD_2     // Ljavax/persistence/TypedQuery; q   (line 33)
+                    LDC "userName"
+                    ALOAD_1     // Ljava/lang/String; userName
+                    INVOKEINTERFACE javax.persistence.TypedQuery.setParameter (Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/TypedQuery;
+                    POP
+                    ALOAD_2     // Ljavax/persistence/TypedQuery; q   (line 34)
+                    INVOKEINTERFACE javax.persistence.TypedQuery.getSingleResult ()Ljava/lang/Object;
+                    CHECKCAST java.lang.Long
+                    ARETURN
+  end public Long countContextsByUserName(String)
+
+end public class org.bk.lmt.dao.JpaContextDao
+ -- (IllegalStateException) Can't ask to parameterize a member of non-generic type: org.bk.lmt.dao.BaseDao  kind(raw)
+Can't ask to parameterize a member of non-generic type: org.bk.lmt.dao.BaseDao  kind(raw)
+java.lang.IllegalStateException: Can't ask to parameterize a member of non-generic type: org.bk.lmt.dao.BaseDao  kind(raw)
+	at org.aspectj.weaver.ResolvedMemberImpl.parameterizedWith(ResolvedMemberImpl.java:727)
+	at org.aspectj.weaver.ResolvedMemberImpl.parameterizedWith(ResolvedMemberImpl.java:710)
+	at org.aspectj.weaver.ReferenceType.getDeclaredMethods(ReferenceType.java:780)
+	at org.aspectj.weaver.ResolvedType$MethodGetterIncludingItds.get(ResolvedType.java:252)
+	at org.aspectj.weaver.ResolvedType$MethodGetterIncludingItds.get(ResolvedType.java:250)
+	at org.aspectj.weaver.Iterators$4$1.hasNext(Iterators.java:213)
+	at org.aspectj.weaver.Iterators$6.hasNext(Iterators.java:288)
+	at org.aspectj.weaver.Iterators$4.hasNext(Iterators.java:230)
+	at org.aspectj.weaver.ResolvedType.lookupResolvedMember(ResolvedType.java:617)
+	at org.aspectj.weaver.JoinPointSignatureIterator.findSignaturesFromSupertypes(JoinPointSignatureIterator.java:192)
+	at org.aspectj.weaver.JoinPointSignatureIterator.hasNext(JoinPointSignatureIterator.java:68)
+	at org.aspectj.weaver.patterns.SignaturePattern.matches(SignaturePattern.java:317)
+	at org.aspectj.weaver.patterns.KindedPointcut.matchInternal(KindedPointcut.java:202)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.AndPointcut.matchInternal(AndPointcut.java:51)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.OrPointcut.matchInternal(OrPointcut.java:54)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.ShadowMunger.match(ShadowMunger.java:113)
+	at org.aspectj.weaver.Advice.match(Advice.java:109)
+	at org.aspectj.weaver.bcel.BcelAdvice.match(BcelAdvice.java:149)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:3173)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:2565)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.weave(BcelClassWeaver.java:480)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.weave(BcelClassWeaver.java:99)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1694)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveWithoutDump(BcelWeaver.java:1638)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveAndNotify(BcelWeaver.java:1401)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1187)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.weaveQueuedEntries(AjPipeliningCompilerAdapter.java:514)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.queueForWeaving(AjPipeliningCompilerAdapter.java:447)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.afterProcessing(AjPipeliningCompilerAdapter.java:432)
+	at org.aspectj.ajdt.internal.compiler.CompilerAdapter.ajc$after$org_aspectj_ajdt_internal_compiler_CompilerAdapter$5$6b855184(CompilerAdapter.aj:98)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.process(Compiler.java:652)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:392)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1027)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:271)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:184)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:248)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:405)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+
+info woven class org.bk.lmt.dao.JpaContextDao (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\JpaContextDao.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\JpaDao.java
+abort trouble in: 
+public abstract class org.bk.lmt.dao.JpaDao extends java.lang.Object implements org.bk.lmt.dao.BaseDao:
+  protected Class entityClass [Signature(Ljava/lang/Class<TE;>;)]
+  protected javax.persistence.EntityManager entityManager [RuntimeVisibleAnnotations]
+  public void <init>(Class)    org.aspectj.weaver.MethodDeclarationLineNumber: 12:288
+:
+                    ALOAD_0     // Lorg/bk/lmt/dao/JpaDao; this   (line 12)
+                    INVOKESPECIAL java.lang.Object.<init> ()V
+    constructor-execution(void org.bk.lmt.dao.JpaDao.<init>(java.lang.Class))
+    |               ALOAD_0     // Lorg/bk/lmt/dao/JpaDao; this   (line 13)
+    |               ALOAD_1     // Ljava/lang/Class; entityClass
+    |               PUTFIELD org.bk.lmt.dao.JpaDao.entityClass Ljava/lang/Class;
+    |               RETURN   (line 14)
+    constructor-execution(void org.bk.lmt.dao.JpaDao.<init>(java.lang.Class))
+  end public void <init>(Class)
+
+  public Object update(Object)    org.aspectj.weaver.MethodDeclarationLineNumber: 16:371
+:
+    method-execution(java.lang.Object org.bk.lmt.dao.JpaDao.update(java.lang.Object))
+    |               ALOAD_0     // Lorg/bk/lmt/dao/JpaDao; this   (line 17)
+    |               GETFIELD org.bk.lmt.dao.JpaDao.entityManager Ljavax/persistence/EntityManager;
+    |               ALOAD_1     // Ljava/lang/Object; entity
+    | method-call(java.lang.Object javax.persistence.EntityManager.merge(java.lang.Object))
+    | |             INVOKEINTERFACE javax.persistence.EntityManager.merge (Ljava/lang/Object;)Ljava/lang/Object;
+    | method-call(java.lang.Object javax.persistence.EntityManager.merge(java.lang.Object))
+    |               ARETURN
+    method-execution(java.lang.Object org.bk.lmt.dao.JpaDao.update(java.lang.Object))
+  end public Object update(Object)
+
+  public Object persist(Object)    org.aspectj.weaver.MethodDeclarationLineNumber: 20:450
+:
+                    ALOAD_0     // Lorg/bk/lmt/dao/JpaDao; this   (line 21)
+                    GETFIELD org.bk.lmt.dao.JpaDao.entityManager Ljavax/persistence/EntityManager;
+                    ALOAD_1     // Ljava/lang/Object; entity
+                    INVOKEINTERFACE javax.persistence.EntityManager.persist (Ljava/lang/Object;)V
+                    ALOAD_1     // Ljava/lang/Object; entity   (line 22)
+                    ARETURN
+  end public Object persist(Object)
+
+  public void remove(Object)    org.aspectj.weaver.MethodDeclarationLineNumber: 25:547
+:
+                    ALOAD_0     // Lorg/bk/lmt/dao/JpaDao; this   (line 26)
+                    GETFIELD org.bk.lmt.dao.JpaDao.entityManager Ljavax/persistence/EntityManager;
+                    ALOAD_1     // Ljava/lang/Object; entity
+                    INVOKEINTERFACE javax.persistence.EntityManager.remove (Ljava/lang/Object;)V
+                    RETURN   (line 27)
+  end public void remove(Object)
+
+  public Object findById(Object)    org.aspectj.weaver.MethodDeclarationLineNumber: 29:621
+:
+                    ALOAD_0     // Lorg/bk/lmt/dao/JpaDao; this   (line 30)
+                    GETFIELD org.bk.lmt.dao.JpaDao.entityManager Ljavax/persistence/EntityManager;
+                    ALOAD_0     // Lorg/bk/lmt/dao/JpaDao; this
+                    GETFIELD org.bk.lmt.dao.JpaDao.entityClass Ljava/lang/Class;
+                    ALOAD_1     // Ljava/lang/Object; id
+                    INVOKEINTERFACE javax.persistence.EntityManager.find (Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;
+                    ARETURN
+  end public Object findById(Object)
+
+  protected javax.persistence.EntityManager getEntityManager()    org.aspectj.weaver.MethodDeclarationLineNumber: 33:727
+:
+                    ALOAD_0     // Lorg/bk/lmt/dao/JpaDao; this   (line 34)
+                    GETFIELD org.bk.lmt.dao.JpaDao.entityManager Ljavax/persistence/EntityManager;
+                    ARETURN
+  end protected javax.persistence.EntityManager getEntityManager()
+
+end public abstract class org.bk.lmt.dao.JpaDao
+ -- (IllegalStateException) Can't ask to parameterize a member of non-generic type: org.bk.lmt.dao.BaseDao  kind(raw)
+Can't ask to parameterize a member of non-generic type: org.bk.lmt.dao.BaseDao  kind(raw)
+java.lang.IllegalStateException: Can't ask to parameterize a member of non-generic type: org.bk.lmt.dao.BaseDao  kind(raw)
+	at org.aspectj.weaver.ResolvedMemberImpl.parameterizedWith(ResolvedMemberImpl.java:727)
+	at org.aspectj.weaver.ResolvedMemberImpl.parameterizedWith(ResolvedMemberImpl.java:710)
+	at org.aspectj.weaver.ReferenceType.getDeclaredMethods(ReferenceType.java:780)
+	at org.aspectj.weaver.ResolvedType$MethodGetterIncludingItds.get(ResolvedType.java:252)
+	at org.aspectj.weaver.ResolvedType$MethodGetterIncludingItds.get(ResolvedType.java:250)
+	at org.aspectj.weaver.Iterators$4$1.hasNext(Iterators.java:213)
+	at org.aspectj.weaver.Iterators$4.hasNext(Iterators.java:230)
+	at org.aspectj.weaver.ResolvedType.lookupResolvedMember(ResolvedType.java:617)
+	at org.aspectj.weaver.JoinPointSignatureIterator.findSignaturesFromSupertypes(JoinPointSignatureIterator.java:192)
+	at org.aspectj.weaver.JoinPointSignatureIterator.hasNext(JoinPointSignatureIterator.java:68)
+	at org.aspectj.weaver.patterns.SignaturePattern.matches(SignaturePattern.java:317)
+	at org.aspectj.weaver.patterns.KindedPointcut.matchInternal(KindedPointcut.java:202)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.AndPointcut.matchInternal(AndPointcut.java:51)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.OrPointcut.matchInternal(OrPointcut.java:54)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.ShadowMunger.match(ShadowMunger.java:113)
+	at org.aspectj.weaver.Advice.match(Advice.java:109)
+	at org.aspectj.weaver.bcel.BcelAdvice.match(BcelAdvice.java:149)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:3173)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:2565)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.weave(BcelClassWeaver.java:480)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.weave(BcelClassWeaver.java:99)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1694)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveWithoutDump(BcelWeaver.java:1638)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveAndNotify(BcelWeaver.java:1401)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1187)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.weaveQueuedEntries(AjPipeliningCompilerAdapter.java:514)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.queueForWeaving(AjPipeliningCompilerAdapter.java:447)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.afterProcessing(AjPipeliningCompilerAdapter.java:432)
+	at org.aspectj.ajdt.internal.compiler.CompilerAdapter.ajc$after$org_aspectj_ajdt_internal_compiler_CompilerAdapter$5$6b855184(CompilerAdapter.aj:98)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.process(Compiler.java:652)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:392)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1027)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:271)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:184)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:248)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:405)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+
+info woven class org.bk.lmt.dao.JpaDao (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\JpaDao.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\JpaProjectDao.java
+abort trouble in: 
+public class org.bk.lmt.dao.JpaProjectDao extends org.bk.lmt.dao.JpaDao implements org.bk.lmt.dao.ProjectDao:
+  public void <init>()    org.aspectj.weaver.MethodDeclarationLineNumber: 12:286
+:
+                    ALOAD_0     // Lorg/bk/lmt/dao/JpaProjectDao; this   (line 13)
+                    LDC org.bk.lmt.domain.Project
+                    INVOKESPECIAL org.bk.lmt.dao.JpaDao.<init> (Ljava/lang/Class;)V
+    constructor-execution(void org.bk.lmt.dao.JpaProjectDao.<init>())
+    |               RETURN   (line 14)
+    constructor-execution(void org.bk.lmt.dao.JpaProjectDao.<init>())
+  end public void <init>()
+
+  public java.util.List findProjectsByGtdUser(String, int, int)    org.aspectj.weaver.MethodDeclarationLineNumber: 17:382
+:
+    method-execution(java.util.List org.bk.lmt.dao.JpaProjectDao.findProjectsByGtdUser(java.lang.String, int, int))
+    |               ALOAD_0     // Lorg/bk/lmt/dao/JpaProjectDao; this   (line 18)
+    |               GETFIELD org.bk.lmt.dao.JpaProjectDao.entityManager Ljavax/persistence/EntityManager;
+    |               LDC "Project.findByUser"
+    |               LDC org.bk.lmt.domain.Project
+    | method-call(javax.persistence.TypedQuery javax.persistence.EntityManager.createNamedQuery(java.lang.String, java.lang.Class))
+    | |             INVOKEINTERFACE javax.persistence.EntityManager.createNamedQuery (Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;
+    | method-call(javax.persistence.TypedQuery javax.persistence.EntityManager.createNamedQuery(java.lang.String, java.lang.Class))
+    |               ASTORE 4
+    |               ALOAD 4     // Ljavax/persistence/TypedQuery; q   (line 19)
+    |               LDC "userName"
+    |               ALOAD_1     // Ljava/lang/String; userName
+    | method-call(javax.persistence.TypedQuery javax.persistence.TypedQuery.setParameter(java.lang.String, java.lang.Object))
+    | |             INVOKEINTERFACE javax.persistence.TypedQuery.setParameter (Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/TypedQuery;
+    | method-call(javax.persistence.TypedQuery javax.persistence.TypedQuery.setParameter(java.lang.String, java.lang.Object))
+    |               POP
+    |               ALOAD 4     // Ljavax/persistence/TypedQuery; q   (line 20)
+    |               ILOAD_2     // I firstResult
+    | method-call(javax.persistence.TypedQuery javax.persistence.TypedQuery.setFirstResult(int))
+    | |             INVOKEINTERFACE javax.persistence.TypedQuery.setFirstResult (I)Ljavax/persistence/TypedQuery;
+    | method-call(javax.persistence.TypedQuery javax.persistence.TypedQuery.setFirstResult(int))
+    |               ILOAD_3     // I maxResults
+    | method-call(javax.persistence.TypedQuery javax.persistence.TypedQuery.setMaxResults(int))
+    | |             INVOKEINTERFACE javax.persistence.TypedQuery.setMaxResults (I)Ljavax/persistence/TypedQuery;
+    | method-call(javax.persistence.TypedQuery javax.persistence.TypedQuery.setMaxResults(int))
+    | method-call(java.util.List javax.persistence.TypedQuery.getResultList())
+    | |             INVOKEINTERFACE javax.persistence.TypedQuery.getResultList ()Ljava/util/List;
+    | method-call(java.util.List javax.persistence.TypedQuery.getResultList())
+    |               ARETURN
+    method-execution(java.util.List org.bk.lmt.dao.JpaProjectDao.findProjectsByGtdUser(java.lang.String, int, int))
+  end public java.util.List findProjectsByGtdUser(String, int, int)
+
+  public java.util.List findProjectsByGtdUser(String)    org.aspectj.weaver.MethodDeclarationLineNumber: 24:723
+:
+                    ALOAD_0     // Lorg/bk/lmt/dao/JpaProjectDao; this   (line 25)
+                    GETFIELD org.bk.lmt.dao.JpaProjectDao.entityManager Ljavax/persistence/EntityManager;
+                    LDC "Project.findByUser"
+                    LDC org.bk.lmt.domain.Project
+                    INVOKEINTERFACE javax.persistence.EntityManager.createNamedQuery (Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;
+                    ASTORE_2
+                    ALOAD_2     // Ljavax/persistence/TypedQuery; q   (line 26)
+                    LDC "userName"
+                    ALOAD_1     // Ljava/lang/String; userName
+                    INVOKEINTERFACE javax.persistence.TypedQuery.setParameter (Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/TypedQuery;
+                    POP
+                    ALOAD_2     // Ljavax/persistence/TypedQuery; q   (line 27)
+                    INVOKEINTERFACE javax.persistence.TypedQuery.getResultList ()Ljava/util/List;
+                    ARETURN
+  end public java.util.List findProjectsByGtdUser(String)
+
+  public Long countProjectsByUserName(String)    org.aspectj.weaver.MethodDeclarationLineNumber: 31:974
+:
+                    ALOAD_0     // Lorg/bk/lmt/dao/JpaProjectDao; this   (line 32)
+                    GETFIELD org.bk.lmt.dao.JpaProjectDao.entityManager Ljavax/persistence/EntityManager;
+                    LDC "Project.countByUser"
+                    LDC java.lang.Long
+                    INVOKEINTERFACE javax.persistence.EntityManager.createNamedQuery (Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;
+                    ASTORE_2
+                    ALOAD_2     // Ljavax/persistence/TypedQuery; q   (line 33)
+                    LDC "userName"
+                    ALOAD_1     // Ljava/lang/String; userName
+                    INVOKEINTERFACE javax.persistence.TypedQuery.setParameter (Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/TypedQuery;
+                    POP
+                    ALOAD_2     // Ljavax/persistence/TypedQuery; q   (line 34)
+                    INVOKEINTERFACE javax.persistence.TypedQuery.getSingleResult ()Ljava/lang/Object;
+                    CHECKCAST java.lang.Long
+                    ARETURN
+  end public Long countProjectsByUserName(String)
+
+end public class org.bk.lmt.dao.JpaProjectDao
+ -- (IllegalStateException) Can't ask to parameterize a member of non-generic type: org.bk.lmt.dao.JpaDao  kind(raw)
+Can't ask to parameterize a member of non-generic type: org.bk.lmt.dao.JpaDao  kind(raw)
+java.lang.IllegalStateException: Can't ask to parameterize a member of non-generic type: org.bk.lmt.dao.JpaDao  kind(raw)
+	at org.aspectj.weaver.ResolvedMemberImpl.parameterizedWith(ResolvedMemberImpl.java:727)
+	at org.aspectj.weaver.ResolvedMemberImpl.parameterizedWith(ResolvedMemberImpl.java:710)
+	at org.aspectj.weaver.ReferenceType.getDeclaredMethods(ReferenceType.java:780)
+	at org.aspectj.weaver.ResolvedType$MethodGetterIncludingItds.get(ResolvedType.java:252)
+	at org.aspectj.weaver.ResolvedType$MethodGetterIncludingItds.get(ResolvedType.java:250)
+	at org.aspectj.weaver.Iterators$4$1.hasNext(Iterators.java:213)
+	at org.aspectj.weaver.Iterators$4.hasNext(Iterators.java:230)
+	at org.aspectj.weaver.ResolvedType.lookupResolvedMember(ResolvedType.java:617)
+	at org.aspectj.weaver.JoinPointSignatureIterator.findSignaturesFromSupertypes(JoinPointSignatureIterator.java:192)
+	at org.aspectj.weaver.JoinPointSignatureIterator.hasNext(JoinPointSignatureIterator.java:68)
+	at org.aspectj.weaver.patterns.SignaturePattern.matches(SignaturePattern.java:317)
+	at org.aspectj.weaver.patterns.KindedPointcut.matchInternal(KindedPointcut.java:202)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.AndPointcut.matchInternal(AndPointcut.java:51)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.OrPointcut.matchInternal(OrPointcut.java:54)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.ShadowMunger.match(ShadowMunger.java:113)
+	at org.aspectj.weaver.Advice.match(Advice.java:109)
+	at org.aspectj.weaver.bcel.BcelAdvice.match(BcelAdvice.java:149)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:3173)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:2565)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.weave(BcelClassWeaver.java:480)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.weave(BcelClassWeaver.java:99)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1694)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveWithoutDump(BcelWeaver.java:1638)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveAndNotify(BcelWeaver.java:1401)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1187)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.weaveQueuedEntries(AjPipeliningCompilerAdapter.java:514)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.queueForWeaving(AjPipeliningCompilerAdapter.java:447)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.afterProcessing(AjPipeliningCompilerAdapter.java:432)
+	at org.aspectj.ajdt.internal.compiler.CompilerAdapter.ajc$after$org_aspectj_ajdt_internal_compiler_CompilerAdapter$5$6b855184(CompilerAdapter.aj:98)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.process(Compiler.java:652)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:392)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1027)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:271)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:184)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:248)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:405)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+
+info woven class org.bk.lmt.dao.JpaProjectDao (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\JpaProjectDao.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\JpaTasksDao.java
+abort trouble in: 
+public class org.bk.lmt.dao.JpaTasksDao extends org.bk.lmt.dao.JpaDao implements org.bk.lmt.dao.TasksDao:
+  public void <init>()    org.aspectj.weaver.MethodDeclarationLineNumber: 14:353
+:
+                    ALOAD_0     // Lorg/bk/lmt/dao/JpaTasksDao; this   (line 15)
+                    LDC org.bk.lmt.domain.Task
+                    INVOKESPECIAL org.bk.lmt.dao.JpaDao.<init> (Ljava/lang/Class;)V
+    constructor-execution(void org.bk.lmt.dao.JpaTasksDao.<init>())
+    |               RETURN   (line 16)
+    constructor-execution(void org.bk.lmt.dao.JpaTasksDao.<init>())
+  end public void <init>()
+
+  public java.util.List findTasksByUser(org.bk.lmt.domain.TaskUser)    org.aspectj.weaver.MethodDeclarationLineNumber: 18:432
+:
+    method-execution(java.util.List org.bk.lmt.dao.JpaTasksDao.findTasksByUser(org.bk.lmt.domain.TaskUser))
+    |               ALOAD_1     // Lorg/bk/lmt/domain/TaskUser; taskUser   (line 19)
+    |               IFNONNULL L0
+    |               NEW java.lang.IllegalArgumentException
+    |               DUP
+    |               LDC "The taskUser argument is required"
+    |               INVOKESPECIAL java.lang.IllegalArgumentException.<init> (Ljava/lang/String;)V
+    |               ATHROW
+    |           L0: ALOAD_0     // Lorg/bk/lmt/dao/JpaTasksDao; this   (line 20)
+    | method-call(javax.persistence.EntityManager org.bk.lmt.dao.JpaTasksDao.getEntityManager())
+    | |             INVOKEVIRTUAL org.bk.lmt.dao.JpaTasksDao.getEntityManager ()Ljavax/persistence/EntityManager;
+    | method-call(javax.persistence.EntityManager org.bk.lmt.dao.JpaTasksDao.getEntityManager())
+    |               ASTORE_2
+    |               ALOAD_2     // Ljavax/persistence/EntityManager; em   (line 21)
+    |               LDC "Task.findByUser"
+    |               LDC org.bk.lmt.domain.Task
+    |               INVOKEINTERFACE javax.persistence.EntityManager.createNamedQuery (Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;
+    |               ASTORE_3
+    |               ALOAD_3     // Ljavax/persistence/TypedQuery; q   (line 22)
+    |               LDC "taskUser"
+    |               ALOAD_1     // Lorg/bk/lmt/domain/TaskUser; taskUser
+    |               INVOKEINTERFACE javax.persistence.TypedQuery.setParameter (Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/TypedQuery;
+    |               POP
+    |               ALOAD_3     // Ljavax/persistence/TypedQuery; q   (line 23)
+    |               INVOKEINTERFACE javax.persistence.TypedQuery.getResultList ()Ljava/util/List;
+    |               ARETURN
+    method-execution(java.util.List org.bk.lmt.dao.JpaTasksDao.findTasksByUser(org.bk.lmt.domain.TaskUser))
+  end public java.util.List findTasksByUser(org.bk.lmt.domain.TaskUser)
+
+  public java.util.List findTasksByUser(org.bk.lmt.domain.TaskUser, int, int)    org.aspectj.weaver.MethodDeclarationLineNumber: 27:831
+:
+                    ALOAD_1     // Lorg/bk/lmt/domain/TaskUser; taskUser   (line 28)
+                    IFNONNULL L0
+                    NEW java.lang.IllegalArgumentException
+                    DUP
+                    LDC "The taskUser argument is required"
+                    INVOKESPECIAL java.lang.IllegalArgumentException.<init> (Ljava/lang/String;)V
+                    ATHROW
+                L0: ALOAD_0     // Lorg/bk/lmt/dao/JpaTasksDao; this   (line 29)
+                    INVOKEVIRTUAL org.bk.lmt.dao.JpaTasksDao.getEntityManager ()Ljavax/persistence/EntityManager;
+                    ASTORE 4
+                    ALOAD 4     // Ljavax/persistence/EntityManager; em   (line 30)
+                    LDC "Task.findByUser"
+                    LDC org.bk.lmt.domain.Task
+                    INVOKEINTERFACE javax.persistence.EntityManager.createNamedQuery (Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;
+                    ASTORE 5
+                    ALOAD 5     // Ljavax/persistence/TypedQuery; q   (line 31)
+                    LDC "taskUser"
+                    ALOAD_1     // Lorg/bk/lmt/domain/TaskUser; taskUser
+                    INVOKEINTERFACE javax.persistence.TypedQuery.setParameter (Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/TypedQuery;
+                    POP
+                    ALOAD 5     // Ljavax/persistence/TypedQuery; q   (line 32)
+                    ILOAD_2     // I firstResult
+                    INVOKEINTERFACE javax.persistence.TypedQuery.setFirstResult (I)Ljavax/persistence/TypedQuery;
+                    ILOAD_3     // I maxResults
+                    INVOKEINTERFACE javax.persistence.TypedQuery.setMaxResults (I)Ljavax/persistence/TypedQuery;
+                    INVOKEINTERFACE javax.persistence.TypedQuery.getResultList ()Ljava/util/List;
+                    ARETURN
+  end public java.util.List findTasksByUser(org.bk.lmt.domain.TaskUser, int, int)
+
+  public Long countTasksByUser(org.bk.lmt.domain.TaskUser)    org.aspectj.weaver.MethodDeclarationLineNumber: 36:1308
+:
+                    ALOAD_1     // Lorg/bk/lmt/domain/TaskUser; taskUser   (line 37)
+                    IFNONNULL L0
+                    NEW java.lang.IllegalArgumentException
+                    DUP
+                    LDC "The taskUser argument is required"
+                    INVOKESPECIAL java.lang.IllegalArgumentException.<init> (Ljava/lang/String;)V
+                    ATHROW
+                L0: ALOAD_0     // Lorg/bk/lmt/dao/JpaTasksDao; this   (line 38)
+                    INVOKEVIRTUAL org.bk.lmt.dao.JpaTasksDao.getEntityManager ()Ljavax/persistence/EntityManager;
+                    ASTORE_2
+                    ALOAD_2     // Ljavax/persistence/EntityManager; em   (line 39)
+                    LDC "Task.countByUser"
+                    LDC java.lang.Long
+                    INVOKEINTERFACE javax.persistence.EntityManager.createNamedQuery (Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;
+                    ASTORE_3
+                    ALOAD_3     // Ljavax/persistence/TypedQuery; q   (line 40)
+                    LDC "taskUser"
+                    ALOAD_1     // Lorg/bk/lmt/domain/TaskUser; taskUser
+                    INVOKEINTERFACE javax.persistence.TypedQuery.setParameter (Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/TypedQuery;
+                    POP
+                    ALOAD_3     // Ljavax/persistence/TypedQuery; q   (line 41)
+                    INVOKEINTERFACE javax.persistence.TypedQuery.getSingleResult ()Ljava/lang/Object;
+                    CHECKCAST java.lang.Long
+                    ARETURN
+  end public Long countTasksByUser(org.bk.lmt.domain.TaskUser)
+
+  public java.util.List findTasksByUserAndNameFilter(org.bk.lmt.domain.TaskUser, String, int, int)    org.aspectj.weaver.MethodDeclarationLineNumber: 45:1676
+:
+                    ALOAD_1     // Lorg/bk/lmt/domain/TaskUser; taskUser   (line 46)
+                    IFNONNULL L0
+                    NEW java.lang.IllegalArgumentException
+                    DUP
+                    LDC "The taskUser argument is required"
+                    INVOKESPECIAL java.lang.IllegalArgumentException.<init> (Ljava/lang/String;)V
+                    ATHROW
+                L0: ALOAD_0     // Lorg/bk/lmt/dao/JpaTasksDao; this   (line 47)
+                    INVOKEVIRTUAL org.bk.lmt.dao.JpaTasksDao.getEntityManager ()Ljavax/persistence/EntityManager;
+                    ASTORE 5
+                    ALOAD 5     // Ljavax/persistence/EntityManager; em   (line 48)
+                    LDC "Task.findByUserAndNamePattern"
+                    LDC org.bk.lmt.domain.Task
+                    INVOKEINTERFACE javax.persistence.EntityManager.createNamedQuery (Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;
+                    ASTORE 6
+                    ALOAD 6     // Ljavax/persistence/TypedQuery; q   (line 49)
+                    LDC "taskUser"
+                    ALOAD_1     // Lorg/bk/lmt/domain/TaskUser; taskUser
+                    INVOKEINTERFACE javax.persistence.TypedQuery.setParameter (Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/TypedQuery;
+                    POP
+                    ALOAD 6     // Ljavax/persistence/TypedQuery; q   (line 50)
+                    LDC "namePattern"
+                    NEW java.lang.StringBuilder
+                    DUP
+                    LDC "%"
+                    INVOKESPECIAL java.lang.StringBuilder.<init> (Ljava/lang/String;)V
+                    ALOAD_2     // Ljava/lang/String; namePattern
+                    INVOKEVIRTUAL java.lang.StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+                    LDC "%"
+                    INVOKEVIRTUAL java.lang.StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+                    INVOKEVIRTUAL java.lang.StringBuilder.toString ()Ljava/lang/String;
+                    INVOKEINTERFACE javax.persistence.TypedQuery.setParameter (Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/TypedQuery;
+                    POP
+                    ALOAD 6     // Ljavax/persistence/TypedQuery; q   (line 51)
+                    ILOAD_3     // I firstResult
+                    INVOKEINTERFACE javax.persistence.TypedQuery.setFirstResult (I)Ljavax/persistence/TypedQuery;
+                    ILOAD 4     // I maxResults
+                    INVOKEINTERFACE javax.persistence.TypedQuery.setMaxResults (I)Ljavax/persistence/TypedQuery;
+                    INVOKEINTERFACE javax.persistence.TypedQuery.getResultList ()Ljava/util/List;
+                    ARETURN
+  end public java.util.List findTasksByUserAndNameFilter(org.bk.lmt.domain.TaskUser, String, int, int)
+
+end public class org.bk.lmt.dao.JpaTasksDao
+ -- (NullPointerException) null
+null
+java.lang.NullPointerException
+	at org.aspectj.weaver.ResolvedType.lookupMethod(ResolvedType.java:548)
+	at org.aspectj.weaver.World.resolve(World.java:651)
+	at org.aspectj.weaver.MemberImpl.resolve(MemberImpl.java:95)
+	at org.aspectj.weaver.JoinPointSignatureIterator.addSignaturesUpToFirstDefiningMember(JoinPointSignatureIterator.java:112)
+	at org.aspectj.weaver.JoinPointSignatureIterator.<init>(JoinPointSignatureIterator.java:49)
+	at org.aspectj.weaver.MemberImpl.getJoinPointSignatures(MemberImpl.java:515)
+	at org.aspectj.weaver.patterns.SignaturePattern.matches(SignaturePattern.java:316)
+	at org.aspectj.weaver.patterns.KindedPointcut.matchInternal(KindedPointcut.java:202)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.AndPointcut.matchInternal(AndPointcut.java:51)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.OrPointcut.matchInternal(OrPointcut.java:50)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.OrPointcut.matchInternal(OrPointcut.java:50)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.OrPointcut.matchInternal(OrPointcut.java:50)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.ShadowMunger.match(ShadowMunger.java:113)
+	at org.aspectj.weaver.Advice.match(Advice.java:109)
+	at org.aspectj.weaver.bcel.BcelAdvice.match(BcelAdvice.java:149)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:3173)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.matchInvokeInstruction(BcelClassWeaver.java:3121)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:2780)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:2558)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.weave(BcelClassWeaver.java:480)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.weave(BcelClassWeaver.java:99)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1694)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveWithoutDump(BcelWeaver.java:1638)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveAndNotify(BcelWeaver.java:1401)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1187)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.weaveQueuedEntries(AjPipeliningCompilerAdapter.java:514)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.queueForWeaving(AjPipeliningCompilerAdapter.java:447)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.afterProcessing(AjPipeliningCompilerAdapter.java:432)
+	at org.aspectj.ajdt.internal.compiler.CompilerAdapter.ajc$after$org_aspectj_ajdt_internal_compiler_CompilerAdapter$5$6b855184(CompilerAdapter.aj:98)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.process(Compiler.java:652)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:392)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1027)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:271)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:184)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:248)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:405)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+
+info woven class org.bk.lmt.dao.JpaTasksDao (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\JpaTasksDao.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\JpaTaskUserDao.java
+abort trouble in: 
+public class org.bk.lmt.dao.JpaTaskUserDao extends org.bk.lmt.dao.JpaDao implements org.bk.lmt.dao.TaskUserDao:
+  public void <init>()    org.aspectj.weaver.MethodDeclarationLineNumber: 13:293
+:
+                    ALOAD_0     // Lorg/bk/lmt/dao/JpaTaskUserDao; this   (line 14)
+                    LDC org.bk.lmt.domain.TaskUser
+                    INVOKESPECIAL org.bk.lmt.dao.JpaDao.<init> (Ljava/lang/Class;)V
+    constructor-execution(void org.bk.lmt.dao.JpaTaskUserDao.<init>())
+    |               RETURN   (line 15)
+    constructor-execution(void org.bk.lmt.dao.JpaTaskUserDao.<init>())
+  end public void <init>()
+
+  public java.util.List findAllUsers(int, int)    org.aspectj.weaver.MethodDeclarationLineNumber: 17:386
+:
+    method-execution(java.util.List org.bk.lmt.dao.JpaTaskUserDao.findAllUsers(int, int))
+    |               ALOAD_0     // Lorg/bk/lmt/dao/JpaTaskUserDao; this   (line 18)
+    | method-call(javax.persistence.EntityManager org.bk.lmt.dao.JpaTaskUserDao.getEntityManager())
+    | |             INVOKEVIRTUAL org.bk.lmt.dao.JpaTaskUserDao.getEntityManager ()Ljavax/persistence/EntityManager;
+    | method-call(javax.persistence.EntityManager org.bk.lmt.dao.JpaTaskUserDao.getEntityManager())
+    |               LDC "TaskUser.findAll"   (line 19)
+    |               LDC org.bk.lmt.domain.TaskUser
+    |               INVOKEINTERFACE javax.persistence.EntityManager.createNamedQuery (Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;
+    |               ILOAD_1     // I firstResult   (line 20)
+    |               INVOKEINTERFACE javax.persistence.TypedQuery.setFirstResult (I)Ljavax/persistence/TypedQuery;
+    |               ILOAD_2     // I maxResults
+    |               INVOKEINTERFACE javax.persistence.TypedQuery.setMaxResults (I)Ljavax/persistence/TypedQuery;
+    |               INVOKEINTERFACE javax.persistence.TypedQuery.getResultList ()Ljava/util/List;   (line 21)
+    |               ARETURN   (line 18)
+    method-execution(java.util.List org.bk.lmt.dao.JpaTaskUserDao.findAllUsers(int, int))
+  end public java.util.List findAllUsers(int, int)
+
+  public org.bk.lmt.domain.TaskUser findUserByUserName(String)    org.aspectj.weaver.MethodDeclarationLineNumber: 25:644
+:
+                    ALOAD_0     // Lorg/bk/lmt/dao/JpaTaskUserDao; this   (line 26)
+                    INVOKEVIRTUAL org.bk.lmt.dao.JpaTaskUserDao.getEntityManager ()Ljavax/persistence/EntityManager;
+                    LDC "TaskUser.findUserByUserName"
+                    LDC org.bk.lmt.domain.TaskUser
+                    INVOKEINTERFACE javax.persistence.EntityManager.createNamedQuery (Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;
+                    ASTORE_2
+                    ALOAD_2     // Ljavax/persistence/TypedQuery; q   (line 27)
+                    LDC "username"
+                    ALOAD_1     // Ljava/lang/String; username
+                    INVOKEINTERFACE javax.persistence.TypedQuery.setParameter (Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/TypedQuery;
+                    POP
+                    ALOAD_2     // Ljavax/persistence/TypedQuery; q   (line 28)
+                    INVOKEINTERFACE javax.persistence.TypedQuery.getResultList ()Ljava/util/List;
+                    ASTORE_3
+                    ALOAD_3     // Ljava/util/List; list   (line 29)
+                    IFNULL L0
+                    ALOAD_3     // Ljava/util/List; list
+                    INVOKEINTERFACE java.util.List.size ()I
+                    IFNE L1
+                L0: ACONST_NULL   (line 30)
+                    ARETURN
+                L1: ALOAD_3     // Ljava/util/List; list   (line 33)
+                    ICONST_0
+                    INVOKEINTERFACE java.util.List.get (I)Ljava/lang/Object;
+                    CHECKCAST org.bk.lmt.domain.TaskUser
+                    ARETURN
+  end public org.bk.lmt.domain.TaskUser findUserByUserName(String)
+
+end public class org.bk.lmt.dao.JpaTaskUserDao
+ -- (NullPointerException) null
+null
+java.lang.NullPointerException
+	at org.aspectj.weaver.ResolvedType.lookupMethod(ResolvedType.java:548)
+	at org.aspectj.weaver.World.resolve(World.java:651)
+	at org.aspectj.weaver.MemberImpl.resolve(MemberImpl.java:95)
+	at org.aspectj.weaver.JoinPointSignatureIterator.addSignaturesUpToFirstDefiningMember(JoinPointSignatureIterator.java:112)
+	at org.aspectj.weaver.JoinPointSignatureIterator.<init>(JoinPointSignatureIterator.java:49)
+	at org.aspectj.weaver.MemberImpl.getJoinPointSignatures(MemberImpl.java:515)
+	at org.aspectj.weaver.patterns.SignaturePattern.matches(SignaturePattern.java:316)
+	at org.aspectj.weaver.patterns.KindedPointcut.matchInternal(KindedPointcut.java:202)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.AndPointcut.matchInternal(AndPointcut.java:51)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.OrPointcut.matchInternal(OrPointcut.java:50)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.OrPointcut.matchInternal(OrPointcut.java:50)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.OrPointcut.matchInternal(OrPointcut.java:50)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.ShadowMunger.match(ShadowMunger.java:113)
+	at org.aspectj.weaver.Advice.match(Advice.java:109)
+	at org.aspectj.weaver.bcel.BcelAdvice.match(BcelAdvice.java:149)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:3173)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.matchInvokeInstruction(BcelClassWeaver.java:3121)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:2780)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:2558)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.weave(BcelClassWeaver.java:480)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.weave(BcelClassWeaver.java:99)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1694)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveWithoutDump(BcelWeaver.java:1638)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveAndNotify(BcelWeaver.java:1401)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1187)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.weaveQueuedEntries(AjPipeliningCompilerAdapter.java:514)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.queueForWeaving(AjPipeliningCompilerAdapter.java:447)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.afterProcessing(AjPipeliningCompilerAdapter.java:432)
+	at org.aspectj.ajdt.internal.compiler.CompilerAdapter.ajc$after$org_aspectj_ajdt_internal_compiler_CompilerAdapter$5$6b855184(CompilerAdapter.aj:98)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.process(Compiler.java:652)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:392)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1027)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:271)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:184)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:248)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:405)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+
+info woven class org.bk.lmt.dao.JpaTaskUserDao (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\JpaTaskUserDao.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\ProjectDao.java
+info woven class org.bk.lmt.dao.ProjectDao (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\ProjectDao.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\TasksDao.java
+info woven class org.bk.lmt.dao.TasksDao (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\TasksDao.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\TaskUserDao.java
+info woven class org.bk.lmt.dao.TaskUserDao (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\dao\TaskUserDao.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\domain\Authority.java
+info woven class org.bk.lmt.domain.Authority (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\domain\Authority.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\domain\AuthorityNames.java
+info woven class org.bk.lmt.domain.AuthorityNames (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\domain\AuthorityNames.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\domain\Context.java
+info woven class org.bk.lmt.domain.Context (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\domain\Context.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\domain\Project.java
+info woven class org.bk.lmt.domain.Project (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\domain\Project.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\domain\Task.java
+info woven class org.bk.lmt.domain.Task (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\domain\Task.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\domain\TaskStatus.java
+info woven class org.bk.lmt.domain.TaskStatus (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\domain\TaskStatus.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\domain\TaskUser.java
+info woven class org.bk.lmt.domain.TaskUser (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\domain\TaskUser.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\registration\RegistrationController.java
+info woven class org.bk.lmt.registration.RegistrationController (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\registration\RegistrationController.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\registration\RegistrationValidator.java
+info woven class org.bk.lmt.registration.RegistrationValidator (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\registration\RegistrationValidator.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\security\GtdAuthenticationProvider.java
+abort trouble in: 
+public class org.bk.lmt.security.GtdAuthenticationProvider extends org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider:
+  private org.bk.lmt.dao.TaskUserDao gtdUserDao [RuntimeVisibleAnnotations]
+  public void <init>():
+                    ALOAD_0     // Lorg/bk/lmt/security/GtdAuthenticationProvider; this   (line 14)
+                    INVOKESPECIAL org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.<init> ()V
+    constructor-execution(void org.bk.lmt.security.GtdAuthenticationProvider.<init>())
+    |               RETURN
+    constructor-execution(void org.bk.lmt.security.GtdAuthenticationProvider.<init>())
+  end public void <init>()
+
+  protected void additionalAuthenticationChecks(org.springframework.security.core.userdetails.UserDetails, org.springframework.security.authentication.UsernamePasswordAuthenticationToken) throws org.springframework.security.core.AuthenticationException    org.aspectj.weaver.MethodDeclarationLineNumber: 19:755
+:
+    method-execution(void org.bk.lmt.security.GtdAuthenticationProvider.additionalAuthenticationChecks(org.springframework.security.core.userdetails.UserDetails, org.springframework.security.authentication.UsernamePasswordAuthenticationToken))
+    |               RETURN   (line 21)
+    method-execution(void org.bk.lmt.security.GtdAuthenticationProvider.additionalAuthenticationChecks(org.springframework.security.core.userdetails.UserDetails, org.springframework.security.authentication.UsernamePasswordAuthenticationToken))
+  end protected void additionalAuthenticationChecks(org.springframework.security.core.userdetails.UserDetails, org.springframework.security.authentication.UsernamePasswordAuthenticationToken) throws org.springframework.security.core.AuthenticationException
+
+  protected org.springframework.security.core.userdetails.UserDetails retrieveUser(String, org.springframework.security.authentication.UsernamePasswordAuthenticationToken) throws org.springframework.security.core.AuthenticationException    org.aspectj.weaver.MethodDeclarationLineNumber: 24:948
+:
+    method-execution(org.springframework.security.core.userdetails.UserDetails org.bk.lmt.security.GtdAuthenticationProvider.retrieveUser(java.lang.String, org.springframework.security.authentication.UsernamePasswordAuthenticationToken))
+    |               ALOAD_0     // Lorg/bk/lmt/security/GtdAuthenticationProvider; this   (line 25)
+    |               GETFIELD org.bk.lmt.security.GtdAuthenticationProvider.gtdUserDao Lorg/bk/lmt/dao/TaskUserDao;
+    |               ALOAD_1     // Ljava/lang/String; username
+    | method-call(org.bk.lmt.domain.TaskUser org.bk.lmt.dao.TaskUserDao.findUserByUserName(java.lang.String))
+    | |             INVOKEINTERFACE org.bk.lmt.dao.TaskUserDao.findUserByUserName (Ljava/lang/String;)Lorg/bk/lmt/domain/TaskUser;
+    | method-call(org.bk.lmt.domain.TaskUser org.bk.lmt.dao.TaskUserDao.findUserByUserName(java.lang.String))
+    |               ASTORE_3
+    |               ALOAD_3     // Lorg/bk/lmt/domain/TaskUser; user   (line 26)
+    |               IFNULL L0
+    |               ALOAD_3     // Lorg/bk/lmt/domain/TaskUser; user   (line 27)
+    |               INVOKEVIRTUAL org.bk.lmt.domain.TaskUser.getPassword ()Ljava/lang/String;
+    |               ASTORE 4
+    |               ALOAD_2     // Lorg/springframework/security/authentication/UsernamePasswordAuthenticationToken; authentication   (line 28)
+    |               INVOKEVIRTUAL org.springframework.security.authentication.UsernamePasswordAuthenticationToken.getCredentials ()Ljava/lang/Object;
+    |               CHECKCAST java.lang.String
+    |               ASTORE 5
+    |               ALOAD 4     // Ljava/lang/String; expectedPassword   (line 29)
+    |               ALOAD 5     // Ljava/lang/String; inputPassword
+    |               INVOKEVIRTUAL java.lang.String.equals (Ljava/lang/Object;)Z
+    |               IFEQ L0
+    |               NEW org.bk.lmt.types.CustomUserDetails   (line 30)
+    |               DUP
+    |               ALOAD_3     // Lorg/bk/lmt/domain/TaskUser; user
+    |               INVOKESPECIAL org.bk.lmt.types.CustomUserDetails.<init> (Lorg/bk/lmt/domain/TaskUser;)V
+    |               ARETURN
+    |           L0: NEW org.springframework.security.authentication.BadCredentialsException   (line 34)
+    |               DUP
+    |               LDC "Invalid User"
+    |               INVOKESPECIAL org.springframework.security.authentication.BadCredentialsException.<init> (Ljava/lang/String;)V
+    |               ATHROW
+    method-execution(org.springframework.security.core.userdetails.UserDetails org.bk.lmt.security.GtdAuthenticationProvider.retrieveUser(java.lang.String, org.springframework.security.authentication.UsernamePasswordAuthenticationToken))
+  end protected org.springframework.security.core.userdetails.UserDetails retrieveUser(String, org.springframework.security.authentication.UsernamePasswordAuthenticationToken) throws org.springframework.security.core.AuthenticationException
+
+  public void setGtdUserDao(org.bk.lmt.dao.TaskUserDao)    org.aspectj.weaver.MethodDeclarationLineNumber: 37:1446
+:
+                    ALOAD_0     // Lorg/bk/lmt/security/GtdAuthenticationProvider; this   (line 38)
+                    ALOAD_1     // Lorg/bk/lmt/dao/TaskUserDao; gtdUserDao
+                    PUTFIELD org.bk.lmt.security.GtdAuthenticationProvider.gtdUserDao Lorg/bk/lmt/dao/TaskUserDao;
+                    RETURN   (line 39)
+  end public void setGtdUserDao(org.bk.lmt.dao.TaskUserDao)
+
+end public class org.bk.lmt.security.GtdAuthenticationProvider
+ -- (NullPointerException) null
+null
+java.lang.NullPointerException
+	at org.aspectj.weaver.ResolvedType.lookupResolvedMember(ResolvedType.java:625)
+	at org.aspectj.weaver.JoinPointSignatureIterator.findSignaturesFromSupertypes(JoinPointSignatureIterator.java:192)
+	at org.aspectj.weaver.JoinPointSignatureIterator.hasNext(JoinPointSignatureIterator.java:68)
+	at org.aspectj.weaver.patterns.SignaturePattern.matches(SignaturePattern.java:317)
+	at org.aspectj.weaver.patterns.KindedPointcut.matchInternal(KindedPointcut.java:202)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.AndPointcut.matchInternal(AndPointcut.java:51)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.OrPointcut.matchInternal(OrPointcut.java:50)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.OrPointcut.matchInternal(OrPointcut.java:50)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.OrPointcut.matchInternal(OrPointcut.java:50)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.ShadowMunger.match(ShadowMunger.java:113)
+	at org.aspectj.weaver.Advice.match(Advice.java:109)
+	at org.aspectj.weaver.bcel.BcelAdvice.match(BcelAdvice.java:149)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:3173)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.matchInvokeInstruction(BcelClassWeaver.java:3121)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:2780)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:2558)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.weave(BcelClassWeaver.java:480)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.weave(BcelClassWeaver.java:99)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1694)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveWithoutDump(BcelWeaver.java:1638)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveAndNotify(BcelWeaver.java:1401)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1187)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.weaveQueuedEntries(AjPipeliningCompilerAdapter.java:514)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.queueForWeaving(AjPipeliningCompilerAdapter.java:447)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.afterProcessing(AjPipeliningCompilerAdapter.java:432)
+	at org.aspectj.ajdt.internal.compiler.CompilerAdapter.ajc$after$org_aspectj_ajdt_internal_compiler_CompilerAdapter$5$6b855184(CompilerAdapter.aj:98)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.process(Compiler.java:652)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:392)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1027)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:271)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:184)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:248)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:405)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+
+info woven class org.bk.lmt.security.GtdAuthenticationProvider (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\security\GtdAuthenticationProvider.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\security\PasswordEncryptionService.java
+info woven class org.bk.lmt.security.PasswordEncryptionService (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\security\PasswordEncryptionService.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\service\ContextService.java
+info woven class org.bk.lmt.service.ContextService (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\service\ContextService.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\service\ContextServiceImpl.java
+abort trouble in: 
+public class org.bk.lmt.service.ContextServiceImpl extends java.lang.Object implements org.bk.lmt.service.ContextService:
+  private org.bk.lmt.dao.ContextDao contextDao [RuntimeVisibleAnnotations]
+  private org.bk.lmt.dao.TaskUserDao gtdUserDao [RuntimeVisibleAnnotations]
+  public void <init>():
+                    ALOAD_0     // Lorg/bk/lmt/service/ContextServiceImpl; this   (line 15)
+                    INVOKESPECIAL java.lang.Object.<init> ()V
+    constructor-execution(void org.bk.lmt.service.ContextServiceImpl.<init>())
+    |               RETURN
+    constructor-execution(void org.bk.lmt.service.ContextServiceImpl.<init>())
+  end public void <init>()
+
+  public org.bk.lmt.domain.Context persistForUser(org.bk.lmt.domain.Context, String)    org.aspectj.weaver.MethodDeclarationLineNumber: 22:561
+:
+    method-execution(org.bk.lmt.domain.Context org.bk.lmt.service.ContextServiceImpl.persistForUser(org.bk.lmt.domain.Context, java.lang.String))
+    |               ALOAD_0     // Lorg/bk/lmt/service/ContextServiceImpl; this   (line 23)
+    |               GETFIELD org.bk.lmt.service.ContextServiceImpl.gtdUserDao Lorg/bk/lmt/dao/TaskUserDao;
+    |               ALOAD_2     // Ljava/lang/String; userName
+    | method-call(org.bk.lmt.domain.TaskUser org.bk.lmt.dao.TaskUserDao.findUserByUserName(java.lang.String))
+    | |             INVOKEINTERFACE org.bk.lmt.dao.TaskUserDao.findUserByUserName (Ljava/lang/String;)Lorg/bk/lmt/domain/TaskUser;
+    | method-call(org.bk.lmt.domain.TaskUser org.bk.lmt.dao.TaskUserDao.findUserByUserName(java.lang.String))
+    |               ASTORE_3
+    |               ALOAD_1     // Lorg/bk/lmt/domain/Context; gtdContext   (line 24)
+    |               ALOAD_3     // Lorg/bk/lmt/domain/TaskUser; taskUser
+    |               INVOKEVIRTUAL org.bk.lmt.domain.Context.setTaskUser (Lorg/bk/lmt/domain/TaskUser;)V
+    |               ALOAD_0     // Lorg/bk/lmt/service/ContextServiceImpl; this   (line 25)
+    |               GETFIELD org.bk.lmt.service.ContextServiceImpl.contextDao Lorg/bk/lmt/dao/ContextDao;
+    |               ALOAD_1     // Lorg/bk/lmt/domain/Context; gtdContext
+    |               INVOKEINTERFACE org.bk.lmt.dao.ContextDao.persist (Ljava/lang/Object;)Ljava/lang/Object;
+    |               CHECKCAST org.bk.lmt.domain.Context
+    |               ARETURN
+    method-execution(org.bk.lmt.domain.Context org.bk.lmt.service.ContextServiceImpl.persistForUser(org.bk.lmt.domain.Context, java.lang.String))
+  end public org.bk.lmt.domain.Context persistForUser(org.bk.lmt.domain.Context, String)
+
+  public org.bk.lmt.domain.Context findById(Long)    org.aspectj.weaver.MethodDeclarationLineNumber: 30:811
+:
+                    ALOAD_0     // Lorg/bk/lmt/service/ContextServiceImpl; this   (line 31)
+                    GETFIELD org.bk.lmt.service.ContextServiceImpl.contextDao Lorg/bk/lmt/dao/ContextDao;
+                    ALOAD_1     // Ljava/lang/Long; id
+                    INVOKEINTERFACE org.bk.lmt.dao.ContextDao.findById (Ljava/lang/Object;)Ljava/lang/Object;
+                    CHECKCAST org.bk.lmt.domain.Context
+                    ARETURN
+  end public org.bk.lmt.domain.Context findById(Long)
+
+  public java.util.List findContextsByGtdUserName(String, int, int)    org.aspectj.weaver.MethodDeclarationLineNumber: 36:920
+:
+                    ALOAD_0     // Lorg/bk/lmt/service/ContextServiceImpl; this   (line 37)
+                    GETFIELD org.bk.lmt.service.ContextServiceImpl.contextDao Lorg/bk/lmt/dao/ContextDao;
+                    ALOAD_1     // Ljava/lang/String; userName
+                    ILOAD_2     // I firstResult
+                    ILOAD_3     // I maxResults
+                    INVOKEINTERFACE org.bk.lmt.dao.ContextDao.findContextsByGtdUser (Ljava/lang/String;II)Ljava/util/List;
+                    ARETURN
+  end public java.util.List findContextsByGtdUserName(String, int, int)
+
+  public java.util.List findContextsByGtdUserName(String)    org.aspectj.weaver.MethodDeclarationLineNumber: 41:1130
+:
+                    ALOAD_0     // Lorg/bk/lmt/service/ContextServiceImpl; this   (line 42)
+                    GETFIELD org.bk.lmt.service.ContextServiceImpl.contextDao Lorg/bk/lmt/dao/ContextDao;
+                    ALOAD_1     // Ljava/lang/String; userName
+                    INVOKEINTERFACE org.bk.lmt.dao.ContextDao.findContextsByGtdUser (Ljava/lang/String;)Ljava/util/List;
+                    ARETURN
+  end public java.util.List findContextsByGtdUserName(String)
+
+  public Long countContextsByUserName(String)    org.aspectj.weaver.MethodDeclarationLineNumber: 45:1268
+:
+                    ALOAD_0     // Lorg/bk/lmt/service/ContextServiceImpl; this   (line 46)
+                    GETFIELD org.bk.lmt.service.ContextServiceImpl.contextDao Lorg/bk/lmt/dao/ContextDao;
+                    ALOAD_1     // Ljava/lang/String; userName
+                    INVOKEINTERFACE org.bk.lmt.dao.ContextDao.countContextsByUserName (Ljava/lang/String;)Ljava/lang/Long;
+                    ARETURN
+  end public Long countContextsByUserName(String)
+
+  public org.bk.lmt.domain.Context updateForUser(org.bk.lmt.domain.Context, String)    org.aspectj.weaver.MethodDeclarationLineNumber: 51:1426
+:
+                    ALOAD_0     // Lorg/bk/lmt/service/ContextServiceImpl; this   (line 52)
+                    GETFIELD org.bk.lmt.service.ContextServiceImpl.gtdUserDao Lorg/bk/lmt/dao/TaskUserDao;
+                    ALOAD_2     // Ljava/lang/String; userName
+                    INVOKEINTERFACE org.bk.lmt.dao.TaskUserDao.findUserByUserName (Ljava/lang/String;)Lorg/bk/lmt/domain/TaskUser;
+                    ASTORE_3
+                    ALOAD_1     // Lorg/bk/lmt/domain/Context; gtdContext   (line 53)
+                    ALOAD_3     // Lorg/bk/lmt/domain/TaskUser; gtdUser
+                    INVOKEVIRTUAL org.bk.lmt.domain.Context.setTaskUser (Lorg/bk/lmt/domain/TaskUser;)V
+                    ALOAD_0     // Lorg/bk/lmt/service/ContextServiceImpl; this   (line 54)
+                    GETFIELD org.bk.lmt.service.ContextServiceImpl.contextDao Lorg/bk/lmt/dao/ContextDao;
+                    ALOAD_1     // Lorg/bk/lmt/domain/Context; gtdContext
+                    INVOKEINTERFACE org.bk.lmt.dao.ContextDao.update (Ljava/lang/Object;)Ljava/lang/Object;
+                    CHECKCAST org.bk.lmt.domain.Context
+                    ARETURN
+  end public org.bk.lmt.domain.Context updateForUser(org.bk.lmt.domain.Context, String)
+
+  public void remove(org.bk.lmt.domain.Context)    org.aspectj.weaver.MethodDeclarationLineNumber: 59:1686
+:
+                    ALOAD_0     // Lorg/bk/lmt/service/ContextServiceImpl; this   (line 60)
+                    GETFIELD org.bk.lmt.service.ContextServiceImpl.contextDao Lorg/bk/lmt/dao/ContextDao;
+                    ALOAD_1     // Lorg/bk/lmt/domain/Context; context
+                    INVOKEINTERFACE org.bk.lmt.dao.ContextDao.remove (Ljava/lang/Object;)V
+                    RETURN   (line 62)
+  end public void remove(org.bk.lmt.domain.Context)
+
+  public void setContextDao(org.bk.lmt.dao.ContextDao)    org.aspectj.weaver.MethodDeclarationLineNumber: 65:1783
+:
+                    ALOAD_0     // Lorg/bk/lmt/service/ContextServiceImpl; this   (line 66)
+                    ALOAD_1     // Lorg/bk/lmt/dao/ContextDao; contextDao
+                    PUTFIELD org.bk.lmt.service.ContextServiceImpl.contextDao Lorg/bk/lmt/dao/ContextDao;
+                    RETURN   (line 67)
+  end public void setContextDao(org.bk.lmt.dao.ContextDao)
+
+  public void setGtdUserDao(org.bk.lmt.dao.TaskUserDao)    org.aspectj.weaver.MethodDeclarationLineNumber: 69:1881
+:
+                    ALOAD_0     // Lorg/bk/lmt/service/ContextServiceImpl; this   (line 70)
+                    ALOAD_1     // Lorg/bk/lmt/dao/TaskUserDao; gtdUserDao
+                    PUTFIELD org.bk.lmt.service.ContextServiceImpl.gtdUserDao Lorg/bk/lmt/dao/TaskUserDao;
+                    RETURN   (line 71)
+  end public void setGtdUserDao(org.bk.lmt.dao.TaskUserDao)
+
+end public class org.bk.lmt.service.ContextServiceImpl
+ -- (NullPointerException) null
+null
+java.lang.NullPointerException
+	at org.aspectj.weaver.ResolvedType.lookupResolvedMember(ResolvedType.java:625)
+	at org.aspectj.weaver.JoinPointSignatureIterator.findSignaturesFromSupertypes(JoinPointSignatureIterator.java:192)
+	at org.aspectj.weaver.JoinPointSignatureIterator.hasNext(JoinPointSignatureIterator.java:68)
+	at org.aspectj.weaver.patterns.SignaturePattern.matches(SignaturePattern.java:317)
+	at org.aspectj.weaver.patterns.KindedPointcut.matchInternal(KindedPointcut.java:202)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.AndPointcut.matchInternal(AndPointcut.java:51)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.OrPointcut.matchInternal(OrPointcut.java:50)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.OrPointcut.matchInternal(OrPointcut.java:50)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.OrPointcut.matchInternal(OrPointcut.java:50)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.ShadowMunger.match(ShadowMunger.java:113)
+	at org.aspectj.weaver.Advice.match(Advice.java:109)
+	at org.aspectj.weaver.bcel.BcelAdvice.match(BcelAdvice.java:149)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:3173)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.matchInvokeInstruction(BcelClassWeaver.java:3121)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:2780)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:2558)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.weave(BcelClassWeaver.java:480)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.weave(BcelClassWeaver.java:99)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1694)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveWithoutDump(BcelWeaver.java:1638)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveAndNotify(BcelWeaver.java:1401)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1187)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.weaveQueuedEntries(AjPipeliningCompilerAdapter.java:514)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.queueForWeaving(AjPipeliningCompilerAdapter.java:447)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.afterProcessing(AjPipeliningCompilerAdapter.java:432)
+	at org.aspectj.ajdt.internal.compiler.CompilerAdapter.ajc$after$org_aspectj_ajdt_internal_compiler_CompilerAdapter$5$6b855184(CompilerAdapter.aj:98)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.process(Compiler.java:652)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:392)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1027)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:271)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:184)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:248)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:405)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+
+info woven class org.bk.lmt.service.ContextServiceImpl (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\service\ContextServiceImpl.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\service\ProjectService.java
+info woven class org.bk.lmt.service.ProjectService (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\service\ProjectService.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\service\ProjectServiceImpl.java
+abort trouble in: 
+public class org.bk.lmt.service.ProjectServiceImpl extends java.lang.Object implements org.bk.lmt.service.ProjectService:
+  private org.bk.lmt.dao.ProjectDao projectDao [RuntimeVisibleAnnotations]
+  private org.bk.lmt.dao.TaskUserDao gtdUserDao [RuntimeVisibleAnnotations]
+  public void <init>():
+                    ALOAD_0     // Lorg/bk/lmt/service/ProjectServiceImpl; this   (line 15)
+                    INVOKESPECIAL java.lang.Object.<init> ()V
+    constructor-execution(void org.bk.lmt.service.ProjectServiceImpl.<init>())
+    |               RETURN
+    constructor-execution(void org.bk.lmt.service.ProjectServiceImpl.<init>())
+  end public void <init>()
+
+  public org.bk.lmt.domain.Project persistForUser(org.bk.lmt.domain.Project, String)    org.aspectj.weaver.MethodDeclarationLineNumber: 22:578
+:
+    method-execution(org.bk.lmt.domain.Project org.bk.lmt.service.ProjectServiceImpl.persistForUser(org.bk.lmt.domain.Project, java.lang.String))
+    |               ALOAD_0     // Lorg/bk/lmt/service/ProjectServiceImpl; this   (line 23)
+    |               GETFIELD org.bk.lmt.service.ProjectServiceImpl.gtdUserDao Lorg/bk/lmt/dao/TaskUserDao;
+    |               ALOAD_2     // Ljava/lang/String; userName
+    | method-call(org.bk.lmt.domain.TaskUser org.bk.lmt.dao.TaskUserDao.findUserByUserName(java.lang.String))
+    | |             INVOKEINTERFACE org.bk.lmt.dao.TaskUserDao.findUserByUserName (Ljava/lang/String;)Lorg/bk/lmt/domain/TaskUser;
+    | method-call(org.bk.lmt.domain.TaskUser org.bk.lmt.dao.TaskUserDao.findUserByUserName(java.lang.String))
+    |               ASTORE_3
+    |               ALOAD_1     // Lorg/bk/lmt/domain/Project; gtdProject   (line 24)
+    |               ALOAD_3     // Lorg/bk/lmt/domain/TaskUser; gtdUser
+    |               INVOKEVIRTUAL org.bk.lmt.domain.Project.setTaskUser (Lorg/bk/lmt/domain/TaskUser;)V
+    |               ALOAD_0     // Lorg/bk/lmt/service/ProjectServiceImpl; this   (line 25)
+    |               GETFIELD org.bk.lmt.service.ProjectServiceImpl.projectDao Lorg/bk/lmt/dao/ProjectDao;
+    |               ALOAD_1     // Lorg/bk/lmt/domain/Project; gtdProject
+    |               INVOKEINTERFACE org.bk.lmt.dao.ProjectDao.persist (Ljava/lang/Object;)Ljava/lang/Object;
+    |               CHECKCAST org.bk.lmt.domain.Project
+    |               ARETURN
+    method-execution(org.bk.lmt.domain.Project org.bk.lmt.service.ProjectServiceImpl.persistForUser(org.bk.lmt.domain.Project, java.lang.String))
+  end public org.bk.lmt.domain.Project persistForUser(org.bk.lmt.domain.Project, String)
+
+  public org.bk.lmt.domain.Project findById(Long)    org.aspectj.weaver.MethodDeclarationLineNumber: 29:840
+:
+                    ALOAD_0     // Lorg/bk/lmt/service/ProjectServiceImpl; this   (line 30)
+                    GETFIELD org.bk.lmt.service.ProjectServiceImpl.projectDao Lorg/bk/lmt/dao/ProjectDao;
+                    ALOAD_1     // Ljava/lang/Long; id
+                    INVOKEINTERFACE org.bk.lmt.dao.ProjectDao.findById (Ljava/lang/Object;)Ljava/lang/Object;
+                    CHECKCAST org.bk.lmt.domain.Project
+                    ARETURN
+  end public org.bk.lmt.domain.Project findById(Long)
+
+  public java.util.List findProjectsByGtdUser(String, int, int)    org.aspectj.weaver.MethodDeclarationLineNumber: 34:956
+:
+                    ALOAD_0     // Lorg/bk/lmt/service/ProjectServiceImpl; this   (line 35)
+                    GETFIELD org.bk.lmt.service.ProjectServiceImpl.projectDao Lorg/bk/lmt/dao/ProjectDao;
+                    ALOAD_1     // Ljava/lang/String; userName
+                    ILOAD_2     // I firstResult
+                    ILOAD_3     // I maxResults
+                    INVOKEINTERFACE org.bk.lmt.dao.ProjectDao.findProjectsByGtdUser (Ljava/lang/String;II)Ljava/util/List;
+                    ARETURN
+  end public java.util.List findProjectsByGtdUser(String, int, int)
+
+  public java.util.List findProjectsByGtdUser(String)    org.aspectj.weaver.MethodDeclarationLineNumber: 39:1170
+:
+                    ALOAD_0     // Lorg/bk/lmt/service/ProjectServiceImpl; this   (line 40)
+                    GETFIELD org.bk.lmt.service.ProjectServiceImpl.projectDao Lorg/bk/lmt/dao/ProjectDao;
+                    ALOAD_1     // Ljava/lang/String; userName
+                    INVOKEINTERFACE org.bk.lmt.dao.ProjectDao.findProjectsByGtdUser (Ljava/lang/String;)Ljava/util/List;
+                    ARETURN
+  end public java.util.List findProjectsByGtdUser(String)
+
+  public Long countProjectsByUserName(String)    org.aspectj.weaver.MethodDeclarationLineNumber: 44:1317
+:
+                    ALOAD_0     // Lorg/bk/lmt/service/ProjectServiceImpl; this   (line 45)
+                    GETFIELD org.bk.lmt.service.ProjectServiceImpl.projectDao Lorg/bk/lmt/dao/ProjectDao;
+                    ALOAD_1     // Ljava/lang/String; userName
+                    INVOKEINTERFACE org.bk.lmt.dao.ProjectDao.countProjectsByUserName (Ljava/lang/String;)Ljava/lang/Long;
+                    ARETURN
+  end public Long countProjectsByUserName(String)
+
+  public org.bk.lmt.domain.Project updateForUser(org.bk.lmt.domain.Project, String)    org.aspectj.weaver.MethodDeclarationLineNumber: 50:1491
+:
+                    ALOAD_0     // Lorg/bk/lmt/service/ProjectServiceImpl; this   (line 51)
+                    GETFIELD org.bk.lmt.service.ProjectServiceImpl.gtdUserDao Lorg/bk/lmt/dao/TaskUserDao;
+                    ALOAD_2     // Ljava/lang/String; userName
+                    INVOKEINTERFACE org.bk.lmt.dao.TaskUserDao.findUserByUserName (Ljava/lang/String;)Lorg/bk/lmt/domain/TaskUser;
+                    ASTORE_3
+                    ALOAD_1     // Lorg/bk/lmt/domain/Project; gtdProject   (line 52)
+                    ALOAD_3     // Lorg/bk/lmt/domain/TaskUser; gtdUser
+                    INVOKEVIRTUAL org.bk.lmt.domain.Project.setTaskUser (Lorg/bk/lmt/domain/TaskUser;)V
+                    ALOAD_0     // Lorg/bk/lmt/service/ProjectServiceImpl; this   (line 53)
+                    GETFIELD org.bk.lmt.service.ProjectServiceImpl.projectDao Lorg/bk/lmt/dao/ProjectDao;
+                    ALOAD_1     // Lorg/bk/lmt/domain/Project; gtdProject
+                    INVOKEINTERFACE org.bk.lmt.dao.ProjectDao.update (Ljava/lang/Object;)Ljava/lang/Object;
+                    CHECKCAST org.bk.lmt.domain.Project
+                    ARETURN
+  end public org.bk.lmt.domain.Project updateForUser(org.bk.lmt.domain.Project, String)
+
+  public void remove(org.bk.lmt.domain.Project)    org.aspectj.weaver.MethodDeclarationLineNumber: 58:1773
+:
+                    ALOAD_0     // Lorg/bk/lmt/service/ProjectServiceImpl; this   (line 59)
+                    GETFIELD org.bk.lmt.service.ProjectServiceImpl.projectDao Lorg/bk/lmt/dao/ProjectDao;
+                    ALOAD_1     // Lorg/bk/lmt/domain/Project; gtdProject
+                    INVOKEINTERFACE org.bk.lmt.dao.ProjectDao.remove (Ljava/lang/Object;)V
+                    RETURN   (line 60)
+  end public void remove(org.bk.lmt.domain.Project)
+
+  public void setProjectDao(org.bk.lmt.dao.ProjectDao)    org.aspectj.weaver.MethodDeclarationLineNumber: 62:1873
+:
+                    ALOAD_0     // Lorg/bk/lmt/service/ProjectServiceImpl; this   (line 63)
+                    ALOAD_1     // Lorg/bk/lmt/dao/ProjectDao; projectDao
+                    PUTFIELD org.bk.lmt.service.ProjectServiceImpl.projectDao Lorg/bk/lmt/dao/ProjectDao;
+                    RETURN   (line 64)
+  end public void setProjectDao(org.bk.lmt.dao.ProjectDao)
+
+  public void setGtdUserDao(org.bk.lmt.dao.TaskUserDao)    org.aspectj.weaver.MethodDeclarationLineNumber: 66:1977
+:
+                    ALOAD_0     // Lorg/bk/lmt/service/ProjectServiceImpl; this   (line 67)
+                    ALOAD_1     // Lorg/bk/lmt/dao/TaskUserDao; gtdUserDao
+                    PUTFIELD org.bk.lmt.service.ProjectServiceImpl.gtdUserDao Lorg/bk/lmt/dao/TaskUserDao;
+                    RETURN   (line 68)
+  end public void setGtdUserDao(org.bk.lmt.dao.TaskUserDao)
+
+end public class org.bk.lmt.service.ProjectServiceImpl
+ -- (NullPointerException) null
+null
+java.lang.NullPointerException
+	at org.aspectj.weaver.ResolvedType.lookupResolvedMember(ResolvedType.java:625)
+	at org.aspectj.weaver.JoinPointSignatureIterator.findSignaturesFromSupertypes(JoinPointSignatureIterator.java:192)
+	at org.aspectj.weaver.JoinPointSignatureIterator.hasNext(JoinPointSignatureIterator.java:68)
+	at org.aspectj.weaver.patterns.SignaturePattern.matches(SignaturePattern.java:317)
+	at org.aspectj.weaver.patterns.KindedPointcut.matchInternal(KindedPointcut.java:202)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.AndPointcut.matchInternal(AndPointcut.java:51)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.OrPointcut.matchInternal(OrPointcut.java:50)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.OrPointcut.matchInternal(OrPointcut.java:50)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.OrPointcut.matchInternal(OrPointcut.java:50)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.ShadowMunger.match(ShadowMunger.java:113)
+	at org.aspectj.weaver.Advice.match(Advice.java:109)
+	at org.aspectj.weaver.bcel.BcelAdvice.match(BcelAdvice.java:149)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:3173)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.matchInvokeInstruction(BcelClassWeaver.java:3121)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:2780)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:2558)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.weave(BcelClassWeaver.java:480)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.weave(BcelClassWeaver.java:99)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1694)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveWithoutDump(BcelWeaver.java:1638)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveAndNotify(BcelWeaver.java:1401)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1187)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.weaveQueuedEntries(AjPipeliningCompilerAdapter.java:514)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.queueForWeaving(AjPipeliningCompilerAdapter.java:447)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.afterProcessing(AjPipeliningCompilerAdapter.java:432)
+	at org.aspectj.ajdt.internal.compiler.CompilerAdapter.ajc$after$org_aspectj_ajdt_internal_compiler_CompilerAdapter$5$6b855184(CompilerAdapter.aj:98)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.process(Compiler.java:652)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:392)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1027)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:271)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:184)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:248)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:405)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+
+info woven class org.bk.lmt.service.ProjectServiceImpl (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\service\ProjectServiceImpl.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\service\TaskService.java
+info woven class org.bk.lmt.service.TaskService (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\service\TaskService.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\service\TaskServiceImpl.java
+abort trouble in: 
+public class org.bk.lmt.service.TaskServiceImpl extends java.lang.Object implements org.bk.lmt.service.TaskService:
+  private org.bk.lmt.dao.TasksDao taskDao [RuntimeVisibleAnnotations]
+  private org.bk.lmt.dao.TaskUserDao gtdUserDao [RuntimeVisibleAnnotations]
+  public void <init>():
+                    ALOAD_0     // Lorg/bk/lmt/service/TaskServiceImpl; this   (line 14)
+                    INVOKESPECIAL java.lang.Object.<init> ()V
+    constructor-execution(void org.bk.lmt.service.TaskServiceImpl.<init>())
+    |               RETURN
+    constructor-execution(void org.bk.lmt.service.TaskServiceImpl.<init>())
+  end public void <init>()
+
+  public org.bk.lmt.domain.Task persistForUser(org.bk.lmt.domain.Task, String)    org.aspectj.weaver.MethodDeclarationLineNumber: 21:571
+:
+    method-execution(org.bk.lmt.domain.Task org.bk.lmt.service.TaskServiceImpl.persistForUser(org.bk.lmt.domain.Task, java.lang.String))
+    |               ALOAD_0     // Lorg/bk/lmt/service/TaskServiceImpl; this   (line 22)
+    |               GETFIELD org.bk.lmt.service.TaskServiceImpl.gtdUserDao Lorg/bk/lmt/dao/TaskUserDao;
+    |               ALOAD_2     // Ljava/lang/String; username
+    | method-call(org.bk.lmt.domain.TaskUser org.bk.lmt.dao.TaskUserDao.findUserByUserName(java.lang.String))
+    | |             INVOKEINTERFACE org.bk.lmt.dao.TaskUserDao.findUserByUserName (Ljava/lang/String;)Lorg/bk/lmt/domain/TaskUser;
+    | method-call(org.bk.lmt.domain.TaskUser org.bk.lmt.dao.TaskUserDao.findUserByUserName(java.lang.String))
+    |               ASTORE_3
+    |               ALOAD_1     // Lorg/bk/lmt/domain/Task; task   (line 23)
+    |               ALOAD_3     // Lorg/bk/lmt/domain/TaskUser; user
+    |               INVOKEVIRTUAL org.bk.lmt.domain.Task.setTaskUser (Lorg/bk/lmt/domain/TaskUser;)V
+    |               ALOAD_0     // Lorg/bk/lmt/service/TaskServiceImpl; this   (line 24)
+    |               GETFIELD org.bk.lmt.service.TaskServiceImpl.taskDao Lorg/bk/lmt/dao/TasksDao;
+    |               ALOAD_1     // Lorg/bk/lmt/domain/Task; task
+    |               INVOKEINTERFACE org.bk.lmt.dao.TasksDao.persist (Ljava/lang/Object;)Ljava/lang/Object;
+    |               CHECKCAST org.bk.lmt.domain.Task
+    |               ARETURN
+    method-execution(org.bk.lmt.domain.Task org.bk.lmt.service.TaskServiceImpl.persistForUser(org.bk.lmt.domain.Task, java.lang.String))
+  end public org.bk.lmt.domain.Task persistForUser(org.bk.lmt.domain.Task, String)
+
+  public org.bk.lmt.domain.Task updateForUser(org.bk.lmt.domain.Task, String)    org.aspectj.weaver.MethodDeclarationLineNumber: 29:795
+:
+                    ALOAD_0     // Lorg/bk/lmt/service/TaskServiceImpl; this   (line 30)
+                    GETFIELD org.bk.lmt.service.TaskServiceImpl.gtdUserDao Lorg/bk/lmt/dao/TaskUserDao;
+                    ALOAD_2     // Ljava/lang/String; username
+                    INVOKEINTERFACE org.bk.lmt.dao.TaskUserDao.findUserByUserName (Ljava/lang/String;)Lorg/bk/lmt/domain/TaskUser;
+                    ASTORE_3
+                    ALOAD_1     // Lorg/bk/lmt/domain/Task; task   (line 31)
+                    ALOAD_3     // Lorg/bk/lmt/domain/TaskUser; user
+                    INVOKEVIRTUAL org.bk.lmt.domain.Task.setTaskUser (Lorg/bk/lmt/domain/TaskUser;)V
+                    ALOAD_0     // Lorg/bk/lmt/service/TaskServiceImpl; this   (line 32)
+                    GETFIELD org.bk.lmt.service.TaskServiceImpl.taskDao Lorg/bk/lmt/dao/TasksDao;
+                    ALOAD_1     // Lorg/bk/lmt/domain/Task; task
+                    INVOKEINTERFACE org.bk.lmt.dao.TasksDao.update (Ljava/lang/Object;)Ljava/lang/Object;
+                    CHECKCAST org.bk.lmt.domain.Task
+                    ARETURN
+  end public org.bk.lmt.domain.Task updateForUser(org.bk.lmt.domain.Task, String)
+
+  public org.bk.lmt.domain.Task findById(Long)    org.aspectj.weaver.MethodDeclarationLineNumber: 36:1000
+:
+                    ALOAD_0     // Lorg/bk/lmt/service/TaskServiceImpl; this   (line 37)
+                    GETFIELD org.bk.lmt.service.TaskServiceImpl.taskDao Lorg/bk/lmt/dao/TasksDao;
+                    ALOAD_1     // Ljava/lang/Long; id
+                    INVOKEINTERFACE org.bk.lmt.dao.TasksDao.findById (Ljava/lang/Object;)Ljava/lang/Object;
+                    CHECKCAST org.bk.lmt.domain.Task
+                    ARETURN
+  end public org.bk.lmt.domain.Task findById(Long)
+
+  public java.util.List findTasksByUser(String, int, int)    org.aspectj.weaver.MethodDeclarationLineNumber: 41:1095
+:
+                    ALOAD_0     // Lorg/bk/lmt/service/TaskServiceImpl; this   (line 42)
+                    GETFIELD org.bk.lmt.service.TaskServiceImpl.gtdUserDao Lorg/bk/lmt/dao/TaskUserDao;
+                    ALOAD_1     // Ljava/lang/String; username
+                    INVOKEINTERFACE org.bk.lmt.dao.TaskUserDao.findUserByUserName (Ljava/lang/String;)Lorg/bk/lmt/domain/TaskUser;
+                    ASTORE 4
+                    ALOAD_0     // Lorg/bk/lmt/service/TaskServiceImpl; this   (line 43)
+                    GETFIELD org.bk.lmt.service.TaskServiceImpl.taskDao Lorg/bk/lmt/dao/TasksDao;
+                    ALOAD 4     // Lorg/bk/lmt/domain/TaskUser; user
+                    ILOAD_2     // I firstResult
+                    ILOAD_3     // I maxResults
+                    INVOKEINTERFACE org.bk.lmt.dao.TasksDao.findTasksByUser (Lorg/bk/lmt/domain/TaskUser;II)Ljava/util/List;
+                    ARETURN
+  end public java.util.List findTasksByUser(String, int, int)
+
+  public java.util.List findTasksByUserAndNameFilter(String, String, int, int)    org.aspectj.weaver.MethodDeclarationLineNumber: 47:1339
+:
+                    ALOAD_0     // Lorg/bk/lmt/service/TaskServiceImpl; this   (line 48)
+                    GETFIELD org.bk.lmt.service.TaskServiceImpl.gtdUserDao Lorg/bk/lmt/dao/TaskUserDao;
+                    ALOAD_1     // Ljava/lang/String; username
+                    INVOKEINTERFACE org.bk.lmt.dao.TaskUserDao.findUserByUserName (Ljava/lang/String;)Lorg/bk/lmt/domain/TaskUser;
+                    ASTORE 5
+                    ALOAD_0     // Lorg/bk/lmt/service/TaskServiceImpl; this   (line 49)
+                    GETFIELD org.bk.lmt.service.TaskServiceImpl.taskDao Lorg/bk/lmt/dao/TasksDao;
+                    ALOAD 5     // Lorg/bk/lmt/domain/TaskUser; user
+                    ALOAD_2     // Ljava/lang/String; namePattern
+                    ILOAD_3     // I firstResult
+                    ILOAD 4     // I maxResults
+                    INVOKEINTERFACE org.bk.lmt.dao.TasksDao.findTasksByUserAndNameFilter (Lorg/bk/lmt/domain/TaskUser;Ljava/lang/String;II)Ljava/util/List;
+                    ARETURN
+  end public java.util.List findTasksByUserAndNameFilter(String, String, int, int)
+
+  public Long countTasksByUser(String)    org.aspectj.weaver.MethodDeclarationLineNumber: 53:1635
+:
+                    ALOAD_0     // Lorg/bk/lmt/service/TaskServiceImpl; this   (line 54)
+                    GETFIELD org.bk.lmt.service.TaskServiceImpl.gtdUserDao Lorg/bk/lmt/dao/TaskUserDao;
+                    ALOAD_1     // Ljava/lang/String; username
+                    INVOKEINTERFACE org.bk.lmt.dao.TaskUserDao.findUserByUserName (Ljava/lang/String;)Lorg/bk/lmt/domain/TaskUser;
+                    ASTORE_2
+                    ALOAD_0     // Lorg/bk/lmt/service/TaskServiceImpl; this   (line 55)
+                    GETFIELD org.bk.lmt.service.TaskServiceImpl.taskDao Lorg/bk/lmt/dao/TasksDao;
+                    ALOAD_2     // Lorg/bk/lmt/domain/TaskUser; user
+                    INVOKEINTERFACE org.bk.lmt.dao.TasksDao.countTasksByUser (Lorg/bk/lmt/domain/TaskUser;)Ljava/lang/Long;
+                    ARETURN
+  end public Long countTasksByUser(String)
+
+  public void remove(org.bk.lmt.domain.Task)    org.aspectj.weaver.MethodDeclarationLineNumber: 60:1832
+:
+                    ALOAD_0     // Lorg/bk/lmt/service/TaskServiceImpl; this   (line 61)
+                    GETFIELD org.bk.lmt.service.TaskServiceImpl.taskDao Lorg/bk/lmt/dao/TasksDao;
+                    ALOAD_1     // Lorg/bk/lmt/domain/Task; task
+                    INVOKEINTERFACE org.bk.lmt.dao.TasksDao.remove (Ljava/lang/Object;)V
+                    RETURN   (line 62)
+  end public void remove(org.bk.lmt.domain.Task)
+
+end public class org.bk.lmt.service.TaskServiceImpl
+ -- (NullPointerException) null
+null
+java.lang.NullPointerException
+	at org.aspectj.weaver.ResolvedType.lookupResolvedMember(ResolvedType.java:625)
+	at org.aspectj.weaver.JoinPointSignatureIterator.findSignaturesFromSupertypes(JoinPointSignatureIterator.java:192)
+	at org.aspectj.weaver.JoinPointSignatureIterator.hasNext(JoinPointSignatureIterator.java:68)
+	at org.aspectj.weaver.patterns.SignaturePattern.matches(SignaturePattern.java:317)
+	at org.aspectj.weaver.patterns.KindedPointcut.matchInternal(KindedPointcut.java:202)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.AndPointcut.matchInternal(AndPointcut.java:51)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.OrPointcut.matchInternal(OrPointcut.java:50)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.OrPointcut.matchInternal(OrPointcut.java:50)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.OrPointcut.matchInternal(OrPointcut.java:50)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.ShadowMunger.match(ShadowMunger.java:113)
+	at org.aspectj.weaver.Advice.match(Advice.java:109)
+	at org.aspectj.weaver.bcel.BcelAdvice.match(BcelAdvice.java:149)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:3173)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.matchInvokeInstruction(BcelClassWeaver.java:3121)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:2780)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:2558)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.weave(BcelClassWeaver.java:480)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.weave(BcelClassWeaver.java:99)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1694)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveWithoutDump(BcelWeaver.java:1638)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveAndNotify(BcelWeaver.java:1401)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1187)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.weaveQueuedEntries(AjPipeliningCompilerAdapter.java:514)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.queueForWeaving(AjPipeliningCompilerAdapter.java:447)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.afterProcessing(AjPipeliningCompilerAdapter.java:432)
+	at org.aspectj.ajdt.internal.compiler.CompilerAdapter.ajc$after$org_aspectj_ajdt_internal_compiler_CompilerAdapter$5$6b855184(CompilerAdapter.aj:98)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.process(Compiler.java:652)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:392)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1027)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:271)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:184)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:248)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:405)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+
+info woven class org.bk.lmt.service.TaskServiceImpl (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\service\TaskServiceImpl.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\service\TaskUserService.java
+info woven class org.bk.lmt.service.TaskUserService (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\service\TaskUserService.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\service\TaskUserServiceImpl.java
+abort trouble in: 
+public class org.bk.lmt.service.TaskUserServiceImpl extends java.lang.Object implements org.bk.lmt.service.TaskUserService:
+  private org.bk.lmt.dao.TaskUserDao taskUserDao [RuntimeVisibleAnnotations]
+  public void <init>():
+                    ALOAD_0     // Lorg/bk/lmt/service/TaskUserServiceImpl; this   (line 12)
+                    INVOKESPECIAL java.lang.Object.<init> ()V
+    constructor-execution(void org.bk.lmt.service.TaskUserServiceImpl.<init>())
+    |               RETURN
+    constructor-execution(void org.bk.lmt.service.TaskUserServiceImpl.<init>())
+  end public void <init>()
+
+  public java.util.List findAllTaskUsers(int, int)    org.aspectj.weaver.MethodDeclarationLineNumber: 16:374
+:
+    method-execution(java.util.List org.bk.lmt.service.TaskUserServiceImpl.findAllTaskUsers(int, int))
+    |               ALOAD_0     // Lorg/bk/lmt/service/TaskUserServiceImpl; this   (line 17)
+    |               GETFIELD org.bk.lmt.service.TaskUserServiceImpl.taskUserDao Lorg/bk/lmt/dao/TaskUserDao;
+    |               ILOAD_1     // I firstResult
+    |               ILOAD_2     // I maxResults
+    | method-call(java.util.List org.bk.lmt.dao.TaskUserDao.findAllUsers(int, int))
+    | |             INVOKEINTERFACE org.bk.lmt.dao.TaskUserDao.findAllUsers (II)Ljava/util/List;
+    | method-call(java.util.List org.bk.lmt.dao.TaskUserDao.findAllUsers(int, int))
+    |               ARETURN
+    method-execution(java.util.List org.bk.lmt.service.TaskUserServiceImpl.findAllTaskUsers(int, int))
+  end public java.util.List findAllTaskUsers(int, int)
+
+  public org.bk.lmt.domain.TaskUser findUserByUserName(String)    org.aspectj.weaver.MethodDeclarationLineNumber: 21:538
+:
+                    ALOAD_0     // Lorg/bk/lmt/service/TaskUserServiceImpl; this   (line 22)
+                    GETFIELD org.bk.lmt.service.TaskUserServiceImpl.taskUserDao Lorg/bk/lmt/dao/TaskUserDao;
+                    ALOAD_1     // Ljava/lang/String; userName
+                    INVOKEINTERFACE org.bk.lmt.dao.TaskUserDao.findUserByUserName (Ljava/lang/String;)Lorg/bk/lmt/domain/TaskUser;
+                    ARETURN
+  end public org.bk.lmt.domain.TaskUser findUserByUserName(String)
+
+  public void setTaskUserDao(org.bk.lmt.dao.TaskUserDao)    org.aspectj.weaver.MethodDeclarationLineNumber: 25:656
+:
+                    ALOAD_0     // Lorg/bk/lmt/service/TaskUserServiceImpl; this   (line 26)
+                    ALOAD_1     // Lorg/bk/lmt/dao/TaskUserDao; taskUserDao
+                    PUTFIELD org.bk.lmt.service.TaskUserServiceImpl.taskUserDao Lorg/bk/lmt/dao/TaskUserDao;
+                    RETURN   (line 27)
+  end public void setTaskUserDao(org.bk.lmt.dao.TaskUserDao)
+
+end public class org.bk.lmt.service.TaskUserServiceImpl
+ -- (NullPointerException) null
+null
+java.lang.NullPointerException
+	at org.aspectj.weaver.ResolvedType.lookupResolvedMember(ResolvedType.java:625)
+	at org.aspectj.weaver.JoinPointSignatureIterator.findSignaturesFromSupertypes(JoinPointSignatureIterator.java:192)
+	at org.aspectj.weaver.JoinPointSignatureIterator.hasNext(JoinPointSignatureIterator.java:68)
+	at org.aspectj.weaver.patterns.SignaturePattern.matches(SignaturePattern.java:317)
+	at org.aspectj.weaver.patterns.KindedPointcut.matchInternal(KindedPointcut.java:202)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.AndPointcut.matchInternal(AndPointcut.java:51)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.OrPointcut.matchInternal(OrPointcut.java:50)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.OrPointcut.matchInternal(OrPointcut.java:50)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.patterns.OrPointcut.matchInternal(OrPointcut.java:50)
+	at org.aspectj.weaver.patterns.Pointcut.match(Pointcut.java:137)
+	at org.aspectj.weaver.ShadowMunger.match(ShadowMunger.java:113)
+	at org.aspectj.weaver.Advice.match(Advice.java:109)
+	at org.aspectj.weaver.bcel.BcelAdvice.match(BcelAdvice.java:149)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:3173)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.matchInvokeInstruction(BcelClassWeaver.java:3121)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:2780)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.match(BcelClassWeaver.java:2558)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.weave(BcelClassWeaver.java:480)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.weave(BcelClassWeaver.java:99)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1694)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveWithoutDump(BcelWeaver.java:1638)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveAndNotify(BcelWeaver.java:1401)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1187)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.weaveQueuedEntries(AjPipeliningCompilerAdapter.java:514)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.queueForWeaving(AjPipeliningCompilerAdapter.java:447)
+	at org.aspectj.ajdt.internal.compiler.AjPipeliningCompilerAdapter.afterProcessing(AjPipeliningCompilerAdapter.java:432)
+	at org.aspectj.ajdt.internal.compiler.CompilerAdapter.ajc$after$org_aspectj_ajdt_internal_compiler_CompilerAdapter$5$6b855184(CompilerAdapter.aj:98)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.process(Compiler.java:652)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:392)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1027)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:271)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:184)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:248)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:405)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+
+info woven class org.bk.lmt.service.TaskUserServiceImpl (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\service\TaskUserServiceImpl.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\spring\CustomCalendarEditor.java
+info woven class org.bk.lmt.spring.CustomCalendarEditor (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\spring\CustomCalendarEditor.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\spring\CustomWebAppInitializer.java
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\spring\StringToContextConverter.java
+weaveinfo Extending interface set for type 'org.bk.lmt.spring.StringToContextConverter' (StringToContextConverter.java) to include 'org.springframework.beans.factory.aspectj.ConfigurableObject' (AnnotationBeanConfigurerAspect.aj)
+weaveinfo Join point 'initialization(void org.springframework.beans.factory.aspectj.ConfigurableObject.<init>())' in Type 'org.bk.lmt.spring.StringToContextConverter' (StringToContextConverter.java:10) advised by before advice from 'org.springframework.beans.factory.aspectj.AnnotationBeanConfigurerAspect' (spring-aspects-3.1.1.RELEASE.jar!AbstractDependencyInjectionAspect.class:78(from AbstractDependencyInjectionAspect.aj)) [with runtime test]
+weaveinfo Join point 'initialization(void org.springframework.beans.factory.aspectj.ConfigurableObject.<init>())' in Type 'org.bk.lmt.spring.StringToContextConverter' (StringToContextConverter.java:10) advised by afterReturning advice from 'org.springframework.beans.factory.aspectj.AnnotationBeanConfigurerAspect' (spring-aspects-3.1.1.RELEASE.jar!AbstractDependencyInjectionAspect.class:87(from AbstractDependencyInjectionAspect.aj)) [with runtime test]
+weaveinfo Join point 'initialization(void org.bk.lmt.spring.StringToContextConverter.<init>())' in Type 'org.bk.lmt.spring.StringToContextConverter' (StringToContextConverter.java:10) advised by afterReturning advice from 'org.springframework.beans.factory.aspectj.AnnotationBeanConfigurerAspect' (spring-aspects-3.1.1.RELEASE.jar!AbstractDependencyInjectionAspect.class:87(from AbstractDependencyInjectionAspect.aj)) [with runtime test]
+info woven class org.bk.lmt.spring.StringToContextConverter (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\spring\StringToContextConverter.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\spring\StringToProjectConverter.java
+weaveinfo Extending interface set for type 'org.bk.lmt.spring.StringToProjectConverter' (StringToProjectConverter.java) to include 'org.springframework.beans.factory.aspectj.ConfigurableObject' (AnnotationBeanConfigurerAspect.aj)
+weaveinfo Join point 'initialization(void org.springframework.beans.factory.aspectj.ConfigurableObject.<init>())' in Type 'org.bk.lmt.spring.StringToProjectConverter' (StringToProjectConverter.java:10) advised by before advice from 'org.springframework.beans.factory.aspectj.AnnotationBeanConfigurerAspect' (spring-aspects-3.1.1.RELEASE.jar!AbstractDependencyInjectionAspect.class:78(from AbstractDependencyInjectionAspect.aj)) [with runtime test]
+weaveinfo Join point 'initialization(void org.springframework.beans.factory.aspectj.ConfigurableObject.<init>())' in Type 'org.bk.lmt.spring.StringToProjectConverter' (StringToProjectConverter.java:10) advised by afterReturning advice from 'org.springframework.beans.factory.aspectj.AnnotationBeanConfigurerAspect' (spring-aspects-3.1.1.RELEASE.jar!AbstractDependencyInjectionAspect.class:87(from AbstractDependencyInjectionAspect.aj)) [with runtime test]
+weaveinfo Join point 'initialization(void org.bk.lmt.spring.StringToProjectConverter.<init>())' in Type 'org.bk.lmt.spring.StringToProjectConverter' (StringToProjectConverter.java:10) advised by afterReturning advice from 'org.springframework.beans.factory.aspectj.AnnotationBeanConfigurerAspect' (spring-aspects-3.1.1.RELEASE.jar!AbstractDependencyInjectionAspect.class:87(from AbstractDependencyInjectionAspect.aj)) [with runtime test]
+info woven class org.bk.lmt.spring.StringToProjectConverter (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\spring\StringToProjectConverter.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\types\CustomUserDetails.java
+info woven class org.bk.lmt.types.CustomUserDetails (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\types\CustomUserDetails.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\types\ListWrapper.java
+info woven class org.bk.lmt.types.ListWrapper (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\types\ListWrapper.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\types\Registration.java
+info woven class org.bk.lmt.types.Registration (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\types\Registration.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\types\TypeWrapper.java
+info woven class org.bk.lmt.types.TypeWrapper (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\types\TypeWrapper.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\web\BaseController.java
+info woven class org.bk.lmt.web.BaseController (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\web\BaseController.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\web\ContextController.java
+info woven class org.bk.lmt.web.ContextController (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\web\ContextController.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\web\DatatableForm.java
+info woven class org.bk.lmt.web.DatatableForm (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\web\DatatableForm.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\web\EndpointDocController.java
+info woven class org.bk.lmt.web.EndpointDocController (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\web\EndpointDocController.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\web\ProjectController.java
+info woven class org.bk.lmt.web.ProjectController (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\web\ProjectController.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\web\spring\CustomObjectMapper.java
+info woven class org.bk.lmt.web.spring.CustomObjectMapper (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\web\spring\CustomObjectMapper.java)
+info compiling C:\learn\lovemytasks\src\main\java\org\bk\lmt\web\TaskController.java
+info woven class org.bk.lmt.web.TaskController (from C:\learn\lovemytasks\src\main\java\org\bk\lmt\web\TaskController.java)

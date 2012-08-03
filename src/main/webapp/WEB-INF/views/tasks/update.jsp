@@ -53,8 +53,15 @@
 				<form:errors cssClass="error" id="isdone_error_id" path="isDone" />
 			</div>
 		</div>
+		<br />	
+		<div class="control-group">	
+			<label for="task_startDate" class="control-label"><spring:message code="task.create.startDate"/> : </label>	
+			<div class="controls">
+				<form:input path="startDate"/>
+				<form:errors cssClass="error" id="name_error_id" path="startDate" />
+			</div>
+		</div>
 		<br />			
-			
 		<div class="submit" id="submit">
 			<spring:message code="button_save" var="save_button" htmlEscape="false" />
 			<input id="proceed" type="submit" value="${fn:escapeXml(save_button)}" />

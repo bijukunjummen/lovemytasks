@@ -30,6 +30,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Access(AccessType.FIELD)
 @NamedQueries({
 		@NamedQuery(name="Task.findByUser", query="SELECT task FROM Task AS task WHERE task.taskUser = :taskUser"),
+		@NamedQuery(name="Task.findByUserAndNamePattern", query="SELECT task FROM Task AS task WHERE task.taskUser = :taskUser and task.title like :namePattern"),
 		@NamedQuery(name="Task.countByUser", query="SELECT COUNT(task) FROM Task AS task WHERE task.taskUser = :taskUser")
 })
 

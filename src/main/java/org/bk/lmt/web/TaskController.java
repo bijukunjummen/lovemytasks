@@ -1,6 +1,7 @@
 package org.bk.lmt.web;
 
 import java.security.Principal;
+import java.util.List;
 
 import javax.validation.Valid;
 
@@ -8,6 +9,7 @@ import org.bk.lmt.domain.Task;
 import org.bk.lmt.service.ContextService;
 import org.bk.lmt.service.ProjectService;
 import org.bk.lmt.service.TaskService;
+import org.bk.lmt.types.ListWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +18,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @RequestMapping("/tasks")
 @Controller
@@ -39,6 +42,26 @@ public class TaskController extends BaseController{
 		int maxPages = (int)( ((nrOfPages>(int)nrOfPages) || nrOfPages==0.0)?nrOfPages+1:nrOfPages);
 		model.addAttribute("maxPages", maxPages);
 		return "tasks/list";
+	}
+	
+	@RequestMapping(produces="application/json", value="/listLoad")
+	public @ResponseBody ListWrapper<Task> listLoad(DatatableForm datatableForm, Principal principal, Model model){
+		String userName = this.getUserDetails().getUsername();
+		int firstResult = datatableForm.getiDisplayStart();
+		List<Task> tasks = null;
+		if (datatableForm.getsSearch()==null){
+			tasks = this.taskService.findTasksByUser(userName, firstResult, datatableForm.getiDisplayLength());
+		}else{
+			tasks = this.taskService.findTasksByUserAndNameFilter(userName, datatableForm.getsSearch(), firstResult, datatableForm.getiDisplayLength());
+		}
+		long noOfRecords = this.taskService.countTasksByUser(userName);
+		float nrOfPages = (float)noOfRecords/datatableForm.getiDisplayLength();
+		int maxPages = (int)( ((nrOfPages>(int)nrOfPages) || nrOfPages==0.0)?nrOfPages+1:nrOfPages);
+		ListWrapper<Task> taskList = new ListWrapper<Task>();
+		taskList.setAaData(tasks);
+		taskList.setiTotalDisplayRecords((int)noOfRecords);
+		taskList.setiTotalRecords((int)noOfRecords);
+		return taskList;
 	}
 	
 	@RequestMapping(method=RequestMethod.POST, produces="text/html")
