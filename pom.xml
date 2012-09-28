@@ -13,7 +13,7 @@
 		<aspectj.version>1.7.0</aspectj.version>
 		<java.version>1.7</java.version>
 		<slf4j.version>1.6.4</slf4j.version>
-		<spring-security.version>3.1.0.RELEASE</spring-security.version>
+		<spring-security.version>3.1.1.RELEASE</spring-security.version>
 		<h2.version>1.3.160</h2.version>
 		<hibernate.version>4.1.1.Final</hibernate.version>
 	</properties>
@@ -286,11 +286,20 @@
 		</dependency>
 		<!-- Jackson JSON Processor -->
 		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-mapper-asl</artifactId>
-			<version>1.6.4</version>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-core</artifactId>
+		    <version>2.0.5</version>
 		</dependency>
-
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-databind</artifactId>
+		    <version>2.0.5</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.fasterxml.jackson.module</groupId>
+		    <artifactId>jackson-module-jaxb-annotations</artifactId>
+		    <version>2.0.5</version>
+		</dependency>
 		<dependency>
 			<groupId>org.apache.tiles</groupId>
 			<artifactId>tiles-core</artifactId>
@@ -361,16 +370,11 @@
 			<artifactId>commons-lang3</artifactId>
 			<version>3.1</version>
 		</dependency>
-        <dependency>
-            <groupId>javax.servlet.jsp.jstl</groupId>
-            <artifactId>jstl-api</artifactId>
-            <version>1.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish.web</groupId>
-            <artifactId>jstl-impl</artifactId>
-            <version>1.2</version>
-        </dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
 		<dependency>
 			<groupId>javax.el</groupId>
 			<artifactId>el-api</artifactId>
@@ -436,8 +440,7 @@
 			<artifactId>json-path</artifactId>
 			<version>0.5.5</version>
 			<scope>test</scope>
-		</dependency>		
-		
+		</dependency>			
 	</dependencies>
 	<build>
 		<plugins>
@@ -482,8 +485,9 @@
 				</executions>
 				<configuration>
 					<outxml>true</outxml>
-					<showWeaveInfo>true</showWeaveInfo>
-					<verbose>true</verbose>
+					<showWeaveInfo>false</showWeaveInfo>
+					<Xlint>warning</Xlint>
+					<verbose>false</verbose>
 					<aspectLibraries>
 						<aspectLibrary>
 							<groupId>org.springframework</groupId>

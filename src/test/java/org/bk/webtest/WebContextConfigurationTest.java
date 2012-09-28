@@ -9,6 +9,9 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.validation.Valid;
+import javax.validation.constraints.Size;
+
 import org.junit.Test;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -58,6 +61,8 @@ public class WebContextConfigurationTest {
 		mockMvc.perform(delete("/members/1").contentType(MediaType.APPLICATION_JSON))
 			.andExpect(status().isOk());
 		
+		mockMvc.perform(post("/").param("id", "101"))
+		.andExpect(status().isOk());
 		
 		
 	}
@@ -80,7 +85,7 @@ class MembersController{
     }
 	
 	@RequestMapping(value="/members", method=RequestMethod.POST)
-	public @ResponseBody Member create(@RequestBody Member member){
+	public @ResponseBody Member create(@RequestBody @Valid Member member){
 		this.memberDB.put(member.getId(), member);
 		return member;
 	}
@@ -104,6 +109,8 @@ class MembersController{
 
 class Member{
 	private Integer id;
+	
+	@Size(min=1)
 	private String first;
 	private String last;
 	

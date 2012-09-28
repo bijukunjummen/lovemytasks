@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context" xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xmlns:p="http://www.springframework.org/schema/p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd     http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd">
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd     
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd     
+	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<context:component-scan base-package="org.bk.lmt" use-default-filters="false">
 		<context:include-filter expression="org.springframework.stereotype.Controller" type="annotation" />
@@ -21,25 +23,29 @@
 		</property>
 		<property name="messageConverters">
 			<list>
-				<bean class="org.springframework.http.converter.ByteArrayHttpMessageConverter"></bean>
+				<ref bean="byteArrayConverter"/>
+				<ref bean="jaxbConverter"/>
+				<ref bean="jsonConverter"/>
 				<bean class="org.springframework.http.converter.StringHttpMessageConverter"></bean>
 				<bean class="org.springframework.http.converter.ResourceHttpMessageConverter"></bean>
 				<bean class="org.springframework.http.converter.xml.SourceHttpMessageConverter"></bean>
 				<bean class="org.springframework.http.converter.xml.XmlAwareFormHttpMessageConverter"></bean>
-				<bean class="org.springframework.http.converter.xml.Jaxb2RootElementHttpMessageConverter"></bean>
-				<bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"></bean>
 			</list>
 		</property>
 	</bean>
+	<bean name="byteArrayConverter" class="org.springframework.http.converter.ByteArrayHttpMessageConverter"></bean>
+	<bean name="jaxbConverter" class="org.springframework.http.converter.xml.Jaxb2RootElementHttpMessageConverter"></bean>
+	<bean name="jsonConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"></bean>
  	
 	<bean name="handlerMapping" class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping">
 		<property name="useSuffixPatternMatch" value="false"></property>
 	</bean>
-	-->
+	
+	 -->
 	
 	<mvc:annotation-driven conversion-service="conversionService"> 
-	   <mvc:message-converters register-defaults="false">
-	       <bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter" >
+	   <mvc:message-converters register-defaults="true">
+	       <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
 	           <property name="objectMapper">
 	               <bean class="org.bk.lmt.web.spring.CustomObjectMapper"/>
 	           </property>

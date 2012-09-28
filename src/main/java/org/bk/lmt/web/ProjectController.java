@@ -1,5 +1,7 @@
 package org.bk.lmt.web;
 
+import java.text.SimpleDateFormat;
+
 import javax.annotation.Resource;
 import javax.validation.Valid;
 
@@ -96,11 +98,11 @@ public class ProjectController extends BaseController{
 	
 //	@InitBinder
 //    public void initBinder(WebDataBinder binder) {
+//		System.out.println("======"+binder.getObjectName());
 //        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 //        dateFormat.setLenient(false);
-//        binder.setConversionService(conversionService)
-//        binder.regi
+//        System.out.println("======"+binder.getObjectName());
+////        binder.
+////        binder.regi
 //    }
-
-
  }

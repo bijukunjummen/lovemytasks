@@ -1,0 +1,25 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+
+
+
+<spring:url value="/resources/js/jquery-1.7.2.js"  var="jqueryjs" />
+<spring:url value="/resources/js/jquery.dataTables.js" var="datatablesjs" />
+<spring:url value="/resources/js/jquery.jeditable.js" var="jeditablejs" />
+<spring:url value="/resources/js/bootstrap.min.js" var="bootstrapjs" />
+
+<spring:url value="/resources/css/standard.css"  var="standard_css" />
+<spring:url value="/resources/css/bootstrap-responsive.min.css"  var="bootstrap_responsive_css" />
+<spring:url value="/resources/css/bootstrap.min.css"  var="bootstrap_css" />
+<spring:url value="/resources/css/jquery.dataTables.css" var="datatables_css" />
+
+<link rel="stylesheet" type="text/css" media="screen" href="${bootstrap_responsive_css}"></link>
+<link rel="stylesheet" type="text/css" media="screen" href="${bootstrap_css}"></link>
+<link rel="stylesheet" type="text/css" media="screen" href="${datatables_css}"></link>
+<link href="${standard_css}" rel="stylesheet"></link>
+
+<script src="${jqueryjs}" type="text/javascript"><!-- /required for FF3 and Opera --></script>
+<script src="${datatablesjs}" type="text/javascript"><!-- /required for FF3 and Opera --></script>
+<script src="${bootstrapjs}" type="text/javascript"><!-- /required for FF3 and Opera --></script>
+<script src="${jeditablejs}" type="text/javascript"><!-- /required for FF3 and Opera --></script>
