@@ -61,9 +61,6 @@ public class WebContextConfigurationTest {
 		mockMvc.perform(delete("/members/1").contentType(MediaType.APPLICATION_JSON))
 			.andExpect(status().isOk());
 		
-		mockMvc.perform(post("/").param("id", "101"))
-		.andExpect(status().isOk());
-		
 		
 	}
 

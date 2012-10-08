@@ -10,18 +10,22 @@ import java.util.List;
 import java.util.UUID;
 
 import org.junit.Test;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.stereotype.Controller;
 import org.springframework.test.web.server.MockMvc;
+import org.springframework.util.PathMatcher;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 
 public class UUIDConfigurationTest {
 	
@@ -35,7 +39,7 @@ public class UUIDConfigurationTest {
 				.andExpect(status().isOk())
 				.andExpect(content().string(containsString("\"1\"")));
 
-		mockMvc.perform(get("/file/test.ext"))
+		mockMvc.perform(get("/file/teST.ext"))
 		.andExpect(status().isOk())
 		.andExpect(content().string(containsString("test")));
 		
@@ -52,12 +56,21 @@ public class UUIDConfigurationTest {
 	}
 
 	@Configuration
-	@EnableWebMvc
 	@ComponentScan(basePackages="org.bk.webtestuuid")
-	public static class TestConfiguration extends WebMvcConfigurerAdapter{
-		public void addFormatters(FormatterRegistry registry) {
-			registry.addConverter(new UUIDConverter());
-		}		
+	public static class TestConfiguration extends WebMvcConfigurationSupport{
+
+		@Bean
+		public PathMatcher pathMatcher(){
+			return new CaseInsensitivePathMatcher();
+		}
+		@Bean
+		public RequestMappingHandlerMapping requestMappingHandlerMapping() {
+			RequestMappingHandlerMapping handlerMapping = new RequestMappingHandlerMapping();
+			handlerMapping.setOrder(0);
+			handlerMapping.setInterceptors(getInterceptors());
+			handlerMapping.setPathMatcher(pathMatcher());
+			return handlerMapping;
+		}
 	}
 }
 

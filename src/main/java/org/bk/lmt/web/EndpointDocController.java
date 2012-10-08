@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 
 @Controller
+@RequestMapping("/rootendpoint")
 public class EndpointDocController {
 
 	private final RequestMappingHandlerMapping handlerMapping;
@@ -18,8 +19,9 @@ public class EndpointDocController {
 	}
 	
 	@RequestMapping(value="/endpointdoc", method=RequestMethod.GET)
-	public void show(Model model) {
+	public String show(Model model) {
 		model.addAttribute("handlerMethods", this.handlerMapping.getHandlerMethods());
+		return "endpointdoc";
 	}
 	
 }

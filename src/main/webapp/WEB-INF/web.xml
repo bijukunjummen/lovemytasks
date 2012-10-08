@@ -74,7 +74,7 @@
     
     <!-- Handles Spring requests -->
     <servlet>
-        <servlet-name>lovemytasks</servlet-name>
+        <servlet-name>spring</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
@@ -84,7 +84,7 @@
     </servlet>
     
     <servlet-mapping>
-        <servlet-name>lovemytasks</servlet-name>
+        <servlet-name>spring</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
     

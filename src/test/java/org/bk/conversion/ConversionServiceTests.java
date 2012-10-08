@@ -26,7 +26,7 @@ public class ConversionServiceTests {
 	@Test
 	public void test() {
 		
-		Date date = this.conversionService.convert("1348343828187", Date.class);
+		Date date = this.conversionService.convert(1348343828187L, Date.class);
 		
 		System.out.println(date);
 	}

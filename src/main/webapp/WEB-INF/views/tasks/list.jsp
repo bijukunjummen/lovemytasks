@@ -64,6 +64,22 @@ $(document).ready(function(){
                     				"column": oTable.fnGetPosition( this )[2]
                     			};
                     	}});
+        			}else if (index==3 || index===4){
+        				$(td).editable( '${cellSaveUrl}', {
+        					type: 'datepicker',
+                        	indicator : 'Saving...',
+                            tooltip   : 'Click to edit...',
+                            submit    : 'OK',
+                            "callback": function( sValue, y ) {
+                                oTable.fnDraw();
+                            },
+                            "submitdata": function ( value, settings ) {
+                            	console.log("hello..");
+                    			return {
+                    				"row_id": this.parentNode.getAttribute('id'),
+                    				"column": oTable.fnGetPosition( this )[2]
+                    			};
+                    	}});
         			}
 
         		});
