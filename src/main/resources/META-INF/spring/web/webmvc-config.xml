@@ -14,17 +14,15 @@
 			<bean class="org.springframework.web.bind.support.ConfigurableWebBindingInitializer">
 				<property name="conversionService" ref="conversionService"></property>
 				<property name="validator">
-					<bean class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
-						<property name="providerClass" value="org.hibernate.validator.HibernateValidator"></property>
-					</bean>
+					<bean class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>
 				</property>
 			</bean>
 		</property>
 		<property name="messageConverters">
 			<list>
-				<ref bean="byteArrayConverter"/>
-				<ref bean="jaxbConverter"/>
-				<ref bean="jsonConverter"/>
+				<bean class="org.springframework.http.converter.ByteArrayHttpMessageConverter"/>
+				<bean class="org.springframework.http.converter.xml.Jaxb2RootElementHttpMessageConverter"/>
+				<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
 				<bean class="org.springframework.http.converter.StringHttpMessageConverter"></bean>
 				<bean class="org.springframework.http.converter.ResourceHttpMessageConverter"></bean>
 				<bean class="org.springframework.http.converter.xml.SourceHttpMessageConverter"></bean>
@@ -32,14 +30,11 @@
 			</list>
 		</property>
 	</bean>
-	<bean name="byteArrayConverter" class="org.springframework.http.converter.ByteArrayHttpMessageConverter"></bean>
-	<bean name="jaxbConverter" class="org.springframework.http.converter.xml.Jaxb2RootElementHttpMessageConverter"></bean>
-	<bean name="jsonConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"></bean>
- 	<bean name="caseInsensitivePathMatcher" class="org.bk.webtestuuid.CaseInsensitivePathMatcher"/>
+	
 	<bean name="handlerMapping" class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping">
-		<property name="pathMatcher" ref="caseInsensitivePathMatcher"></property>
+		<property name="useTrailingSlashMatch" value="true"></property>
 	</bean>
-	-->
+ 	-->
 	<mvc:annotation-driven conversion-service="conversionService"> 
 	   <mvc:message-converters register-defaults="true">
 	       <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">

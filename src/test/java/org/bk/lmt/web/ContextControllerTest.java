@@ -23,6 +23,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.FlashMap;
+import org.springframework.web.servlet.HandlerExecutionChain;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
@@ -61,7 +62,9 @@ public class ContextControllerTest {
 		MockHttpServletResponse response = new MockHttpServletResponse();
 		Authentication authentication = new UsernamePasswordAuthenticationToken(new CustomUserDetails(this.usersMap.get("user1")), null);
 		SecurityContextHolder.getContext().setAuthentication(authentication);
-		Object handler = this.handlerMapping.getHandler(httpRequest).getHandler();
+		HandlerExecutionChain handlerChain = this.handlerMapping.getHandler(httpRequest);
+//		handlerChain.getInterceptors();
+		Object handler = handlerChain.getHandler();
 		ModelAndView modelAndView = handlerAdapter.handle(httpRequest, response, handler);
 		assertThat(modelAndView.getViewName(), is("redirect:/contexts"));
 	}

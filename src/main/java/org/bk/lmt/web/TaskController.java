@@ -37,8 +37,8 @@ public class TaskController extends BaseController{
 				@RequestParam(defaultValue="10", value="size", required=false) Integer size, Principal principal, Model model){
 		String userName = this.getUserDetails().getUsername();
 		int firstResult = (page==null)?0:(page-1) * size;
-		model.addAttribute("tasks",this.taskService.findTasksByUser(userName, firstResult, size));
-		float nrOfPages = (float)this.taskService.countTasksByUser(userName)/size;
+		model.addAttribute("tasks",this.taskService.findIncompleteTasksByUser(userName, firstResult, size));
+		float nrOfPages = (float)this.taskService.countIncompleteTasksByUser(userName)/size;
 		int maxPages = (int)( ((nrOfPages>(int)nrOfPages) || nrOfPages==0.0)?nrOfPages+1:nrOfPages);
 		model.addAttribute("maxPages", maxPages);
 		return "tasks/list";

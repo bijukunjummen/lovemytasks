@@ -31,8 +31,10 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Access(AccessType.FIELD)
 @NamedQueries({
 		@NamedQuery(name="Task.findByUser", query="SELECT task FROM Task AS task WHERE task.taskUser = :taskUser"),
-		@NamedQuery(name="Task.findByUserAndNamePattern", query="SELECT task FROM Task AS task WHERE task.taskUser = :taskUser and task.title like :namePattern"),
-		@NamedQuery(name="Task.countByUser", query="SELECT COUNT(task) FROM Task AS task WHERE task.taskUser = :taskUser")
+		@NamedQuery(name="Task.findIncompleteByUser", query="SELECT task FROM Task AS task WHERE task.taskUser = :taskUser AND task.isDone=FALSE"),
+		@NamedQuery(name="Task.findByUserAndNamePattern", query="SELECT task FROM Task AS task WHERE task.taskUser = :taskUser AND task.title like :namePattern"),
+		@NamedQuery(name="Task.countByUser", query="SELECT COUNT(task) FROM Task AS task WHERE task.taskUser = :taskUser"),
+		@NamedQuery(name="Task.countIncompleteByUser", query="SELECT COUNT(task) FROM Task AS task WHERE task.taskUser = :taskUser AND task.isDone=FALSE")
 })
 
 public class Task {

@@ -6,18 +6,33 @@
 
 <%@ taglib tagdir="/WEB-INF/tags/util" prefix="util"%>
 <script type="text/javascript">
-$(document).ready(function(){
-	$('#projectlist').dataTable({
- 		"bPaginate": false,
-        "bLengthChange": false,
-        "bFilter": false,
-        "bSort": false,
-        "bInfo": false,
-        "bAutoWidth": false		
+function deleteProject(deleteUrl){
+	var form = $('<form/>',{
+		action: deleteUrl,
+		method: "POST"
 	});
-});
-</script>
+	
+	form.append($('<input/>',{
+		type: 'hidden',
+		name: '_method',
+		value: 'DELETE'
+	}));
+	form.append($('<input/>', {
+        type: 'hidden',
+        name: "page",
+        value: "${param.page}"
+    }));
 
+	form.append($('<input/>', {
+        type: 'hidden',
+        name: "size",
+        value: "${param.size}"
+    }));
+	
+	form.appendTo('body').submit();	
+}
+</script>
+<spring:message code="project.delete_project" var="delete_message" htmlEscape="false" />
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <div class="row-fluid">
 	<div class="span1">
@@ -49,17 +64,10 @@ $(document).ready(function(){
 				</td>
 				<td>
 					<spring:url value="/projects/${project.id}" var="delete_form_url" /> 
-					<form:form action="${delete_form_url}" method="DELETE" id="${project.id}_DELETE_FORM">
-					<input name="page" type="hidden" value="${param.page}" />
-					<input name="size" type="hidden" value="${param.size}" />
-					<spring:message code="project.delete_project" var="delete_message" htmlEscape="false" />
-					<input type="submit" value="${fn:escapeXml(delete_message)}" class="btn-small" />
-				</form:form>						
-			</td>
-		</tr>
-		
-	</c:forEach>
-	<tr>
+					<a href="#" onclick="javascript:deleteProject('${delete_form_url}')">${delete_message}</a>
+				</td>
+				</tr>
+			</c:forEach>
 	</tbody>
 </table>
 <util:pagination maxPages="${maxPages}" page="${param.page}" size="${param.size}"></util:pagination>

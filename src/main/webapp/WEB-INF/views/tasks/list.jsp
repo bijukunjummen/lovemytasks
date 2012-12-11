@@ -1,3 +1,5 @@
+<%@ page trimDirectiveWhitespaces="true" %>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
@@ -6,111 +8,43 @@
 
 <%@ taglib tagdir="/WEB-INF/tags/util" prefix="util"%>
 
-
-<spring:url var="ajaxUrl" value="/tasks/listLoad"/>
-<spring:url var="cellSaveUrl" value="/tasks/cellSave"/>
 <script type="text/javascript">
-$.extend( $.fn.dataTableExt.oStdClasses, {
-    "sWrapper": "dataTables_wrapper form-inline"
-} );
-$(document).ready(function(){
-	
-	var store = {
-			columns:[
-			         {type:"text",name:"title"},
-			         {type:"text",name:"project"},
-			         {type:"text",name:"context"},
-			         {type:"date",name:"startDate"},
-			         {type:"date",name:"completedDate"},
-			         {type:"checkbox",name:"isDone"},
-			         {type:"text",name:"status"}
-			]
-	};
-	
-	var oTable = $('#tasklist').dataTable({
- 		bServerSide:true,
- 		"sPaginationType": "full_numbers",
- 		sAjaxSource:"${ajaxUrl}",
- 		aoColumns: [
-	            { mDataProp: "title" },
-	            { mDataProp: "project", sDefaultContent:'', fnRender: function(o, val){if (val) return val.name} },
-	            { mDataProp: "context", sDefaultContent:'', fnRender: function(o, val){if (val) return val.name} },
-	            { mDataProp: "startDate" },
-	            { mDataProp: "completedDate" },
-	            { mDataProp: "isDone", fnRender:function(o, val){
-	            	if (val===true) 
-	            		return "<input type='checkbox' value='true'/>" ;
-	            	else 
-	            		return "<input type='checkbox' value='false'/>" ;
-	            }},
-	            { mDataProp: "status" }
-        ],
-        "fnDrawCallback": function () {
-        	var alltrs = $('#tasklist').dataTable().fnGetNodes();
-        	$(alltrs).each(function(index, tr){
-        		$(tr).children().each(function(index, td){
-        			if (index<2){
-            			$(td).editable( '${cellSaveUrl}', {
-                        	indicator : 'Saving...',
-                            tooltip   : 'Click to edit...',
-                            submit    : 'OK',
-                            "callback": function( sValue, y ) {
-                                oTable.fnDraw();
-                            },
-                            "submitdata": function ( value, settings ) {
-                            	console.log("hello..");
-                    			return {
-                    				"row_id": this.parentNode.getAttribute('id'),
-                    				"column": oTable.fnGetPosition( this )[2]
-                    			};
-                    	}});
-        			}else if (index==3 || index===4){
-        				$(td).editable( '${cellSaveUrl}', {
-        					type: 'datepicker',
-                        	indicator : 'Saving...',
-                            tooltip   : 'Click to edit...',
-                            submit    : 'OK',
-                            "callback": function( sValue, y ) {
-                                oTable.fnDraw();
-                            },
-                            "submitdata": function ( value, settings ) {
-                            	console.log("hello..");
-                    			return {
-                    				"row_id": this.parentNode.getAttribute('id'),
-                    				"column": oTable.fnGetPosition( this )[2]
-                    			};
-                    	}});
-        			}
 
-        		});
-        		
-        	});
-//            $('#tasklist tbody td').editable( '${cellSaveUrl}', {
-//            	indicator : 'Saving...',
-//                tooltip   : 'Click to edit...',
-//                submit    : 'OK',
-//                "callback": function( sValue, y ) {
-//                    oTable.fnDraw();
-//                },
-//                "submitdata": function ( value, settings ) {
-//                	console.log("hello..");
-//        			return {
-//        				"row_id": this.parentNode.getAttribute('id'),
-//        				"column": oTable.fnGetPosition( this )[2]
-//        			};
-//        		}
-//            } );
-        }
-	});
+<spring:url value="/tasks/" var="delete_form_url" /> 
+function deleteTask(id, deleteUrl){
+	var form = $('<form/>', {
+        action: deleteUrl + id,
+        method: "POST"
+    });
 	
-});
+	form.append($('<input/>', {
+        type: 'hidden',
+        name: "_method",
+        value: "DELETE"
+    }));
+	form.append($('<input/>', {
+        type: 'hidden',
+        name: "page",
+        value: "${param.page}"
+    }));
+	form.append($('<input/>', {
+        type: 'hidden',
+        name: "size",
+        value: "${param.size}"
+    }));
+	
+	form.appendTo('body').submit();
+}
 </script>
+<spring:message code="project.delete_project" var="delete_message" htmlEscape="false" />
+<spring:message code="tasks.edit_task" var="edit_message" htmlEscape="false" /> 
 
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <div class="row-fluid">
   	<div class="span1">
 	</div>
-  	<div class="span9">
-		<table class="table table-striped table-bordered" id="tasklist">
+  	<div class="span8">
+		<table class="table table-condensed table-bordered" id="tasklist">
 			<thead>
 				<tr>
 					<th><spring:message code="task.name" /></th>
@@ -120,13 +54,32 @@ $(document).ready(function(){
 					<th><spring:message code="task.completedDate" /></th>
 					<th><spring:message code="task.isDone" /></th>
 					<th><spring:message code="task.status" /></th>
+					<th></th>
 				</tr>
 			</thead>
 			<tbody>
-
+			<c:forEach items="${tasks}" var="task">
+				<tr>
+					<td id="task_title_${task.id}"><c:out value="${task.title}" /></td>
+					<td><c:out value="${task.project.name}" /></td>
+					<td><c:out value="${task.context.name}" /></td>
+					<td><fmt:formatDate value="${task.startDate}" type="date" /></td>
+					<td><fmt:formatDate value="${task.completedDate}" type="date" /></td>
+					<td><c:out value="${task.isDone}" /></td>
+					<td><c:out value="${task.status}" /></td>
+					<td><spring:url value="/tasks/${task.id}" var="update_form_url">
+						<spring:param name="form" />
+					</spring:url> 
+					<a href="${update_form_url}">${fn:escapeXml(edit_message)}</a>
+					 | 
+					<a href="#" onclick="javascript:deleteTask(${task.id}, '${delete_form_url}')" >${fn:escapeXml(delete_message)} </a>					
+				</td>					
+				</tr>
+			</c:forEach>
 			</tbody>
 		</table>
-		<br/>
+		<util:pagination maxPages="${maxPages}" page="${param.page}" size="${param.size}"></util:pagination>
+		
 		<spring:url var="createUrl" value="/tasks">
 			<spring:param name="form"></spring:param>
 		</spring:url>
