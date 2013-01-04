@@ -54,7 +54,7 @@
       <div class="row-fluid">
         <div class="span9">
           <div class="page-header">
-            <h2>My tasks!</h2>
+            <h2>${appname}</h2>
           </div>
         </div>
       </div>

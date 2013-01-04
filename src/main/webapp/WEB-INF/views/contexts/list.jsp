@@ -5,7 +5,6 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib tagdir="/WEB-INF/tags/util" prefix="util"%>
 <spring:message code="context.delete_context" var="delete_message" htmlEscape="false" />
-<spring:url value="/contexts/${context.id}" var="delete_form_url" />
 
 <script type="text/javascript">
 
@@ -50,8 +49,9 @@ function deleteContext(deleteUrl){
 				<c:forEach items="${contexts}" var="context">
 				<tr>
 				<td><c:out value="${context.name}" /></td>
-				<td><spring:url value="/contexts/${context.id}" var="update_form_url">
+				<td><spring:url value="/contexts/" var="update_form_url">
 						<spring:param name="form" />
+						<spring:param name="id" value="${context.id}"></spring:param>
 					</spring:url> 
 					<spring:message code="context.edit_context" var="edit_message" htmlEscape="false" />
 					<spring:url value="/contexts/${context.id}" var="delete_form_url" /> 
